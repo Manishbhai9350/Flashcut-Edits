@@ -6,32 +6,100 @@ import Link from "next/link";
 import FAQSection from "./_components/FAQ";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import Footer from "./_components/Footer";
+import WhyChooseUs from "./_components/WhyChooseUs";
+import { MessageCircle, Menu, X } from "lucide-react";
+import { useState } from "react";
 
 export default function Home() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <ReactLenis root>
       <main className="relative font-sans overflow-x-hidden">
         {/* Navbar */}
-        <nav className="text-[#0d1117] bg-white w-full z-50 fixed top-0 left-0 flex justify-between items-center p-6 border-b">
-          <div className="text-xl font-bold">Flashcut Edits</div>
-          <ul className="hidden md:flex gap-8 text-sm">
-            <li>
-              <Link href="#" className="text-black/60 hover:text-black">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="text-black/60 hover:text-black">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="text-black/60 hover:text-black">
-                Services
-              </Link>
-            </li>
-          </ul>
-          <button variant="outline">Schedule Call</button>
+        <nav className="text-[#0d1117] w-full z-50 fixed top-0 left-0 border-b border-gray-200 backdrop-blur-sm bg-white/95">
+          <div className="max-w-7xl mx-auto px-6 py-4">
+            <div className="flex justify-between items-center">
+              {/* Logo */}
+              <div className="text-xl font-bold text-[#0d1117]">
+                Flashcut Edits
+              </div>
+
+              {/* Desktop Navigation */}
+              <ul className="hidden md:flex gap-8 text-sm font-medium">
+                <li>
+                  <Link href="#" className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200">
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200">
+                    About
+                  </Link>
+                </li>
+              </ul>
+
+              {/* Desktop CTA Buttons */}
+              <div className="hidden md:flex items-center gap-3">
+                <button className="px-4 py-2 text-sm font-medium text-[#0d1117] border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+                  Book a Call
+                </button>
+                <a
+                  href="https://wa.me/1234567890"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-green-500 rounded-lg hover:bg-green-600 transition-colors duration-200"
+                >
+                  <MessageCircle size={16} />
+                  WhatsApp
+                </a>
+              </div>
+
+              {/* Mobile Menu Button */}
+              <button
+                className="md:hidden p-2 text-[#0d1117]"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
+
+            {/* Mobile Menu */}
+            {isMobileMenuOpen && (
+              <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
+                <div className="flex flex-col space-y-4 pt-4">
+                  <Link href="#" className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200">
+                    Home
+                  </Link>
+                  <Link href="#" className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200">
+                    Services
+                  </Link>
+                  <Link href="#" className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200">
+                    About
+                  </Link>
+                  <div className="flex flex-col gap-3 pt-4">
+                    <button className="px-4 py-2 text-sm font-medium text-[#0d1117] border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+                      Book a Call
+                    </button>
+                    <a
+                      href="https://wa.me/1234567890"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white bg-green-500 rounded-lg hover:bg-green-600 transition-colors duration-200"
+                    >
+                      <MessageCircle size={16} />
+                      WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
         </nav>
 
         {/* Hero */}
@@ -43,14 +111,14 @@ export default function Home() {
             </h1>
             <p className="text-sm md:text-xl mb-6 opacity-80">
               Professional Video Editing and Graphic Design services to elevate
-              your brand.
+              your brand and captivate your audience with stunning visual content.
             </p>
             <div className="flex gap-4">
-              <button className="px-6 py-2  bg-white border border-black hover:text-white hover:bg-black duration-150 cursor-pointer">
+              <button className="px-6 py-2 bg-white border border-black hover:text-white hover:bg-black duration-150 cursor-pointer font-medium">
                 Get Started
               </button>
-              <button className="px-6 py-2  bg-white border border-black hover:text-white hover:bg-black duration-150 cursor-pointer">
-                View Work
+              <button className="px-6 py-2 bg-white border border-black hover:text-white hover:bg-black duration-150 cursor-pointer font-medium">
+                View Portfolio
               </button>
             </div>
           </div>
@@ -87,6 +155,9 @@ export default function Home() {
 
         {/* Expertise */}
         <Expertise />
+
+        {/* Why Choose Us */}
+        <WhyChooseUs />
 
         {/* Pricing */}
         <Pricing />
@@ -173,7 +244,7 @@ export default function Home() {
                     alt="client"
                   />
                   <div>
-                    <p className="font-bold text-white group-hover:text-white/ transition">
+                    <p className="font-bold text-gray-900 group-hover:text-white transition">
                       Jessica L.
                     </p>
                     <p className="text-sm text-gray-500 group-hover:text-white/70 transition">
