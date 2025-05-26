@@ -46,7 +46,7 @@ export default function Home() {
 
               {/* Desktop CTA Buttons */}
               <div className="hidden md:flex items-center gap-3">
-                <button className="px-4 py-2 cursor-pointer text-sm font-medium text-[#0d1117] border border-gray-300 rounded-lg hover:bg-green-500 hover:text-white transition-colors duration-200">
+                <button className="px-4 py-2 cursor-pointer text-sm font-medium text-[#0d1117] border border-gray-300 rounded-lg hover:bg-green-500 transition-colors duration-200">
                   Book a Call
                 </button>
                 <a
@@ -176,9 +176,6 @@ export default function Home() {
 
         {/* Expertise */}
         <Expertise />
-
-        {/* Why Choose Us */}
-        <WhyChooseUs />
 
         {/* Pricing */}
         <Pricing />

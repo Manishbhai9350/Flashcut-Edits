@@ -3,22 +3,32 @@
 export default function WhyChooseUs() {
   return (
     <section className="text-[#0d1117] bg-white py-16 px-6 md:px-20">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h3 className="text-sm font-semibold tracking-wide text-blue-600 uppercase mb-2">
-            Why Choose Us
-          </h3>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            The{" "}
-            <span className="text-transparent bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text">
-              Perfect Choice
-            </span>{" "}
-            for Your Creative Needs
-          </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed">
-            We combine years of experience with cutting-edge technology to deliver exceptional results that exceed expectations and drive real business growth.
-          </p>
+        <div className="mb-16">
+          <div className="inline-block mb-6">
+            <div className="border-2 border-[#0d1117] rounded-2xl px-6 py-3 transform -rotate-1">
+              <h3 className="text-lg font-bold text-[#0d1117]">
+                Why Choose Us
+              </h3>
+            </div>
+          </div>
+
+          <div className="mb-8">
+            <div className="border-2 border-[#0d1117] rounded-3xl px-8 py-6 bg-gray-50">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0d1117]">
+                The Perfect Choice for Your Creative Needs
+              </h2>
+            </div>
+          </div>
+
+          <div className="mb-12">
+            <div className="border-2 border-[#0d1117] rounded-2xl px-6 py-4 bg-gray-50">
+              <p className="text-gray-600 text-lg leading-relaxed">
+                We combine years of experience with cutting-edge technology to deliver exceptional results that exceed expectations and drive real business growth.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Features Grid */}
