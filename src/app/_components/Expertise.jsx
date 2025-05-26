@@ -9,16 +9,16 @@ export default function ExpertiseSection() {
           </span>{" "}
           in Creative Solutions
         </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto mb-12">
+        <p className="text-gray-500 max-w-2xl mx-auto mb-12">
           We specialize in turning ideas into captivating visuals through video
           editing and graphic design.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="border cursor-pointer border-gray-700 rounded-2xl p-6 text-left hover:bg-[#161b22] hover:text-white transition duration-300">
-            <div className="flex justify-start items-center gap-4 mb-2">
+          <div className="border cursor-pointer border-gray-200 rounded-2xl p-6 text-left hover:bg-gray-50 hover:border-gray-300 transition duration-300">
+            <div className="flex justify-start items-center gap-4 mb-4">
               <div>
-                <div className="w-12 h-12 flex items-center justify-center rounded-md bg-blue-500/10 border border-blue-500">
+                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-blue-500/10 border border-blue-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -35,17 +35,18 @@ export default function ExpertiseSection() {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-2xl font-semibold">Video Editing</h3>
+              <h3 className="text-2xl font-semibold text-[#0d1117]">Video Editing</h3>
             </div>
-            <p className="text-gray-400">
-              From jump cuts to cinematic grading — we bring stories to life
-              with smooth transitions, pro-level sound, and engaging visuals.
+            <p className="text-gray-600 leading-relaxed">
+              Our dedicated video editing team works diligently to produce high-quality content,
+              ensuring client satisfaction with every project. From jump cuts to cinematic grading —
+              we bring stories to life with smooth transitions, pro-level sound, and engaging visuals.
             </p>
           </div>
 
-          <div className="border cursor-pointer border-gray-700 rounded-2xl p-6 text-left hover:bg-[#161b22] hover:text-white transition duration-300">
-            <div className="flex justify-start items-center gap-4 mb-2">
-              <div className="w-12 h-12 flex items-center justify-center rounded-md bg-pink-500/10 border border-pink-500">
+          <div className="border cursor-pointer border-gray-200 rounded-2xl p-6 text-left hover:bg-gray-50 hover:border-gray-300 transition duration-300">
+            <div className="flex justify-start items-center gap-4 mb-4">
+              <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-pink-500/10 border border-pink-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -61,11 +62,12 @@ export default function ExpertiseSection() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-semibold">Graphic Designing</h3>
+              <h3 className="text-2xl font-semibold text-[#0d1117]">Graphic Designing</h3>
             </div>
-            <p className="text-gray-400">
-              Stand out with scroll-stopping designs. We craft visuals that
-              resonate, inspire, and elevate your brand.
+            <p className="text-gray-600 leading-relaxed">
+              Our graphic design team is committed to delivering creative and impactful designs
+              tailored to your brand's needs. Stand out with scroll-stopping designs. We craft
+              visuals that resonate, inspire, and elevate your brand.
             </p>
           </div>
         </div>

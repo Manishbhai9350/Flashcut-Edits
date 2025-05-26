@@ -46,7 +46,7 @@ export default function Home() {
 
               {/* Desktop CTA Buttons */}
               <div className="hidden md:flex items-center gap-3">
-                <button className="px-4 py-2 text-sm font-medium text-[#0d1117] border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+                <button className="px-4 py-2 cursor-pointer text-sm font-medium text-[#0d1117] border border-gray-300 rounded-lg hover:bg-green-500 hover:text-white transition-colors duration-200">
                   Book a Call
                 </button>
                 <a
@@ -129,26 +129,47 @@ export default function Home() {
         </section>
 
         {/* About */}
-        <section className="text-[#0d1117] bg-white px-6 pb-4 text-center md:text-left">
-          <h2 className="text-sm font-semibold mb-2 opacity-70">Our Story</h2>
-          <h3 className="text-3xl font-bold mb-4">About Flashcut Edits</h3>
-          <p className="max-w-3xl mb-8 opacity-70">
-            Our mission is to provide premium video editing solutions that
-            resonate with your audience, ensuring every frame captures the
-            essence of your story while maintaining a sleek, modern aesthetic.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm font-semibold">
-            <div className="bg-black text-white p-4 shadow w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center">
-              More Than 5 Years Of Experience
+        <section className="text-[#0d1117] bg-white px-6 py-16 text-center md:text-left">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-sm font-semibold mb-2 opacity-70">Our Story</h2>
+            <h3 className="text-3xl md:text-4xl font-bold mb-6">About Flashcut Edits</h3>
+            <div className="max-w-4xl mb-12">
+              <p className="text-lg mb-4 opacity-80 leading-relaxed">
+                Our mission is to provide premium video editing solutions that
+                resonate with your audience, ensuring every frame captures the
+                essence of your story while maintaining a sleek, modern aesthetic.
+              </p>
+              <p className="text-base opacity-70 leading-relaxed">
+                Founded with a passion for visual storytelling, we've grown from a small creative team
+                to a full-service digital content agency. Our journey has been driven by one core belief:
+                exceptional content has the power to transform brands and connect with audiences on a deeper level.
+              </p>
             </div>
-            <div className="bg-black text-white p-4 shadow w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center">
-              100+ Clients Trust With Our Service
-            </div>
-            <div className="bg-black text-white p-4 shadow w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center">
-              Generated 50 Million+ Views
-            </div>
-            <div className="bg-black text-white p-4 shadow w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center">
-              30+ Team Members
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm font-semibold">
+              <div className="bg-gray-100 text-[#0d1117] p-6 shadow-sm w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center hover:bg-gray-200 transition-colors duration-300">
+                <div>
+                  <div className="text-2xl font-bold mb-1">5+</div>
+                  <div className="text-xs leading-tight opacity-70">Over 5 Years of Experience Crafting Engaging Visual Content</div>
+                </div>
+              </div>
+              <div className="bg-gray-100 text-[#0d1117] p-6 shadow-sm w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center hover:bg-gray-200 transition-colors duration-300">
+                <div>
+                  <div className="text-2xl font-bold mb-1">100+</div>
+                  <div className="text-xs leading-tight opacity-70">Trusted by 100+ Clients Worldwide</div>
+                </div>
+              </div>
+              <div className="bg-gray-100 text-[#0d1117] p-6 shadow-sm w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center hover:bg-gray-200 transition-colors duration-300">
+                <div>
+                  <div className="text-2xl font-bold mb-1">50M+</div>
+                  <div className="text-xs leading-tight opacity-70">Over 50 Million Views Generated</div>
+                </div>
+              </div>
+              <div className="bg-gray-100 text-[#0d1117] p-6 shadow-sm w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center hover:bg-gray-200 transition-colors duration-300">
+                <div>
+                  <div className="text-2xl font-bold mb-1">30+</div>
+                  <div className="text-xs leading-tight opacity-70">A Dedicated Team of 30+ Creative Professionals</div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -185,23 +206,21 @@ export default function Home() {
               <div className="group bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-left transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
                 <div className="flex items-center gap-4 mb-4">
                   <img
-                    src="https://i.pravatar.cc/100?img=12"
-                    className="w-12 h-12 rounded-full border"
+                    src="girl1.jpg"
+                    className="w-12 h-12 rounded-full border object-cover"
                     alt="client"
                   />
                   <div>
                     <p className="font-bold text-gray-900 group-hover:text-white transition">
-                      Sarah J.
+                      Sarah M.
                     </p>
                     <p className="text-sm text-gray-500 group-hover:text-white/70 transition">
-                      Travel YouTuber
+                      YouTube Coach, California
                     </p>
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4 group-hover:text-white/80 transition">
-                  "Flashcut took my travel vlogs to the next level. My
-                  subscribers keep commenting on how cinematic my videos look
-                  now. My watch time increased by 40% after switching to them!"
+                  "I hired Flashcut Edits for my YouTube Shorts and within 2 weeks, I saw a massive jump in engagement! They understand how to make content pop. Definitely recommend them for creators who want professional edits without the hassle."
                 </p>
                 <div className="text-yellow-400 text-lg group-hover:text-yellow-500 transition">
                   ★★★★★
@@ -212,26 +231,24 @@ export default function Home() {
               <div className="group bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-left transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
                 <div className="flex items-center gap-4 mb-4">
                   <img
-                    src="https://i.pravatar.cc/100?img=13"
-                    className="w-12 h-12 rounded-full border"
+                    src="boy1.jpeg"
+                    className="w-12 h-12 rounded-full border object-cover"
                     alt="client"
                   />
                   <div>
                     <p className="font-bold text-gray-900 group-hover:text-white transition">
-                      Mike T.
+                      Jason B.
                     </p>
                     <p className="text-sm text-gray-500 group-hover:text-white/70 transition">
-                      Fitness Coach
+                      Startup Founder, New York
                     </p>
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4 group-hover:text-white/80 transition">
-                  "I was spending hours editing my workout videos. Flashcut not
-                  only saves me time but makes my content look way more
-                  professional. My Instagram following doubled in 2 months!"
+                  "Our promotional videos and IG reels were handled by Flashcut Edits and they nailed it! The storytelling, transitions, and graphics were top-tier. It saved my team tons of time and looked super clean."
                 </p>
                 <div className="text-yellow-400 text-lg group-hover:text-yellow-500 transition">
-                  ★★★★★
+                  ★★★★☆
                 </div>
               </div>
 
@@ -239,26 +256,99 @@ export default function Home() {
               <div className="group bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-left transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
                 <div className="flex items-center gap-4 mb-4">
                   <img
-                    src="https://i.pravatar.cc/100?img=14"
-                    className="w-12 h-12 rounded-full border"
+                    src="girl2.jpg"
+                    className="w-12 h-12 rounded-full border object-cover"
                     alt="client"
                   />
                   <div>
                     <p className="font-bold text-gray-900 group-hover:text-white transition">
-                      Jessica L.
+                      Ananya R.
                     </p>
                     <p className="text-sm text-gray-500 group-hover:text-white/70 transition">
-                      E-commerce Brand
+                      Content Creator, Mumbai
                     </p>
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4 group-hover:text-white/80 transition">
-                  "Our conversion rates on Facebook ads increased by 3x after
-                  Flashcut redesigned our video creatives. Their understanding
-                  of what makes people click is incredible."
+                  "Flashcut Edits has been a game-changer for me. From reels to long-form content, everything feels more polished and professional. Plus, they always deliver before the deadline!"
                 </p>
                 <div className="text-yellow-400 text-lg group-hover:text-yellow-500 transition">
                   ★★★★★
+                </div>
+              </div>
+
+              {/* Testimonial Card 4 */}
+              <div className="group bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-left transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
+                <div className="flex items-center gap-4 mb-4">
+                  <img
+                    src="boy3.jpg"
+                    className="w-12 h-12 rounded-full border object-cover"
+                    alt="client"
+                  />
+                  <div>
+                    <p className="font-bold text-gray-900 group-hover:text-white transition">
+                      Rohit S.
+                    </p>
+                    <p className="text-sm text-gray-500 group-hover:text-white/70 transition">
+                      Tech YouTuber, Delhi
+                    </p>
+                  </div>
+                </div>
+                <p className="text-gray-700 mb-4 group-hover:text-white/80 transition">
+                  "Many agencies tried, but Flashcut Edits truly took my video quality to the next level. Their motion graphics and thumbnails are complete game-changers!"
+                </p>
+                <div className="text-yellow-400 text-lg group-hover:text-yellow-500 transition">
+                  ★★★★☆
+                </div>
+              </div>
+
+              {/* Testimonial Card 5 */}
+              <div className="group bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-left transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
+                <div className="flex items-center gap-4 mb-4">
+                  <img
+                    src="girl1.jpg"
+                    className="w-12 h-12 rounded-full border object-cover"
+                    alt="client"
+                  />
+                  <div>
+                    <p className="font-bold text-gray-900 group-hover:text-white transition">
+                      Nikita B.
+                    </p>
+                    <p className="text-sm text-gray-500 group-hover:text-white/70 transition">
+                      Artist, Pune
+                    </p>
+                  </div>
+                </div>
+                <p className="text-gray-700 mb-4 group-hover:text-white/80 transition">
+                  "Flashcut Edits did an amazing job editing my promo video. The transitions and effects looked professional, and they totally captured the vibe I was going for. Super fast turnaround too. Highly recommend!"
+                </p>
+                <div className="text-yellow-400 text-lg group-hover:text-yellow-500 transition">
+                  ★★★★★
+                </div>
+              </div>
+
+              {/* Testimonial Card 6 */}
+              <div className="group bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-left transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
+                <div className="flex items-center gap-4 mb-4">
+                  <img
+                    src="boy3.jpg"
+                    className="w-12 h-12 rounded-full border object-cover"
+                    alt="client"
+                  />
+                  <div>
+                    <p className="font-bold text-gray-900 group-hover:text-white transition">
+                      Virat K.
+                    </p>
+                    <p className="text-sm text-gray-500 group-hover:text-white/70 transition">
+                      Social Media Manager, Haryana
+                    </p>
+                  </div>
+                </div>
+                <p className="text-gray-700 mb-4 group-hover:text-white/80 transition">
+                  "Flashcut Edits nailed our social media graphics! Clean design, great use of color, and matched our brand perfectly. Quick revisions and smooth communication made the process easy."
+                </p>
+                <div className="text-yellow-400 text-lg group-hover:text-yellow-500 transition">
+                  ★★★★☆
                 </div>
               </div>
             </div>

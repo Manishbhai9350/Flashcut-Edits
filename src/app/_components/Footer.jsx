@@ -25,11 +25,11 @@ export default function Footer() {
           <h3 className="text-xl font-medium mb-4">Information</h3>
           <div className="flex items-start space-x-3 mb-2">
             <Phone className="w-4 h-4 mt-1 text-gray-400" />
-            <span className="text-sm text-gray-400">(+444–876–907–340)</span>
+            <span className="text-sm text-gray-400">(+91 9867009961)</span>
           </div>
           <div className="flex items-start space-x-3 mb-2">
             <Mail className="w-4 h-4 mt-1 text-gray-400" />
-            <span className="text-sm text-gray-400">alomultimedia@gmail.com</span>
+            <span className="text-sm text-gray-400">flashcutedits@gmail.com</span>
           </div>
           <div className="flex items-start space-x-3">
             <MapPin className="w-4 h-4 mt-1 text-gray-400" />
