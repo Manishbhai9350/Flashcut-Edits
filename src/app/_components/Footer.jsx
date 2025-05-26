@@ -31,12 +31,6 @@ export default function Footer() {
             <Mail className="w-4 h-4 mt-1 text-gray-400" />
             <span className="text-sm text-gray-400">flashcutedits@gmail.com</span>
           </div>
-          <div className="flex items-start space-x-3">
-            <MapPin className="w-4 h-4 mt-1 text-gray-400" />
-            <span className="text-sm text-gray-400">
-              2972 Westheimer Rd. Santa Ana, Illinois 85486
-            </span>
-          </div>
         </div>
 
         {/* Subscribe */}
