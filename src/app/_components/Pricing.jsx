@@ -1,19 +1,26 @@
 export default function Pricing() {
   return (
-    <div className="min-h-screen bg-[#0d1117] text-white flex flex-col items-center px-4 py-16">
+    <div className="min-h-screen text-[#0d1117] bg-white flex flex-col items-center px-4 py-16">
       <h2 className="text-4xl font-bold text-center mb-4">
-        Simple, <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">Transparent</span> Pricing
+        Simple,{" "}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+          Transparent
+        </span>{" "}
+        Pricing
       </h2>
       <p className="text-center text-gray-400 max-w-xl mb-12">
-        Choose the package that fits your needs. Custom solutions available for larger projects.
+        Choose the package that fits your needs. Custom solutions available for
+        larger projects.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl ">
+      <div className="grid text-white grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl ">
         {/* Starter Plan */}
-        <div className="bg-[#161b22] relative rounded-2xl p-6 flex flex-col duration-150 border-2 border-indigo-500/0 hover:border-indigo-500">
+        <div className="text-[#161b22] hover:bg-[#161b22] hover:text-white relative rounded-2xl p-6 flex flex-col duration-150 border-2 border-indigo-500/30 hover:border-indigo-500">
           <h3 className="text-xl font-semibold mb-2">Starter</h3>
           <p className="text-gray-400 mb-4">Perfect for new creators</p>
-          <h4 className="text-3xl font-bold mb-6">$97 <span className="text-base font-medium">/video</span></h4>
+          <h4 className="text-3xl font-bold mb-6">
+            $97 <span className="text-base font-medium">/video</span>
+          </h4>
           <ul className="space-y-3 text-sm mb-6">
             <li>✓ Up to 10 min video</li>
             <li>✓ Basic color correction</li>
@@ -21,15 +28,23 @@ export default function Pricing() {
             <li>✓ 48-hour turnaround</li>
             <li className="line-through text-gray-600">✗ No motion graphics</li>
           </ul>
-          <button className="mt-auto cursor-pointer bg-gray-700 hover:bg-indigo-600 rounded-lg py-2">Get Started</button>
+          <button className="mt-auto cursor-pointer text-white bg-gray-700 hover:bg-indigo-600 rounded-lg py-2">
+            Get Started
+          </button>
         </div>
 
         {/* Pro Plan */}
-        <div className="bg-[#161b22] relative border-2 border-indigo-500 rounded-2xl p-6 flex flex-col shadow-lg">
-          <div className="self-end absolute right-5 top-5  bg-indigo-500 text-xs px-2 py-1 rounded-md text-white font-semibold mb-2">POPULAR</div>
+        <div className="text-[#161b22] hover:bg-[#161b22] hover:text-white relative rounded-2xl p-6 flex flex-col duration-150 border-2 border-indigo-500/30 hover:border-indigo-500">
+          <div className="self-end absolute right-5 top-5  bg-indigo-500 text-xs px-2 py-1 rounded-md text-white font-semibold mb-2">
+            POPULAR
+          </div>
           <h3 className="text-xl font-semibold mb-2">Pro</h3>
-          <p className="text-gray-400 mb-4">For growing channels & businesses</p>
-          <h4 className="text-3xl font-bold mb-6">$197 <span className="text-base font-medium">/video</span></h4>
+          <p className="text-gray-400 mb-4">
+            For growing channels & businesses
+          </p>
+          <h4 className="text-3xl font-bold mb-6">
+            $197 <span className="text-base font-medium">/video</span>
+          </h4>
           <ul className="space-y-3 text-sm mb-6">
             <li>✓ Up to 20 min video</li>
             <li>✓ Advanced color grading</li>
@@ -37,14 +52,20 @@ export default function Pricing() {
             <li>✓ 24-hour turnaround</li>
             <li>✓ Basic motion graphics</li>
           </ul>
-          <button className="mt-auto cursor-pointer bg-indigo-600 hover:bg-indigo-500 rounded-lg py-2">Get Started</button>
+          <button className="mt-auto cursor-pointer text-white bg-gray-700 hover:bg-indigo-600 rounded-lg py-2">
+            Get Started
+          </button>
         </div>
 
         {/* Premium Plan */}
-        <div className="bg-[#161b22] relative rounded-2xl p-6 flex flex-col duration-150 border-2 border-indigo-500/0 hover:border-indigo-500">
+        <div className="text-[#161b22] hover:bg-[#161b22] hover:text-white relative rounded-2xl p-6 flex flex-col duration-150 border-2 border-indigo-500/30 hover:border-indigo-500">
           <h3 className="text-xl font-semibold mb-2">Premium</h3>
-          <p className="text-gray-400 mb-4">For established brands & agencies</p>
-          <h4 className="text-3xl font-bold mb-6">$497 <span className="text-base font-medium">/video</span></h4>
+          <p className="text-gray-400 mb-4">
+            For established brands & agencies
+          </p>
+          <h4 className="text-3xl font-bold mb-6">
+            $497 <span className="text-base font-medium">/video</span>
+          </h4>
           <ul className="space-y-3 text-sm mb-6">
             <li>✓ Up to 60 min video</li>
             <li>✓ Cinematic color grading</li>
@@ -52,13 +73,17 @@ export default function Pricing() {
             <li>✓ 12-hour rush option</li>
             <li>✓ Advanced motion graphics</li>
           </ul>
-          <button className="mt-auto cursor-pointer bg-gray-700 hover:bg-indigo-600 rounded-lg py-2">Get Started</button>
+          <button className="mt-auto cursor-pointer text-white bg-gray-700 hover:bg-indigo-600 rounded-lg py-2">
+            Get Started
+          </button>
         </div>
       </div>
 
       <p className="text-gray-400 text-sm mt-12">
         Need something custom? We offer bulk discounts and monthly retainers.{" "}
-        <a href="#" className="text-indigo-400 underline">Contact us for custom pricing →</a>
+        <a href="#" className="text-indigo-400 underline">
+          Contact us for custom pricing →
+        </a>
       </p>
     </div>
   );

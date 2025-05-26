@@ -1,6 +1,6 @@
 export default function ExpertiseSection() {
   return (
-    <section className="bg-[#0d1117] text-white py-16 px-6 md:px-20">
+    <section className="text-[#0d1117] bg-white py-16 px-6 md:px-20">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">
           Our{" "}
@@ -15,7 +15,7 @@ export default function ExpertiseSection() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="border cursor-pointer border-gray-700 rounded-2xl p-6 text-left hover:bg-[#161b22] transition duration-300">
+          <div className="border cursor-pointer border-gray-700 rounded-2xl p-6 text-left hover:bg-[#161b22] hover:text-white transition duration-300">
             <div className="flex justify-start items-center gap-4 mb-2">
               <div>
                 <div className="w-12 h-12 flex items-center justify-center rounded-md bg-blue-500/10 border border-blue-500">
@@ -43,7 +43,7 @@ export default function ExpertiseSection() {
             </p>
           </div>
 
-          <div className="border cursor-pointer border-gray-700 rounded-2xl p-6 text-left hover:bg-[#161b22] transition duration-300">
+          <div className="border cursor-pointer border-gray-700 rounded-2xl p-6 text-left hover:bg-[#161b22] hover:text-white transition duration-300">
             <div className="flex justify-start items-center gap-4 mb-2">
               <div className="w-12 h-12 flex items-center justify-center rounded-md bg-pink-500/10 border border-pink-500">
                 <svg
