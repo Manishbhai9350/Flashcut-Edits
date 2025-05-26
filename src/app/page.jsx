@@ -11,17 +11,17 @@ export default function Home() {
         <div className="text-xl font-bold">Flashcut Edits</div>
         <ul className="hidden md:flex gap-8 text-sm">
           <li>
-            <Link href="#" className="text-white/60 hover:text-white">
+            <Link href="#" className="text-black/60 hover:text-black">
               Home
             </Link>
           </li>
           <li>
-            <Link href="#" className="text-white/60 hover:text-white">
+            <Link href="#" className="text-black/60 hover:text-black">
               About
             </Link>
           </li>
           <li>
-            <Link href="#" className="text-white/60 hover:text-white">
+            <Link href="#" className="text-black/60 hover:text-black">
               Services
             </Link>
           </li>
