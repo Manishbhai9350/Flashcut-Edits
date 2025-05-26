@@ -63,7 +63,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-gray-700 mt-12 pt-6 text-center text-sm text-gray-500">
-        <p>2023 exstudio. All Rights Reserved.</p>
+        <p>2023 Flashcut Edits. All Rights Reserved.</p>
         <div className="flex justify-center space-x-6 mt-2">
           <a href="#" className="hover:text-white">WHO WE ARE</a>
           <a href="#" className="hover:text-white">OUR WORK</a>
