@@ -2,73 +2,91 @@ export default function ExpertiseSection() {
   return (
     <section className="text-[#0d1117] bg-white py-16 px-6 md:px-20">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <p className="text-gray-500 mb-4 text-lg">
+          Discover how Flashcut Edits transforms your vision into reality with our specialized services.
+        </p>
+        <h2 className="text-4xl md:text-5xl font-bold mb-16">
           Our{" "}
-          <span className="bg-gradient-to-r from-blue-500 to-pink-500 text-transparent bg-clip-text">
+          <span className="text-transparent bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text">
             Expertise
           </span>{" "}
-          in Creative Solutions
+          In Creative Solutions
         </h2>
-        <p className="text-gray-500 max-w-2xl mx-auto mb-12">
-          We specialize in turning ideas into captivating visuals through video
-          editing and graphic design.
-        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="border cursor-pointer border-gray-200 rounded-2xl p-6 text-left hover:bg-gray-50 hover:border-gray-300 transition duration-300">
-            <div className="flex justify-start items-center gap-4 mb-4">
-              <div>
-                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-blue-500/10 border border-blue-500">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    className="w-6 h-6 text-blue-400"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15.75 9V5.25m0 0L19.5 9m-3.75-3.75L12 9M4.5 15l3.75 3.75m0 0V14.25m0 4.5L12 15"
-                    />
-                  </svg>
+          {/* Video Editing Card */}
+          <div className="relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+            {/* Background Image */}
+            <div className="h-80 bg-gradient-to-br from-gray-800 to-gray-900 relative">
+              {/* Simulated video editing interface background */}
+              <div className="absolute inset-0 bg-black/20"></div>
+              <div className="absolute top-4 left-4 right-4">
+                <div className="bg-gray-700/80 rounded p-2 mb-2">
+                  <div className="flex gap-1 mb-2">
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  </div>
+                  <div className="space-y-1">
+                    <div className="h-2 bg-blue-400 rounded w-3/4"></div>
+                    <div className="h-2 bg-green-400 rounded w-1/2"></div>
+                    <div className="h-2 bg-purple-400 rounded w-2/3"></div>
+                  </div>
+                </div>
+                <div className="grid grid-cols-4 gap-1">
+                  <div className="h-12 bg-gray-600/60 rounded"></div>
+                  <div className="h-12 bg-gray-600/60 rounded"></div>
+                  <div className="h-12 bg-gray-600/60 rounded"></div>
+                  <div className="h-12 bg-gray-600/60 rounded"></div>
                 </div>
               </div>
-              <h3 className="text-2xl font-semibold text-[#0d1117]">Video Editing</h3>
             </div>
-            <p className="text-gray-600 leading-relaxed">
-              Our dedicated video editing team works diligently to produce high-quality content,
-              ensuring client satisfaction with every project. From jump cuts to cinematic grading —
-              we bring stories to life with smooth transitions, pro-level sound, and engaging visuals.
-            </p>
+
+            {/* Overlay Content */}
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white">
+              <h3 className="text-2xl font-bold mb-3">Video Editing</h3>
+              <p className="text-sm leading-relaxed">
+                Our video editing team works 12 hours a day to create great things while also managing the client and also providing client a satisfaction on their face.
+              </p>
+            </div>
           </div>
 
-          <div className="border cursor-pointer border-gray-200 rounded-2xl p-6 text-left hover:bg-gray-50 hover:border-gray-300 transition duration-300">
-            <div className="flex justify-start items-center gap-4 mb-4">
-              <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-pink-500/10 border border-pink-500">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6 text-pink-400"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M4.5 6.75L12 3l7.5 3.75m-15 0l7.5 3.75m-7.5-3.75v7.5L12 21l7.5-6.75v-7.5m-15 0l7.5 3.75m7.5-3.75l-7.5 3.75"
-                  />
-                </svg>
+          {/* Graphic Designing Card */}
+          <div className="relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+            {/* Background Image */}
+            <div className="h-80 bg-gradient-to-br from-gray-800 to-gray-900 relative">
+              {/* Simulated graphic design interface background */}
+              <div className="absolute inset-0 bg-black/20"></div>
+              <div className="absolute top-4 left-4 right-4">
+                <div className="bg-gray-700/80 rounded p-2 mb-2">
+                  <div className="flex gap-1 mb-2">
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  </div>
+                  <div className="flex gap-2">
+                    <div className="w-8 h-8 bg-blue-500 rounded"></div>
+                    <div className="w-8 h-8 bg-pink-500 rounded-full"></div>
+                    <div className="w-8 h-8 bg-yellow-500 rounded"></div>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="h-16 bg-gradient-to-r from-blue-500/60 to-pink-500/60 rounded"></div>
+                  <div className="flex gap-2">
+                    <div className="h-8 bg-purple-500/60 rounded flex-1"></div>
+                    <div className="h-8 bg-green-500/60 rounded flex-1"></div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-semibold text-[#0d1117]">Graphic Designing</h3>
             </div>
-            <p className="text-gray-600 leading-relaxed">
-              Our graphic design team is committed to delivering creative and impactful designs
-              tailored to your brand's needs. Stand out with scroll-stopping designs. We craft
-              visuals that resonate, inspire, and elevate your brand.
-            </p>
+
+            {/* Overlay Content */}
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-purple-600 to-pink-600 p-6 text-white">
+              <h3 className="text-2xl font-bold mb-3">Graphic Designing</h3>
+              <p className="text-sm leading-relaxed">
+                With our graphic designing team dedicated to deliver some good things to client. It could be a good match for you. We provide Graphic Designs
+              </p>
+            </div>
           </div>
         </div>
       </div>

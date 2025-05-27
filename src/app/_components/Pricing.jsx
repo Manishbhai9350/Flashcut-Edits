@@ -1,6 +1,7 @@
 export default function Pricing() {
   return (
-    <div className="min-h-screen text-[#0d1117] bg-white flex flex-col items-center px-4 py-16">
+    <section className="text-[#0d1117] bg-white py-16 px-6 md:px-20">
+      <div className="max-w-6xl mx-auto text-center">
       <h2 className="text-4xl font-bold text-center mb-4">
         Simple,{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
@@ -8,14 +9,14 @@ export default function Pricing() {
         </span>{" "}
         Pricing
       </h2>
-      <p className="text-center text-gray-400 max-w-xl mb-12">
+      <p className="text-gray-400  mb-12 w-full text-center">
         Choose the package that fits your needs. Custom solutions available for
         larger projects.
       </p>
 
       <div className="grid text-white grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl ">
         {/* Starter Plan */}
-        <div className="text-[#161b22] hover:bg-[#161b22] hover:text-white relative rounded-2xl p-6 flex flex-col duration-150 border-2 border-indigo-500/30 hover:border-indigo-500">
+        <div className="text-[#161b22] hover:bg-[#161b22] hover:text-white relative rounded-2xl p-6 flex flex-col duration-150 border-2 border-indigo-500/30 hover:border-indigo-500 text-left">
           <h3 className="text-xl font-semibold mb-2">Starter</h3>
           <p className="text-gray-400 mb-4">Perfect for new creators</p>
           <h4 className="text-3xl font-bold mb-6">
@@ -28,13 +29,18 @@ export default function Pricing() {
             <li>✓ 48-hour turnaround</li>
             <li className="line-through text-gray-600">✗ No motion graphics</li>
           </ul>
-          <button className="mt-auto cursor-pointer text-white bg-gray-700 hover:bg-indigo-600 rounded-lg py-2">
+          <a
+            href="https://calendly.com/jaitanishq222/video-editing-consultation"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-auto cursor-pointer text-white bg-gray-700 hover:bg-indigo-600 rounded-lg py-2 text-center"
+          >
             Get Started
-          </button>
+          </a>
         </div>
 
         {/* Pro Plan */}
-        <div className="text-[#161b22] hover:bg-[#161b22] hover:text-white relative rounded-2xl p-6 flex flex-col duration-150 border-2 border-indigo-500/30 hover:border-indigo-500">
+        <div className="text-[#161b22] hover:bg-[#161b22] hover:text-white relative rounded-2xl p-6 flex flex-col duration-150 border-2 border-indigo-500/30 hover:border-indigo-500 text-left">
           <div className="self-end absolute right-5 top-5  bg-indigo-500 text-xs px-2 py-1 rounded-md text-white font-semibold mb-2">
             POPULAR
           </div>
@@ -52,13 +58,18 @@ export default function Pricing() {
             <li>✓ 24-hour turnaround</li>
             <li>✓ Basic motion graphics</li>
           </ul>
-          <button className="mt-auto cursor-pointer text-white bg-gray-700 hover:bg-indigo-600 rounded-lg py-2">
+          <a
+            href="https://calendly.com/jaitanishq222/video-editing-consultation"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-auto cursor-pointer text-white bg-gray-700 hover:bg-indigo-600 rounded-lg py-2 text-center"
+          >
             Get Started
-          </button>
+          </a>
         </div>
 
         {/* Premium Plan */}
-        <div className="text-[#161b22] hover:bg-[#161b22] hover:text-white relative rounded-2xl p-6 flex flex-col duration-150 border-2 border-indigo-500/30 hover:border-indigo-500">
+        <div className="text-[#161b22] hover:bg-[#161b22] hover:text-white relative rounded-2xl p-6 flex flex-col duration-150 border-2 border-indigo-500/30 hover:border-indigo-500 text-left">
           <h3 className="text-xl font-semibold mb-2">Premium</h3>
           <p className="text-gray-400 mb-4">
             For established brands & agencies
@@ -73,18 +84,24 @@ export default function Pricing() {
             <li>✓ 12-hour rush option</li>
             <li>✓ Advanced motion graphics</li>
           </ul>
-          <button className="mt-auto cursor-pointer text-white bg-gray-700 hover:bg-indigo-600 rounded-lg py-2">
+          <a
+            href="https://calendly.com/jaitanishq222/video-editing-consultation"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-auto cursor-pointer text-white bg-gray-700 hover:bg-indigo-600 rounded-lg py-2 text-center"
+          >
             Get Started
-          </button>
+          </a>
         </div>
       </div>
 
-      <p className="text-gray-400 text-sm mt-12">
-        Need something custom? We offer bulk discounts and monthly retainers.{" "}
-        <a href="#" className="text-indigo-400 underline">
-          Contact us for custom pricing →
-        </a>
-      </p>
-    </div>
-  );
+        <p className="text-gray-800 text-sm mt-12">
+          Need something custom? We offer bulk discounts and monthly retainers. <br/>
+          <a href="#" className="text-indigo-400 underline">
+            Contact us for custom pricing →
+          </a>
+        </p>
+      </div>
+    </section>
+  )
 }

@@ -7,6 +7,7 @@ import FAQSection from "./_components/FAQ";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import Footer from "./_components/Footer";
 import WhyChooseUs from "./_components/WhyChooseUs";
+import Contact from "./_components/Contact";
 import { MessageCircle, Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -18,27 +19,36 @@ export default function Home() {
       <main className="relative font-sans overflow-x-hidden">
         {/* Navbar */}
         <nav className="text-[#0d1117] w-full z-50 fixed top-0 left-0 border-b border-gray-200 backdrop-blur-sm bg-white/95">
-          <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="md:px-20 py-4">
             <div className="flex justify-between items-center">
               {/* Logo */}
-              <div className="text-xl font-bold text-[#0d1117]">
+              <div className="text-3xl font-bold pop text-[#0d1117]">
                 Flashcut Edits
               </div>
 
               {/* Desktop Navigation */}
               <ul className="hidden md:flex gap-8 text-sm font-medium">
                 <li>
-                  <Link href="#" className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200">
+                  <Link
+                    href="#"
+                    className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200"
+                  >
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200">
+                  <Link
+                    href="#"
+                    className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200"
+                  >
                     Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200">
+                  <Link
+                    href="#"
+                    className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200"
+                  >
                     About
                   </Link>
                 </li>
@@ -46,9 +56,14 @@ export default function Home() {
 
               {/* Desktop CTA Buttons */}
               <div className="hidden md:flex items-center gap-3">
-                <button className="px-4 py-2 cursor-pointer text-sm font-medium text-[#0d1117] border border-gray-300 rounded-lg hover:bg-green-500 transition-colors duration-200">
+                <a
+                  href="https://calendly.com/jaitanishq222/video-editing-consultation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 cursor-pointer text-sm font-medium text-[#0d1117] border border-gray-300 rounded-lg hover:bg-green-500 hover:text-white transition-colors duration-200"
+                >
                   Book a Call
-                </button>
+                </a>
                 <a
                   href="https://wa.me/1234567890"
                   target="_blank"
@@ -73,19 +88,33 @@ export default function Home() {
             {isMobileMenuOpen && (
               <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
                 <div className="flex flex-col space-y-4 pt-4">
-                  <Link href="#" className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200">
+                  <Link
+                    href="#"
+                    className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200"
+                  >
                     Home
                   </Link>
-                  <Link href="#" className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200">
+                  <Link
+                    href="#"
+                    className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200"
+                  >
                     Services
                   </Link>
-                  <Link href="#" className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200">
+                  <Link
+                    href="#"
+                    className="text-[#0d1117]/70 hover:text-[#0d1117] transition-colors duration-200"
+                  >
                     About
                   </Link>
                   <div className="flex flex-col gap-3 pt-4">
-                    <button className="px-4 py-2 text-sm font-medium text-[#0d1117] border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+                    <a
+                      href="https://calendly.com/jaitanishq222/video-editing-consultation"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 cursor-pointer text-sm font-medium text-[#0d1117] border border-gray-300 rounded-lg hover:bg-green-500 hover:text-white transition-colors duration-200"
+                    >
                       Book a Call
-                    </button>
+                    </a>
                     <a
                       href="https://wa.me/1234567890"
                       target="_blank"
@@ -103,71 +132,96 @@ export default function Home() {
         </nav>
 
         {/* Hero */}
-        <section className="relative z-20 bg-white text-[#0d1117] h-fit w-full items-start px-6 py-32">
-          <div className="relative z-30 w-full sm:w-[60%]">
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4">
-              Elevate Your Brand with Professional Video Editing and Graphic
-              Design
-            </h1>
-            <p className="text-sm md:text-xl mb-6 opacity-80">
-              Professional Video Editing and Graphic Design services to elevate
-              your brand and captivate your audience with stunning visual content.
-            </p>
-            <div className="flex gap-4">
-              <button className="px-6 py-2 bg-white border border-black hover:text-white hover:bg-black duration-150 cursor-pointer font-medium">
-                Get Started
-              </button>
-              <button className="px-6 py-2 bg-white border border-black hover:text-white hover:bg-black duration-150 cursor-pointer font-medium">
-                View Portfolio
-              </button>
+        <section className="relative z-20 bg-white text-[#0d1117] py-32 px-6 md:px-20">
+          <div className="max-w-6xl mx-auto">
+            <div className="relative z-30 w-full sm:w-[60%]">
+              <h1 className="text-3xl pop md:text-4xl lg:text-6xl font-semibold mb-4">
+                
+                <span className="text-transparent bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text">
+                  Elevate
+                </span> Your Brand with{" "}
+                <span className="text-transparent bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text">
+                  Professional Video &nbsp;Editing
+                </span>{" "}
+                and{" "}
+                <span className="text-transparent bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text">
+                  Graphic Design
+                </span>
+              </h1>
+              <p className="text-sm md:text-xl mb-6 opacity-80 pop">
+                Professional Video Editing and Graphic Design services to
+                elevate your brand and captivate your audience with stunning
+                visual content.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className="px-8 py-3 text-white rounded-lg hover:border-blue-500 hover:bg-gray-50 transition-all duration-300 cursor-pointer font-medium bg-gradient-to-r from-blue-500 to-pink-500 text-xl hover:opacity-80">
+                  Get Started
+                </button>
+                <button className="px-8 py-3 text-white rounded-lg hover:border-blue-500 hover:bg-gray-50 transition-all duration-300 cursor-pointer font-medium bg-gradient-to-r from-blue-500 to-pink-500 text-xl hover:opacity-80">
+                  View Portfolio
+                </button>
+              </div>
             </div>
-          </div>
-          {/* <img src="/hero-image.png" alt="Studio Setup" className="rounded-xl shadow-md" /> */}
-          <div className="uncorn-3d-element w-full h-full z-20 absolute top-1/2 left-1/4 -translate-y-1/2">
-            {/* <UnicornEmbed /> */}
+            {/* <img src="/hero-image.png" alt="Studio Setup" className="rounded-xl shadow-md" /> */}
+            <div className="uncorn-3d-element w-full h-full z-20 absolute top-1/2 left-1/4 -translate-y-1/2">
+              {/* <UnicornEmbed /> */}
+            </div>
           </div>
         </section>
 
         {/* About */}
-        <section className="text-[#0d1117] bg-white px-6 py-16 text-center md:text-left">
+        <section className="text-[#0d1117] bg-white py-16 px-6 md:px-20 text-center md:text-left">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-sm font-semibold mb-2 opacity-70">Our Story</h2>
-            <h3 className="text-3xl md:text-4xl font-bold mb-6">About Flashcut Edits</h3>
-            <div className="max-w-4xl mb-12">
+            <h2 className="text-sm font-semibold mb-2 opacity-70 pop">OUR STORY</h2>
+            <h3 className="text-3xl md:text-6xl mb-6 pop font-medium">
+              About Flashcut Edits
+            </h3>
+            <div className="max-w-4xl mb-12 pop">
               <p className="text-lg mb-4 opacity-80 leading-relaxed">
                 Our mission is to provide premium video editing solutions that
                 resonate with your audience, ensuring every frame captures the
-                essence of your story while maintaining a sleek, modern aesthetic.
+                essence of your story while maintaining a sleek, modern
+                aesthetic.
               </p>
               <p className="text-base opacity-70 leading-relaxed">
-                Founded with a passion for visual storytelling, we've grown from a small creative team
-                to a full-service digital content agency. Our journey has been driven by one core belief:
-                exceptional content has the power to transform brands and connect with audiences on a deeper level.
+                Founded with a passion for visual storytelling, we've grown from
+                a small creative team to a full-service digital content agency.
+                Our journey has been driven by one core belief: exceptional
+                content has the power to transform brands and connect with
+                audiences on a deeper level.
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm font-semibold">
               <div className="bg-gray-100 text-[#0d1117] p-6 shadow-sm w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center hover:bg-gray-200 transition-colors duration-300">
                 <div>
-                  <div className="text-2xl font-bold mb-1">5+</div>
-                  <div className="text-xs leading-tight opacity-70">Over 5 Years of Experience Crafting Engaging Visual Content</div>
+                  <div className="text-3xl font-bold mb-1 pop">5+</div>
+                  <div className="text-md leading-tight pop font-medium">
+                    Over 5 Years of Experience Crafting Engaging Visual Content
+                  </div>
                 </div>
               </div>
               <div className="bg-gray-100 text-[#0d1117] p-6 shadow-sm w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center hover:bg-gray-200 transition-colors duration-300">
                 <div>
-                  <div className="text-2xl font-bold mb-1">100+</div>
-                  <div className="text-xs leading-tight opacity-70">Trusted by 100+ Clients Worldwide</div>
+                  <div className="text-3xl font-bold mb-1 pop">100+</div>
+                  <div className="text-md leading-tight pop font-medium">
+                    Trusted by 100+ Clients Worldwide
+                  </div>
                 </div>
               </div>
               <div className="bg-gray-100 text-[#0d1117] p-6 shadow-sm w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center hover:bg-gray-200 transition-colors duration-300">
                 <div>
-                  <div className="text-2xl font-bold mb-1">50M+</div>
-                  <div className="text-xs leading-tight opacity-70">Over 50 Million Views Generated</div>
+                  <div className="text-3xl font-bold mb-1 pop">50M+</div>
+                  <div className="text-md leading-tight pop font-medium">
+                    Over 50 Million Views Generated
+                  </div>
                 </div>
               </div>
               <div className="bg-gray-100 text-[#0d1117] p-6 shadow-sm w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center hover:bg-gray-200 transition-colors duration-300">
                 <div>
-                  <div className="text-2xl font-bold mb-1">30+</div>
-                  <div className="text-xs leading-tight opacity-70">A Dedicated Team of 30+ Creative Professionals</div>
+                  <div className="text-3xl font-bold mb-1 pop">30+</div>
+                  <div className="text-md leading-tight pop font-medium">
+                    A Dedicated Team of 30+ Creative Professionals
+                  </div>
                 </div>
               </div>
             </div>
@@ -181,7 +235,7 @@ export default function Home() {
         <Pricing />
 
         {/* Testimonials  */}
-        <section className="bg-white text-gray-800 py-20 px-6 md:px-20">
+        <section className="bg-white text-gray-800 py-16 px-6 md:px-20">
           <div className="max-w-6xl mx-auto text-center">
             <h3 className="text-sm font-semibold tracking-wide text-blue-600 uppercase mb-2">
               Client Testimonials
@@ -217,7 +271,10 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4 group-hover:text-white/80 transition">
-                  "I hired Flashcut Edits for my YouTube Shorts and within 2 weeks, I saw a massive jump in engagement! They understand how to make content pop. Definitely recommend them for creators who want professional edits without the hassle."
+                  "I hired Flashcut Edits for my YouTube Shorts and within 2
+                  weeks, I saw a massive jump in engagement! They understand how
+                  to make content pop. Definitely recommend them for creators
+                  who want professional edits without the hassle."
                 </p>
                 <div className="text-yellow-400 text-lg group-hover:text-yellow-500 transition">
                   ★★★★★
@@ -242,7 +299,10 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4 group-hover:text-white/80 transition">
-                  "Our promotional videos and IG reels were handled by Flashcut Edits and they nailed it! The storytelling, transitions, and graphics were top-tier. It saved my team tons of time and looked super clean."
+                  "Our promotional videos and IG reels were handled by Flashcut
+                  Edits and they nailed it! The storytelling, transitions, and
+                  graphics were top-tier. It saved my team tons of time and
+                  looked super clean."
                 </p>
                 <div className="text-yellow-400 text-lg group-hover:text-yellow-500 transition">
                   ★★★★☆
@@ -267,7 +327,9 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4 group-hover:text-white/80 transition">
-                  "Flashcut Edits has been a game-changer for me. From reels to long-form content, everything feels more polished and professional. Plus, they always deliver before the deadline!"
+                  "Flashcut Edits has been a game-changer for me. From reels to
+                  long-form content, everything feels more polished and
+                  professional. Plus, they always deliver before the deadline!"
                 </p>
                 <div className="text-yellow-400 text-lg group-hover:text-yellow-500 transition">
                   ★★★★★
@@ -292,7 +354,9 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4 group-hover:text-white/80 transition">
-                  "Many agencies tried, but Flashcut Edits truly took my video quality to the next level. Their motion graphics and thumbnails are complete game-changers!"
+                  "Many agencies tried, but Flashcut Edits truly took my video
+                  quality to the next level. Their motion graphics and
+                  thumbnails are complete game-changers!"
                 </p>
                 <div className="text-yellow-400 text-lg group-hover:text-yellow-500 transition">
                   ★★★★☆
@@ -317,7 +381,10 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4 group-hover:text-white/80 transition">
-                  "Flashcut Edits did an amazing job editing my promo video. The transitions and effects looked professional, and they totally captured the vibe I was going for. Super fast turnaround too. Highly recommend!"
+                  "Flashcut Edits did an amazing job editing my promo video. The
+                  transitions and effects looked professional, and they totally
+                  captured the vibe I was going for. Super fast turnaround too.
+                  Highly recommend!"
                 </p>
                 <div className="text-yellow-400 text-lg group-hover:text-yellow-500 transition">
                   ★★★★★
@@ -342,7 +409,10 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4 group-hover:text-white/80 transition">
-                  "Flashcut Edits nailed our social media graphics! Clean design, great use of color, and matched our brand perfectly. Quick revisions and smooth communication made the process easy."
+                  "Flashcut Edits nailed our social media graphics! Clean
+                  design, great use of color, and matched our brand perfectly.
+                  Quick revisions and smooth communication made the process
+                  easy."
                 </p>
                 <div className="text-yellow-400 text-lg group-hover:text-yellow-500 transition">
                   ★★★★☆
@@ -352,13 +422,14 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Contact Section */}
+        <Contact />
+
         {/* FAQ Section  */}
         <FAQSection />
 
-
         {/* Footer */}
         <Footer />
-
       </main>
     </ReactLenis>
   );
