@@ -112,8 +112,8 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">
-            <h3 className="text-2xl font-bold mb-6 text-[#0d1117]">
+          <div className="bg-white p-4 sm:p-8 rounded-2xl border border-gray-200 shadow-sm">
+            <h3 className="text-2xl text-center sm:text-start font-bold mb-6 text-[#0d1117]">
               Send us a Message
             </h3>
 

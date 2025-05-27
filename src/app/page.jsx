@@ -19,7 +19,7 @@ export default function Home() {
       <main className="relative font-sans overflow-x-hidden">
         {/* Navbar */}
         <nav className="text-[#0d1117] w-full z-50 fixed top-0 left-0 border-b border-gray-200 backdrop-blur-sm bg-white/95">
-          <div className="md:px-20 py-4">
+          <div className="px-6 md:px-20 py-4">
             <div className="flex justify-between items-center">
               {/* Logo */}
               <div className="text-3xl font-bold pop text-[#0d1117]">
@@ -77,16 +77,24 @@ export default function Home() {
 
               {/* Mobile Menu Button */}
               <button
-                className="md:hidden p-2 text-[#0d1117]"
+                className="md:hidden p-2 text-[#0d1117] transition-transform duration-200 hover:scale-105"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               >
-                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                <div className="transition-transform duration-300">
+                  {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </div>
               </button>
             </div>
 
             {/* Mobile Menu */}
-            {isMobileMenuOpen && (
-              <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
+            <div className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
+              isMobileMenuOpen
+                ? 'max-h-96 opacity-100 transform translate-y-0'
+                : 'max-h-0 opacity-0 transform -translate-y-2'
+            }`}>
+              <div className={`transition-all duration-300 ${
+                isMobileMenuOpen ? 'mt-4 pb-4 border-t border-gray-200' : 'mt-0 pb-0'
+              }`}>
                 <div className="flex flex-col space-y-4 pt-4">
                   <Link
                     href="#"
@@ -127,16 +135,16 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            )}
+            </div>
           </div>
         </nav>
 
         {/* Hero */}
         <section className="relative z-20 bg-white text-[#0d1117] py-32 px-6 md:px-20">
           <div className="max-w-6xl mx-auto">
-            <div className="relative z-30 w-full sm:w-[60%]">
-              <h1 className="text-3xl pop md:text-4xl lg:text-6xl font-semibold mb-4">
-                
+            <div className="relative z-30 w-full  sm:w-[60%]">
+              <h1 className="text-3xl pop  sm:text-5xl lg:text-6xl font-semibold mb-4">
+
                 <span className="text-transparent bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text">
                   Elevate
                 </span> Your Brand with{" "}
@@ -191,35 +199,35 @@ export default function Home() {
                 audiences on a deeper level.
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm font-semibold">
+            <div className="grid grid-cols-2 place-items-center sm:place-items-start md:grid-cols-4 gap-6 text-sm font-semibold">
               <div className="bg-gray-100 text-[#0d1117] p-6 shadow-sm w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center hover:bg-gray-200 transition-colors duration-300">
                 <div>
-                  <div className="text-3xl font-bold mb-1 pop">5+</div>
-                  <div className="text-md leading-tight pop font-medium">
+                  <div className="text-xl sm:text-3xl font-bold mb-1 pop">5+</div>
+                  <div className="text-[.6rem] sm:text-md leading-tight pop font-medium">
                     Over 5 Years of Experience Crafting Engaging Visual Content
                   </div>
                 </div>
               </div>
               <div className="bg-gray-100 text-[#0d1117] p-6 shadow-sm w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center hover:bg-gray-200 transition-colors duration-300">
                 <div>
-                  <div className="text-3xl font-bold mb-1 pop">100+</div>
-                  <div className="text-md leading-tight pop font-medium">
+                  <div className="text-xl sm:text-3xl font-bold mb-1 pop">100+</div>
+                  <div className="text-[.6rem] sm:text-md leading-tight pop font-medium">
                     Trusted by 100+ Clients Worldwide
                   </div>
                 </div>
               </div>
               <div className="bg-gray-100 text-[#0d1117] p-6 shadow-sm w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center hover:bg-gray-200 transition-colors duration-300">
                 <div>
-                  <div className="text-3xl font-bold mb-1 pop">50M+</div>
-                  <div className="text-md leading-tight pop font-medium">
+                  <div className="text-xl sm:text-3xl font-bold mb-1 pop">50M+</div>
+                  <div className="text-[.6rem] sm:text-md leading-tight pop font-medium">
                     Over 50 Million Views Generated
                   </div>
                 </div>
               </div>
               <div className="bg-gray-100 text-[#0d1117] p-6 shadow-sm w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center hover:bg-gray-200 transition-colors duration-300">
                 <div>
-                  <div className="text-3xl font-bold mb-1 pop">30+</div>
-                  <div className="text-md leading-tight pop font-medium">
+                  <div className="text-xl sm:text-3xl font-bold mb-1 pop">30+</div>
+                  <div className="text-[.6rem] sm:text-md leading-tight pop font-medium">
                     A Dedicated Team of 30+ Creative Professionals
                   </div>
                 </div>
