@@ -14,9 +14,12 @@ export default function Footer() {
             services.
           </p>
           <div className="flex space-x-4 mt-6 text-gray-400">
-            <Twitter className="w-5 h-5 hover:text-white cursor-pointer" />
-            <Instagram className="w-5 h-5 hover:text-white cursor-pointer" />
-            <Facebook className="w-5 h-5 hover:text-white cursor-pointer" />
+            <a href="https://www.instagram.com/tanishqjain" target="_blank" rel="noopener noreferrer">
+              <Instagram className="w-5 h-5 hover:text-white cursor-pointer" />
+            </a>
+            <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
+              <Facebook className="w-5 h-5 hover:text-white cursor-pointer" />
+            </a>
           </div>
         </div>
 

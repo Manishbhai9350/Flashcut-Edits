@@ -8,7 +8,14 @@ import { ReactLenis } from "lenis/dist/lenis-react";
 import Footer from "./_components/Footer";
 import WhyChooseUs from "./_components/WhyChooseUs";
 import Contact from "./_components/Contact";
+import { useEffect } from "react";
+
 export default function Home() {
+  useEffect(() => {
+    console.log("🚀 Home page loaded!");
+    console.log("📍 Current URL:", window.location.href);
+    console.log("⏰ Timestamp:", new Date().toISOString());
+  }, []);
 
   return (
     <ReactLenis root>
@@ -31,16 +38,16 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-sm md:text-xl mb-6 opacity-80 pop">
-                Professional Video Editing and Graphic Design services to
-                elevate your brand and captivate your audience with stunning
-                visual content.
+                Video Editing Agency That Saves You Time - We provide professional
+                video editing and graphic design services to elevate your brand and
+                captivate your audience with stunning visual content.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="px-8 py-3 text-white rounded-lg hover:border-blue-500 hover:bg-gray-50 transition-all duration-300 cursor-pointer font-medium bg-gradient-to-r from-blue-500 to-pink-500 text-xl hover:opacity-80">
-                  Get Started
+                  Get Started Today
                 </button>
                 <button className="px-8 py-3 text-white rounded-lg hover:border-blue-500 hover:bg-gray-50 transition-all duration-300 cursor-pointer font-medium bg-gradient-to-r from-blue-500 to-pink-500 text-xl hover:opacity-80">
-                  View Portfolio
+                  View Our Portfolio
                 </button>
               </div>
             </div>
@@ -60,16 +67,16 @@ export default function Home() {
             </h3>
             <div className="max-w-4xl mb-12 pop">
               <p className="text-lg mb-4 opacity-80 leading-relaxed">
-                Our mission is to provide premium video editing solutions that
-                resonate with your audience, ensuring every frame captures the
-                essence of your story while maintaining a sleek, modern
-                aesthetic.
+                We provide premium video editing solutions that resonate with your
+                audience, ensuring every frame captures the essence of your story
+                while maintaining a sleek, modern aesthetic.
               </p>
               <p className="text-base opacity-70 leading-relaxed">
-                Founded with a passion for visual storytelling, we've grown from
-                a small creative team to a full-service digital content agency.
-                Our journey has been driven by one core belief: exceptional
-                content has the power to transform brands and connect with
+                We are a team of professional video editors passionate about creating
+                engaging, high-quality videos. Founded with a passion for visual
+                storytelling, we've grown from a small creative team to a full-service
+                digital content agency. Our journey has been driven by one core belief:
+                exceptional content has the power to transform brands and connect with
                 audiences on a deeper level.
               </p>
             </div>
@@ -153,10 +160,11 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4 group-hover:text-white/80 transition">
-                  "I hired Flashcut Edits for my YouTube Shorts and within 2
-                  weeks, I saw a massive jump in engagement! They understand how
-                  to make content pop. Definitely recommend them for creators
-                  who want professional edits without the hassle."
+                  "Flashcut Edits transformed our video content, enhancing its engagement
+                  and professionalism. I hired them for my YouTube Shorts and within 2
+                  weeks, I saw a massive jump in engagement! They understand how to make
+                  content pop. Definitely recommend them for creators who want professional
+                  video editing without the hassle."
                 </p>
                 <div className="text-yellow-400 text-lg group-hover:text-yellow-500 transition">
                   ★★★★★
@@ -181,10 +189,9 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4 group-hover:text-white/80 transition">
-                  "Our promotional videos and IG reels were handled by Flashcut
-                  Edits and they nailed it! The storytelling, transitions, and
-                  graphics were top-tier. It saved my team tons of time and
-                  looked super clean."
+                  "We hired Flashcut Edits for our promotional videos and IG reels, and they
+                  nailed it! The storytelling, transitions, and graphics were top-tier.
+                  They saved our team tons of time and delivered super clean results."
                 </p>
                 <div className="text-yellow-400 text-lg group-hover:text-yellow-500 transition">
                   ★★★★☆

@@ -24,14 +24,15 @@ export default function Navbar() {
       icon: <Play className="w-4 h-4" />,
       href: "/services#video-editing",
       submenu: [
-        { title: "YouTube Videos", href: "/services/video-editing/youtube" },
-        { title: "YouTube Shorts", href: "/services/video-editing/shorts" },
-        { title: "Instagram Reels", href: "/services/video-editing/reels" },
-        { title: "TikTok Videos", href: "/services/video-editing/tiktok" },
-        { title: "Promotional Videos", href: "/services/video-editing/promotional" },
-        { title: "Product Demos", href: "/services/video-editing/demos" },
-        { title: "Color Grading", href: "/services/video-editing/color-grading" },
-        { title: "Motion Graphics", href: "/services/video-editing/motion-graphics" }
+        { title: "Ads & Promotional Videos", href: "/services/video_editing/ads_promotional" },
+        { title: "3D Edit", href: "/services/video_editing/3d" },
+        { title: "Documentary", href: "/services/video_editing/documentary" },
+        { title: "Ecommerce", href: "/services/video_editing/ecommerce" },
+        { title: "Educational", href: "/services/video_editing/educational" },
+        { title: "Faceless", href: "/services/video_editing/faceless" },
+        { title: "High Level Motion Graphics", href: "/services/video_editing/high_level_motion_graphics" },
+        { title: "Podcasts", href: "/services/video_editing/podcasts" },
+        { title: "Real Estate", href: "/services/video_editing/real_estate" },
       ]
     },
     graphicDesign: {
@@ -39,14 +40,14 @@ export default function Navbar() {
       icon: <Palette className="w-4 h-4" />,
       href: "/services#graphic-design",
       submenu: [
-        { title: "Logo Design", href: "/services/graphic-design/logo" },
-        { title: "Brand Identity", href: "/services/graphic-design/branding" },
-        { title: "Social Media Graphics", href: "/services/graphic-design/social-media" },
-        { title: "Business Cards", href: "/services/graphic-design/business-cards" },
-        { title: "Brochures & Flyers", href: "/services/graphic-design/print" },
-        { title: "Web Graphics", href: "/services/graphic-design/web" },
-        { title: "Packaging Design", href: "/services/graphic-design/packaging" },
-        { title: "Digital Ads", href: "/services/graphic-design/ads" }
+        { title: "Documentary", href: "/services/graphic_designing/documentary" },
+        { title: "Educational", href: "/services/graphic_designing/educational" },
+        { title: "Fitness", href: "/services/graphic_designing/fitness" },
+        { title: "Gaming", href: "/services/graphic_designing/gaming" },
+        { title: "Podcasts", href: "/services/graphic_designing/podcasts" },
+        { title: "Tech", href: "/services/graphic_designing/tech" },
+        { title: "Trading", href: "/services/graphic_designing/trading" },
+        { title: "Vlog / Lifestyle", href: "/services/graphic_designing/vlog_lifestyle" },
       ]
     }
   };
@@ -62,7 +63,7 @@ export default function Navbar() {
       <div className="px-6 md:px-20 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="text-3xl font-bold text-[#0d1117] hover:opacity-80 transition-opacity duration-200">
+          <Link href="/" className="text-3xl pop font-[900] text-[#0d1117] hover:opacity-80 transition-opacity duration-200">
             Flashcut Edits
           </Link>
 

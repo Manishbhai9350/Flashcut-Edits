@@ -46,7 +46,7 @@ export default function FAQSection() {
           </span>
         </h2>
         <p className="text-gray-500 max-w-2xl mx-auto mb-14">
-          Find answers to common inquiries about our video editing services and how we can assist you.
+          We answer common inquiries about our video editing services and how we can assist you.
         </p>
 
         <div className="max-w-3xl mx-auto">

@@ -3,7 +3,7 @@ export default function ExpertiseSection() {
     <section className="text-[#0d1117] bg-white py-16 px-6 md:px-20">
       <div className="max-w-6xl mx-auto text-center">
         <p className="text-gray-500 mb-4 text-lg">
-          Discover how Flashcut Edits transforms your vision into reality with our specialized services.
+          We specialize in editing short-form videos, such as social media clips, promotional content, and more.
         </p>
         <h2 className="text-4xl md:text-5xl font-bold mb-16">
           Our{" "}
@@ -46,7 +46,9 @@ export default function ExpertiseSection() {
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white">
               <h3 className="text-2xl font-bold mb-3">Video Editing</h3>
               <p className="text-sm leading-relaxed">
-                Our video editing team works 12 hours a day to create great things while also managing the client and also providing client a satisfaction on their face.
+                We specialize in editing short-form videos, such as social media clips,
+                promotional content, and YouTube Shorts. Our dedicated video editing team
+                works tirelessly to deliver exceptional results that exceed client expectations.
               </p>
             </div>
           </div>

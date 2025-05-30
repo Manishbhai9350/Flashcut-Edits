@@ -1,24 +1,24 @@
-'use client'
-import { Mail, Phone, MessageCircle, Send } from "lucide-react";
+"use client";
+import { Mail, Phone, MessageCircle, Send, Instagram } from "lucide-react";
 import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -37,7 +37,8 @@ export default function Contact() {
             Your Content?
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed">
-            Let's discuss your project and bring your vision to life. Get in touch with our team today for a free consultation.
+            Let's discuss your project and bring your vision to life. Get in
+            touch with our team today for a free consultation.
           </p>
         </div>
 
@@ -49,8 +50,10 @@ export default function Contact() {
                 Let's Start a Conversation
               </h3>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Whether you need video editing, graphic design, or a complete content strategy,
-                we're here to help. Reach out to us through any of the channels below.
+                We offer professional video editing, impactful graphic design, and complete
+                content strategies to transform your vision into reality. Our team is here
+                to support your goals. Connect with us through any of the channels below
+                and let's elevate your content today!
               </p>
             </div>
 
@@ -67,12 +70,12 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 transition-colors duration-300">
-                <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center">
-                  <MessageCircle className="w-6 h-6 text-green-500" />
+                <div className="w-12 h-12 bg-pink-500/10 rounded-lg flex items-center justify-center">
+                  <Instagram className="w-6 h-6 text-pink-500" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#0d1117]">WhatsApp</h4>
-                  <p className="text-gray-600">Quick response guaranteed</p>
+                  <h4 className="font-semibold text-[#0d1117]">Instagram</h4>
+                  <p className="text-gray-600">@tanishqjain</p>
                 </div>
               </div>
 
@@ -99,8 +102,7 @@ export default function Contact() {
                 WhatsApp Us
               </a>
               <a
-                                  href="https://calendly.com/jaitanishq222/video-editing-consultation"
-
+                href="https://calendly.com/jaitanishq222/video-editing-consultation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 px-6 py-3 text-black border border-black/30 hover:border-green-500 hover:bg-green-500 hover:text-white rounded-lg transition-colors duration-200 font-medium"
@@ -119,7 +121,10 @@ export default function Contact() {
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Full Name
                 </label>
                 <input
@@ -135,7 +140,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Email Address
                 </label>
                 <input
@@ -151,7 +159,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Project Details
                 </label>
                 <textarea
