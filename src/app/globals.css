@@ -38,3 +38,103 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* View Transition API Animations */
+@supports (view-transition-name: none) {
+  /* Enable view transitions */
+  html {
+    view-transition-name: root;
+  }
+
+  /* Default page transition */
+  ::view-transition-old(root) {
+    animation: fade-out-rotate 0.6s ease-in-out;
+  }
+
+  ::view-transition-new(root) {
+    animation: clip-in-from-bottom 0.6s ease-in-out;
+  }
+
+  /* Fade out and rotate animation for old page */
+  @keyframes fade-out-rotate {
+    0% {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(0.95) rotate(2deg);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.9) rotate(5deg);
+    }
+  }
+
+  /* Clip path animation from bottom to top for new page */
+  @keyframes clip-in-from-bottom {
+    0% {
+      opacity: 0;
+      clip-path: inset(100% 0 0 0);
+      transform: translateY(20px);
+    }
+    50% {
+      opacity: 0.7;
+      clip-path: inset(50% 0 0 0);
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      clip-path: inset(0 0 0 0);
+      transform: translateY(0);
+    }
+  }
+
+  /* Smooth transition for the container */
+  .view-transition-container {
+    view-transition-name: main-content;
+  }
+
+  /* Enhanced animations for main content */
+  ::view-transition-old(main-content) {
+    animation: slide-out-fade 0.5s ease-in-out;
+  }
+
+  ::view-transition-new(main-content) {
+    animation: slide-in-clip 0.5s ease-in-out;
+  }
+
+  @keyframes slide-out-fade {
+    0% {
+      opacity: 1;
+      transform: translateX(0) rotate(0deg);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-30px) rotate(-2deg);
+    }
+  }
+
+  @keyframes slide-in-clip {
+    0% {
+      opacity: 0;
+      clip-path: inset(100% 0 0 0);
+      transform: translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      clip-path: inset(0 0 0 0);
+      transform: translateX(0);
+    }
+  }
+
+  /* Fallback for browsers that don't support view transitions */
+  @media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(root),
+    ::view-transition-new(root),
+    ::view-transition-old(main-content),
+    ::view-transition-new(main-content) {
+      animation: none;
+    }
+  }
+}
