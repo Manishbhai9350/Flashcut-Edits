@@ -31,7 +31,72 @@ export  const graphicDesign = {
             name: "Documentary",
             category: "documentary",
             works:[
-              
+              {
+                name:'documentary thumbnail',
+                category:'documentary',
+                key:Math.floor(Math.random() * 100000000),
+                description:'Banner Work'
+              },
+              {
+                name:'documentary thumbnail',
+                category:'documentary',
+                key:Math.floor(Math.random() * 100000000),
+                description:'Banner Work'
+              },
+              {
+                name:'documentary thumbnail',
+                category:'documentary',
+                key:Math.floor(Math.random() * 100000000),
+                description:'Banner Work'
+              },
+              {
+                name:'documentary thumbnail',
+                category:'documentary',
+                key:Math.floor(Math.random() * 100000000),
+                description:'Banner Work'
+              },
+              {
+                name:'documentary thumbnail',
+                category:'documentary',
+                key:Math.floor(Math.random() * 100000000),
+                description:'Banner Work'
+              },
+            ]
+          },
+          { 
+            name: "Design",
+            category: "design",
+            works:[
+              {
+                name:'design thumbnail',
+                category:'design',
+                key:Math.floor(Math.random() * 100000000),
+                description:'Banner Work'
+              },
+              {
+                name:'design thumbnail',
+                category:'design',
+                key:Math.floor(Math.random() * 100000000),
+                description:'Banner Work'
+              },
+              {
+                name:'design thumbnail',
+                category:'design',
+                key:Math.floor(Math.random() * 100000000),
+                description:'Banner Work'
+              },
+              {
+                name:'design thumbnail',
+                category:'design',
+                key:Math.floor(Math.random() * 100000000),
+                description:'Banner Work'
+              },
+              {
+                name:'design thumbnail',
+                category:'design',
+                key:Math.floor(Math.random() * 100000000),
+                description:'Banner Work'
+              },
             ]
           }
         ]
