@@ -20,7 +20,7 @@ export default function Pricing() {
           <h3 className="text-xl font-semibold mb-2">Starter</h3>
           <p className="text-gray-400 mb-4">Perfect for new creators</p>
           <h4 className="text-3xl font-bold mb-6">
-            $97 <span className="text-base font-medium">/video</span>
+            ₹9,999 <span className="text-base font-medium">/video</span>
           </h4>
           <ul className="space-y-3 text-sm mb-6">
             <li>✓ Up to 10 min video</li>
@@ -49,7 +49,7 @@ export default function Pricing() {
             For growing channels & businesses
           </p>
           <h4 className="text-3xl font-bold mb-6">
-            $197 <span className="text-base font-medium">/video</span>
+            ₹29,999 <span className="text-base font-medium">/video</span>
           </h4>
           <ul className="space-y-3 text-sm mb-6">
             <li>✓ Up to 20 min video</li>
@@ -75,7 +75,7 @@ export default function Pricing() {
             For established brands & agencies
           </p>
           <h4 className="text-3xl font-bold mb-6">
-            $497 <span className="text-base font-medium">/video</span>
+            ₹89,999 <span className="text-base font-medium">/video</span>
           </h4>
           <ul className="space-y-3 text-sm mb-6">
             <li>✓ Up to 60 min video</li>
