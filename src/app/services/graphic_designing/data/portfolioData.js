@@ -8,18 +8,6 @@ export  const graphicDesign = {
         title: "Catalogs",
         description: "Comprehensive long-form videos for detailed storytelling",
         categories:[
-          { 
-            name: "Documentary",
-            category: "documentary",
-            works:[
-            ]
-          },
-          { 
-            name: "Podcasts",
-            category: "podcasts",
-            works:[
-            ]
-          },
         ]
       },
       "banners":{
@@ -34,71 +22,72 @@ export  const graphicDesign = {
               {
                 name:'documentary thumbnail',
                 category:'documentary',
-                key:Math.floor(Math.random() * 100000000),
-                description:'Banner Work'
-              },
-              {
-                name:'documentary thumbnail',
-                category:'documentary',
-                key:Math.floor(Math.random() * 100000000),
-                description:'Banner Work'
-              },
-              {
-                name:'documentary thumbnail',
-                category:'documentary',
-                key:Math.floor(Math.random() * 100000000),
-                description:'Banner Work'
-              },
-              {
-                name:'documentary thumbnail',
-                category:'documentary',
-                key:Math.floor(Math.random() * 100000000),
-                description:'Banner Work'
-              },
-              {
-                name:'documentary thumbnail',
-                category:'documentary',
-                key:Math.floor(Math.random() * 100000000),
-                description:'Banner Work'
-              },
+                key:1,
+                description:'Channel Banner Design',
+                id:'1xq5MnWKZguryFrgMIEjVHZhh2rrEkrF3',
+                image:'https://drive.google.com/file/d/1xq5MnWKZguryFrgMIEjVHZhh2rrEkrF3/view?usp=drive_link'
+              }
             ]
           },
           { 
-            name: "Design",
-            category: "design",
+            name: "Educational",
+            category: "educational",
+            works:[]
+          },
+          { 
+            name: "Fitness",
+            category: "fitness",
             works:[
               {
-                name:'design thumbnail',
-                category:'design',
-                key:Math.floor(Math.random() * 100000000),
-                description:'Banner Work'
-              },
-              {
-                name:'design thumbnail',
-                category:'design',
-                key:Math.floor(Math.random() * 100000000),
-                description:'Banner Work'
-              },
-              {
-                name:'design thumbnail',
-                category:'design',
-                key:Math.floor(Math.random() * 100000000),
-                description:'Banner Work'
-              },
-              {
-                name:'design thumbnail',
-                category:'design',
-                key:Math.floor(Math.random() * 100000000),
-                description:'Banner Work'
-              },
-              {
-                name:'design thumbnail',
-                category:'design',
-                key:Math.floor(Math.random() * 100000000),
-                description:'Banner Work'
-              },
+                name:'documentary thumbnail',
+                category:'documentary',
+                key:1,
+                description:'Channel Banner Design',
+                id:'1y3IxDx4HVFsxVVWZyfxn0ITMStGcXg46',
+                image:'https://drive.google.com/file/d/1y3IxDx4HVFsxVVWZyfxn0ITMStGcXg46/view?usp=drive_link'
+              }
             ]
-          }
+          },
+          { 
+            name: "Gaming",
+            category: "gaming",
+            works:[
+            ]
+          },
+          { 
+            name: "Podcast",
+            category: "podcast",
+            works:[
+            ]
+          },
+          { 
+            name: "Tech",
+            category: "tech",
+            works:[
+              {
+                name:'documentary thumbnail',
+                category:'documentary',
+                key:1,
+                description:'Channel Banner Design',
+                id:'1xyJW0IStXbjTjex4RnyZTN3d9kCL8crX',
+                image:'https://drive.google.com/file/d/1xyJW0IStXbjTjex4RnyZTN3d9kCL8crX/view?usp=drive_link'
+              }
+            ]
+          },
+          { 
+            name: "Trading",
+            category: "trading",
+            works:[
+              {
+                name:'Trading Thumbnail',
+                category:'trading',
+                key:1,
+                description:'Channel Banner Design',
+                id:'1xrq99fPnFEgNFuf125ykGfyfM9wkYcqz',
+                image:'https://drive.google.com/file/d/1xrq99fPnFEgNFuf125ykGfyfM9wkYcqz/view?usp=drive_link'
+              }
+            ]
+          },
         ]
       }, 
       "cover":{

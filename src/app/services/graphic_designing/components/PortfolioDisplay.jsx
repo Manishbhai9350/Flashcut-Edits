@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Eye, Calendar, User, Filter, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 
 export default function PortfolioDisplay({ 
   portfolioData,
@@ -97,18 +98,16 @@ export default function PortfolioDisplay({
           {/* Projects Grid */}
           <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {(CurrentCategory.works && CurrentCategory.works.length > 0 ) ?  CurrentCategory.works.map((category) => {
+              console.log(category)
                 return <div
-                key={category.key}
+                key={category.id}
                 className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:border-purple-300"
               >
                 {/* Project Thumbnail */}
                 <div className="relative overflow-hidden">
                   <div className="aspect-[5/3] bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <Eye className="w-8 h-8 text-purple-500" />
-                      </div>
-                      <p className="text-gray-600 text-sm">Project Preview</p>
+                    <div className="image relative w-full h-[auto]">
+                      {/* <Image fill src={`https://drive.google.com/uc?export=view&id=${category.id}`} alt="Image" /> */}
                     </div>
                   </div>
                   
@@ -117,14 +116,6 @@ export default function PortfolioDisplay({
                     <span className="bg-purple-500 text-white px-2 py-1 rounded text-xs font-medium">
                       {category.category}
                     </span>
-                  </div>
-
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <button className="bg-white text-purple-500 px-6 py-3 rounded-lg font-medium hover:bg-purple-50 transition-colors duration-200 flex items-center gap-2">
-                      <ExternalLink size={20} />
-                      View Project
-                    </button>
                   </div>
                 </div>
 
