@@ -1,20 +1,21 @@
 "use client";
 import Pricing from "./_components/Pricing";
-import UnicornEmbed from "./_components/Unicorn_3D";
 import Expertise from "./_components/Expertise";
-import Link from "next/link";
 import FAQSection from "./_components/FAQ";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import Footer from "./_components/Footer";
-import WhyChooseUs from "./_components/WhyChooseUs";
 import Contact from "./_components/Contact";
+import ICON3D from "./_components/3d/3D_Icon";
 export default function Home() {
 
   return (
     <ReactLenis root>
       <main className="relative font-sans overflow-x-hidden">
         {/* Hero */}
-        <section className="relative z-20 bg-white text-[#0d1117] py-32 px-6 md:px-20">
+        <section className="relative h-screen z-20 bg-white text-[#0d1117] py-32 px-6 md:px-20">
+          <div className="3d w-full h-full absolute right-0 top-0">
+            <ICON3D />
+          </div>
           <div className="max-w-6xl mx-auto">
             <div className="relative z-30 w-full  sm:w-[60%]">
               <h1 className="text-3xl pop  sm:text-5xl lg:text-6xl font-semibold mb-4">

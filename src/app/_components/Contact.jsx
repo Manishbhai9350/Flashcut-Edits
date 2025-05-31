@@ -9,10 +9,33 @@ export default function Contact() {
     message: ''
   });
 
-  const handleSubmit = (e) => {
+  const [status, setStatus] = useState(null); // null | 'success' | 'error' | 'loading'
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    setStatus('loading');
+
+    try {
+      const res = await fetch("https://formspree.io/f/mvgrpvlp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await res.json();
+
+      if (data?.ok || res.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' }); // reset form
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
   };
 
   const handleChange = (e) => {
@@ -99,8 +122,7 @@ export default function Contact() {
                 WhatsApp Us
               </a>
               <a
-                                  href="https://calendly.com/jaitanishq222/video-editing-consultation"
-
+                href="https://calendly.com/jaitanishq222/video-editing-consultation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 px-6 py-3 text-black border border-black/30 hover:border-green-500 hover:bg-green-500 hover:text-white rounded-lg transition-colors duration-200 font-medium"
@@ -117,7 +139,7 @@ export default function Contact() {
               Send us a Message
             </h3>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6" noValidate>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Full Name
@@ -166,9 +188,21 @@ export default function Contact() {
                 />
               </div>
 
+              {/* Submission status messages */}
+              {status === 'loading' && (
+                <p className="text-blue-600 text-center font-medium">Sending message...</p>
+              )}
+              {status === 'success' && (
+                <p className="text-green-600 text-center font-medium">Message sent successfully! We'll get back to you soon.</p>
+              )}
+              {status === 'error' && (
+                <p className="text-red-600 text-center font-medium">Oops! Something went wrong. Please try again.</p>
+              )}
+
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[#0d1117] text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium"
+                disabled={status === 'loading'}
+                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[#0d1117] text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium disabled:opacity-50"
               >
                 <Send size={20} />
                 Send Message
