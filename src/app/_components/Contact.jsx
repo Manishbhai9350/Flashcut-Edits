@@ -1,5 +1,5 @@
 'use client'
-import { Mail, Phone, MessageCircle, Send } from "lucide-react";
+import { Mail, Phone, MessageCircle, Send, Instagram } from "lucide-react";
 import { useState } from "react";
 
 export default function Contact() {
@@ -79,23 +79,23 @@ export default function Contact() {
 
             {/* Contact Methods */}
             <div className="space-y-6">
-              <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 transition-colors duration-300">
-                <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-blue-500" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-[#0d1117]">Phone</h4>
-                  <p className="text-gray-600">+91 9867009961</p>
-                </div>
-              </div>
-
+              
               <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 transition-colors duration-300">
                 <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center">
                   <MessageCircle className="w-6 h-6 text-green-500" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-[#0d1117]">WhatsApp</h4>
-                  <p className="text-gray-600">Quick response guaranteed</p>
+                  <p className="text-gray-600">+91 9867009961</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 transition-colors duration-300">
+                <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                  <Instagram className="w-6 h-6 text-purple-500" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-[#0d1117]">Instagram</h4>
+                  <p className="text-gray-600">@flashcut.tanishq</p>
                 </div>
               </div>
 
