@@ -110,13 +110,6 @@ const Scene = () => {
       {/* The 3D Model placeholder */}
       <RotatingModel />
 
-      {/* Optional: OrbitControls for manual user rotation */}
-      <OrbitControls
-        enablePan={false}
-        enableZoom={true}
-        maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 4}
-      />
     </>
   );
 };
