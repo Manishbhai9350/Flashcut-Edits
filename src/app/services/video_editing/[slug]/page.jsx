@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import {videoPortfolio,Slugs} from '../data/portfolioData'
@@ -13,7 +13,7 @@ export default  function VideoEditingSlugPage({ params }) {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const {slug} =  params;
+  const {slug} =  use(params);
 
   useEffect(() => {
     const CurrentSlug = Slugs.find(sl => sl.slug == slug)
@@ -91,7 +91,6 @@ export default  function VideoEditingSlugPage({ params }) {
       {/* Portfolio Display Component */}
       <PortfolioDisplay
         portfolioData={PortfolioData}
-        initialTab={'short-form'}
         slug={slug}
         metadata={metadata}
       />

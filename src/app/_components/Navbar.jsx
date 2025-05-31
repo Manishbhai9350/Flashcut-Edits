@@ -40,14 +40,13 @@ export default function Navbar() {
       icon: <Palette className="w-4 h-4" />,
       href: "/services#graphic-design",
       submenu: [
-        { title: "Documentary", href: "/services/graphic_designing/documentary" },
-        { title: "Educational", href: "/services/graphic_designing/educational" },
-        { title: "Fitness", href: "/services/graphic_designing/fitness" },
-        { title: "Gaming", href: "/services/graphic_designing/gaming" },
-        { title: "Podcasts", href: "/services/graphic_designing/podcasts" },
-        { title: "Tech", href: "/services/graphic_designing/tech" },
-        { title: "Trading", href: "/services/graphic_designing/trading" },
-        { title: "Vlog / Lifestyle", href: "/services/graphic_designing/vlog_lifestyle" },
+        { title: "Catalogs", href: "/services/graphic_designing/catalogs" },
+        { title: "Banners", href: "/services/graphic_designing/banners" },
+        { title: "Cover Image", href: "/services/graphic_designing/cover" },
+        { title: "Flyers & Brochures", href: "/services/graphic_designing/flyers_brochures" },
+        { title: "Logo Designing", href: "/services/graphic_designing/logo_designing" },
+        { title: "Poster Creatives", href: "/services/graphic_designing/poster_creatives" },
+        { title: "Thumbnails", href: "/services/graphic_designing/thumbnails" },
       ]
     }
   };

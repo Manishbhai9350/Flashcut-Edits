@@ -1,13 +1,7 @@
 import {
   Play,
   Camera,
-  Sparkles,
-  Scissors,
-  Palette,
-  Star,
-  Layout,
-  FileImage,
-  Music
+  Sparkles
 } from 'lucide-react';
 
 // Services data structure matching portfolio categories
@@ -171,36 +165,3 @@ export const graphicDesign = {
       },
     }
   }
-
-// Helper function to get all video editing categories
-export const getVideoEditingCategories = () => {
-  const categories = new Set();
-
-  Object.values(servicesData.videoEditing.subcategories).forEach(subcategory => {
-    subcategory.services.forEach(service => {
-      if (service.categories) {
-        service.categories.forEach(cat => categories.add(cat));
-      }
-    });
-  });
-
-  return Array.from(categories).sort();
-};
-
-// Helper function to get services by category
-export const getServicesByCategory = (category) => {
-  const matchingServices = [];
-
-  Object.values(servicesData.videoEditing.subcategories).forEach(subcategory => {
-    subcategory.services.forEach(service => {
-      if (service.categories && service.categories.includes(category)) {
-        matchingServices.push({
-          ...service,
-          subcategory: subcategory.title
-        });
-      }
-    });
-  });
-
-  return matchingServices;
-};
