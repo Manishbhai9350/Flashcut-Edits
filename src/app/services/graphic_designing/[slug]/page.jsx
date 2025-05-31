@@ -87,7 +87,7 @@ export default function GraphicDesigningSlugPage({ params }) {
   }
 
   return (
-    <div className="min-h-screen bg-white mt-12">
+    <div className="min-h-screen bg-white mt-12 overflow-x-hidden">
       {/* Header */}
       <section className="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-16 px-6 md:px-20">
         <div className="max-w-6xl mx-auto">
