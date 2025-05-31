@@ -20,7 +20,7 @@ export  const graphicDesign = {
             category: "documentary",
             works:[
               {
-                name:'documentary thumbnail',
+                name:'Documentary Banner',
                 category:'documentary',
                 key:1,
                 description:'Channel Banner Design',
@@ -39,10 +39,10 @@ export  const graphicDesign = {
             category: "fitness",
             works:[
               {
-                name:'documentary thumbnail',
-                category:'documentary',
+                name:'Fitness Banner',
+                category:'fitness',
                 key:1,
-                description:'Channel Banner Design',
+                description:'Fitness Channel Banner Design',
                 id:'1y3IxDx4HVFsxVVWZyfxn0ITMStGcXg46',
                 image:'https://drive.google.com/file/d/1y3IxDx4HVFsxVVWZyfxn0ITMStGcXg46/view?usp=drive_link'
               }
