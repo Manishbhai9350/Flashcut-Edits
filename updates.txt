@@ -1,4 +1,5 @@
-Update the portfolioData function to match the current data using ai
+Add the thumbnails data
+Show the thumbnails data 
 Implement the google drive video showing system and also add thumbnails
 
   "Documentary":{
