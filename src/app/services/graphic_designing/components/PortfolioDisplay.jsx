@@ -39,7 +39,7 @@ export default function PortfolioDisplay({
       {portfolioData.categories?.length > 0 &&  (
         <section className="bg-white border-b border-gray-200 sticky top-0 z-10">
           <div className="max-w-6xl mx-auto px-6 md:px-20">
-            <div className="flex space-x-8">
+            <div className="flex space-x-8 w-screen overflow-x-scroll">
               {portfolioData.categories.map((item) => {
                 return <button
                   key={item.category}
