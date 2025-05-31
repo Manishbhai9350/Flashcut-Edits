@@ -1,67 +1,34 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
-import { 
-  getSlugConfig, 
-  getFilteredPortfolioData, 
-  getSlugMetadata, 
-  isValidSlug, 
-  getSlugSuggestions 
-} from '../utils/dataFetcher';
+import { graphicDesign } from '../data/portfolioData';
 import PortfolioDisplay from '../components/PortfolioDisplay';
 
 export default function GraphicDesigningSlugPage({ params }) {
   const [portfolioData, setPortfolioData] = useState({});
-  const [slugConfig, setSlugConfig] = useState({});
-  const [metadata, setMetadata] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const {slug} = use(params)
+
   useEffect(() => {
-    console.log("🎨 Graphic designing slug page loaded!");
-    console.log("📂 Current slug:", params.slug);
-    
-    try {
-      // Validate slug
-      if (!isValidSlug(params.slug)) {
-        const suggestions = getSlugSuggestions(params.slug);
-        setError({
-          type: 'invalid_slug',
-          message: `Invalid slug "${params.slug}"`,
-          suggestions
-        });
-        setIsLoading(false);
-        return;
-      }
-
-      // Fetch data based on slug
-      const config = getSlugConfig(params.slug);
-      const filteredData = getFilteredPortfolioData(params.slug);
-      const meta = getSlugMetadata(params.slug);
-
-      setSlugConfig(config);
-      setPortfolioData(filteredData);
-      setMetadata(meta);
-      setIsLoading(false);
-
-      console.log("✅ Data loaded successfully:", {
-        config,
-        projectCount: meta.totalProjects,
-        categories: meta.categories
-      });
-
-    } catch (err) {
-      console.error("❌ Error loading data:", err);
+    const SlugData = graphicDesign.slugs[slug]
+    setIsLoading(false)
+    if(!SlugData) {
       setError({
-        type: 'data_error',
-        message: 'Failed to load portfolio data',
-        details: err.message
-      });
-      setIsLoading(false);
+        message:'Invalid Category',
+        suggestions:Object.keys(graphicDesign.slugs)
+      })
+    } else {
+      setPortfolioData(SlugData)
     }
-  }, [params.slug]);
+    return () => {
+      
+    }
+  }, [])
+  
 
   // Loading state
   if (isLoading) {
@@ -118,7 +85,7 @@ export default function GraphicDesigningSlugPage({ params }) {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white mt-12">
       {/* Header */}
       <section className="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-16 px-6 md:px-20">
         <div className="max-w-6xl mx-auto">
@@ -131,10 +98,10 @@ export default function GraphicDesigningSlugPage({ params }) {
           </Link>
           
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            {slugConfig.title}
+            {portfolioData.title}
           </h1>
           <p className="text-xl text-white/90 max-w-3xl">
-            {slugConfig.description}
+            {portfolioData.description}
           </p>
         </div>
       </section>
@@ -142,9 +109,6 @@ export default function GraphicDesigningSlugPage({ params }) {
       {/* Portfolio Display Component */}
       <PortfolioDisplay 
         portfolioData={portfolioData}
-        slugConfig={slugConfig}
-        metadata={metadata}
-        initialTab={slugConfig.defaultTab}
       />
 
       {/* CTA Section */}

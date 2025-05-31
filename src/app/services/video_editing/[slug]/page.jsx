@@ -3,65 +3,31 @@
 import { useEffect, useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
-import {
-  getSlugConfig,
-  getFilteredPortfolioData,
-  getSlugMetadata,
-  isValidSlug,
-  getSlugSuggestions
-} from '../utils/dataFetcher';
-import PortfolioDisplay from '../components/PortfolioDisplay';
+import {videoPortfolio,Slugs} from '../data/portfolioData'
+import PortfolioDisplay from '../components/PortfolioDisplay'
 
-export default function VideoEditingSlugPage({ params }) {
-  const [portfolioData, setPortfolioData] = useState({});
+export default  function VideoEditingSlugPage({ params }) {
+  const [PortfolioData , setPortfolioData ] = useState()
   const [slugConfig, setSlugConfig] = useState({});
   const [metadata, setMetadata] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const {slug} =  params;
+
   useEffect(() => {
-    console.log("🎬 Video editing slug page loaded!");
-    console.log("📂 Current slug:", params.slug);
-
-    try {
-      // Validate slug
-      if (!isValidSlug(params.slug)) {
-        const suggestions = getSlugSuggestions(params.slug);
-        setError({
-          type: 'invalid_slug',
-          message: `Invalid slug "${params.slug}"`,
-          suggestions
-        });
-        setIsLoading(false);
-        return;
-      }
-
-      // Fetch data based on slug
-      const config = getSlugConfig(params.slug);
-      const filteredData = getFilteredPortfolioData(params.slug);
-      const meta = getSlugMetadata(params.slug);
-
-      setSlugConfig(config);
-      setPortfolioData(filteredData);
-      setMetadata(meta);
-      setIsLoading(false);
-
-      console.log("✅ Data loaded successfully:", {
-        config,
-        videoCount: meta.totalVideos,
-        categories: meta.categories
-      });
-
-    } catch (err) {
-      console.error("❌ Error loading data:", err);
+    const CurrentSlug = Slugs.find(sl => sl.slug == slug)
+    if(!CurrentSlug) {
       setError({
-        type: 'data_error',
-        message: 'Failed to load portfolio data',
-        details: err.message
-      });
-      setIsLoading(false);
+        message:'Invalid Slug'
+      })
+    } else {
+      setPortfolioData(videoPortfolio)
+      setMetadata(CurrentSlug)
     }
-  }, [params.slug]);
+    setIsLoading(false)
+  }, [])
+  
 
   // Loading state
   if (isLoading) {
@@ -87,23 +53,6 @@ export default function VideoEditingSlugPage({ params }) {
             {error.type === 'invalid_slug' ? 'Page Not Found' : 'Error Loading Content'}
           </h2>
           <p className="text-gray-600 mb-6">{error.message}</p>
-
-          {error.suggestions && (
-            <div className="mb-6">
-              <p className="text-sm text-gray-500 mb-3">Did you mean:</p>
-              <div className="flex flex-wrap gap-2 justify-center">
-                {error.suggestions.map((suggestion) => (
-                  <Link
-                    key={suggestion}
-                    href={`/services/video_editing/${suggestion}`}
-                    className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm hover:bg-blue-200 transition-colors"
-                  >
-                    {suggestion}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
 
           <Link
             href="/services"
@@ -131,20 +80,20 @@ export default function VideoEditingSlugPage({ params }) {
           </Link>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            {slugConfig.title}
+            {metadata?.title}
           </h1>
           <p className="text-xl text-white/90 max-w-3xl">
-            {slugConfig.description}
+            {metadata?.description}
           </p>
         </div>
       </section>
 
       {/* Portfolio Display Component */}
       <PortfolioDisplay
-        portfolioData={portfolioData}
-        slugConfig={slugConfig}
+        portfolioData={PortfolioData}
+        initialTab={'short-form'}
+        slug={slug}
         metadata={metadata}
-        initialTab={slugConfig.defaultTab}
       />
 
       {/* CTA Section */}

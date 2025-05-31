@@ -1,0 +1,46 @@
+{expandedCategory === 'graphic_designing' && (
+                  <div className="border-t border-gray-100 bg-gray-50">
+                    {Object.entries(graphicDesign.subcategories).map(([subKey, subcategory]) => (
+                      <div key={subKey} className="border-b border-gray-100 last:border-b-0">
+                        {/* Subcategory Header */}
+                        <button
+                          onClick={() => toggleSubcategory(subKey)}
+                          className="w-full p-4 pl-16 flex items-center justify-between hover:bg-white transition-colors duration-200"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className="p-2 rounded-lg bg-white shadow-sm">
+                              {subcategory.icon}
+                            </div>
+                            <h4 className="text-lg font-semibold text-[#0d1117]">{subcategory.title}</h4>
+                          </div>
+                          <div className="transition-transform duration-200">
+                            {expandedSubcategory === subKey ? (
+                              <ChevronDown className="w-5 h-5 text-gray-400" />
+                            ) : (
+                              <ChevronRight className="w-5 h-5 text-gray-400" />
+                            )}
+                          </div>
+                        </button>
+
+                        {/* Services List */}
+                        {expandedSubcategory === subKey && (
+                          <div className="pl-24 pr-6 pb-4">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                              {subcategory.categories.map((category, index) => (
+                                <div key={index} className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                                  <div className="flex justify-between items-start mb-2">
+                                    <h5 className="font-semibold text-[#0d1117]">{category.name}</h5>
+                                  </div>
+                                  <Link href={subcategory.href} className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors duration-200 text-sm font-medium">
+                                    View
+                                    <ArrowRight className="w-4 h-4" />
+                                  </Link>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )} 

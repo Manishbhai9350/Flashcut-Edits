@@ -2,42 +2,27 @@
 
 import { useState, useEffect } from 'react';
 import { Eye, Calendar, User, Filter, ExternalLink } from 'lucide-react';
-import { getCategories, filterProjectsByCategory } from '../data/portfolioData';
 
 export default function PortfolioDisplay({ 
-  portfolioData, 
-  slugConfig, 
-  metadata,
-  initialTab = 'brand-identity' 
+  portfolioData,
 }) {
-  const [activeTab, setActiveTab] = useState(initialTab);
+  const [activeTab, setActiveTab] = useState(portfolioData.categories[0].category);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [filteredProjects, setFilteredProjects] = useState([]);
+  const [Categories, setCategories] = useState(portfolioData.categories)
+  const [CurrentCategory, setCurrentCategory] = useState(portfolioData.categories.find(e => e.category == portfolioData.categories[0].category))
 
   useEffect(() => {
-    console.log("🎨 Graphic design portfolio display loaded!");
-    console.log("📊 Metadata:", metadata);
-    
-    // Set initial filtered projects
-    const currentProjects = portfolioData[activeTab]?.projects || [];
-    setFilteredProjects(currentProjects);
+    console.log(portfolioData , ' Data')
+    console.log(activeTab , ' Active')
+    console.log(Categories , ' Cats')
+    console.log(CurrentCategory , 'Current Cat')
   }, [portfolioData, activeTab]);
 
-  // Filter projects by category using helper function
-  const filterByCategory = (category) => {
-    setSelectedCategory(category);
-    const currentProjects = portfolioData[activeTab]?.projects || [];
-    const filtered = filterProjectsByCategory(currentProjects, category);
-    setFilteredProjects(filtered);
-  };
 
-  const currentSection = portfolioData[activeTab];
-  const categories = getCategories(currentSection?.projects || []);
-  const availableTabs = Object.keys(portfolioData);
-
-  if (!currentSection) {
+  if (false) {
     return (
-      <div className="text-center py-12">
+      <div className="text-center mt-12">
         <h3 className="text-xl font-semibold text-gray-700 mb-2">No content available</h3>
         <p className="text-gray-500">No projects found for this section.</p>
       </div>
@@ -47,33 +32,41 @@ export default function PortfolioDisplay({
   return (
     <>
       {/* Tab Navigation - Only show if multiple tabs available */}
-      {slugConfig.showAllSections && availableTabs.length > 1 && (
+      {Categories?.length > 0 &&  (
         <section className="bg-white border-b border-gray-200 sticky top-0 z-10">
           <div className="max-w-6xl mx-auto px-6 md:px-20">
             <div className="flex space-x-8">
-              {availableTabs.map((tab) => (
-                <button
-                  key={tab}
+              {Categories.map((item) => {
+                console.log(item)
+                return <button
+                  key={item.category}
                   onClick={() => {
-                    setActiveTab(tab);
-                    setSelectedCategory('All');
+                    setActiveTab(item.category);
                   }}
                   className={`py-4 px-2 border-b-2 font-medium text-sm transition-colors ${
-                    activeTab === tab
+                    activeTab === item.category
                       ? 'border-purple-500 text-purple-600'
                       : 'border-transparent text-gray-500 hover:text-gray-700'
                   }`}
                 >
-                  {portfolioData[tab].title}
+                  {item.name}
                 </button>
-              ))}
+})}
             </div>
           </div>
         </section>
       )}
 
       {/* Content Section */}
-      <section className="py-16 px-6 md:px-20">
+      
+    </>
+  );
+}
+
+
+function Content(){
+  return (
+    <section className="py-16 px-6 md:px-20">
         <div className="max-w-6xl mx-auto">
           {/* Section Description */}
           <div className="text-center mb-12">
@@ -196,6 +189,5 @@ export default function PortfolioDisplay({
           )}
         </div>
       </section>
-    </>
-  );
+  )
 }

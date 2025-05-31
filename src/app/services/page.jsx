@@ -5,10 +5,10 @@ import Link from 'next/link';
 import {
   ChevronDown,
   ChevronRight,
-  Play,
   ArrowRight,
 } from 'lucide-react';
-import { servicesData } from './data/servicesData';
+import { videoEditing,graphicDesign } from './data/servicesData';
+
 
 export default function ServicesPage() {
   const [expandedCategory, setExpandedCategory] = useState(null);
@@ -35,8 +35,7 @@ export default function ServicesPage() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Professional video editing across all formats - from viral short-form content to comprehensive
-            long-form productions, plus complete graphic design solutions to elevate your brand
+            Comprehensive video editing and graphic design solutions tailored to elevate your brand and captivate your audience
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -66,30 +65,29 @@ export default function ServicesPage() {
               </span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              From viral social media content to professional documentaries, we deliver
-              comprehensive video editing and design solutions that match your portfolio data
+              From concept to completion, we provide end-to-end creative solutions
             </p>
           </div>
 
           <div className="space-y-6">
-            {Object.entries(servicesData).map(([key, category]) => (
-              <div key={key} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            {/* // ->>>  */}
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
                 {/* Main Category Header */}
                 <button
-                  onClick={() => toggleCategory(key)}
+                  onClick={() => toggleCategory('video_editing')}
                   className="w-full p-6 flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
                 >
                   <div className="flex items-center gap-4">
-                    <div className={`p-3 rounded-lg bg-gradient-to-r ${category.gradient} text-white`}>
-                      {category.icon}
+                    <div className={`p-3 rounded-lg bg-gradient-to-r text-white`}>
+                      {/* Icon Here  */}
                     </div>
                     <div className="text-left">
-                      <h3 className="text-xl font-bold text-[#0d1117]">{category.title}</h3>
-                      <p className="text-gray-600">{category.description}</p>
+                      <h3 className="text-xl font-bold text-[#0d1117]">{videoEditing.title}</h3>
+                      <p className="text-gray-600">{videoEditing.description}</p>
                     </div>
                   </div>
                   <div className="transition-transform duration-200">
-                    {expandedCategory === key ? (
+                    {expandedCategory === 'video_editing' ? (
                       <ChevronDown className="w-6 h-6 text-gray-400" />
                     ) : (
                       <ChevronRight className="w-6 h-6 text-gray-400" />
@@ -98,9 +96,9 @@ export default function ServicesPage() {
                 </button>
 
                 {/* Subcategories */}
-                {expandedCategory === key && (
+                {expandedCategory === 'video_editing' && (
                   <div className="border-t border-gray-100 bg-gray-50">
-                    {Object.entries(category.subcategories).map(([subKey, subcategory]) => (
+                    {Object.entries(videoEditing.subcategories).map(([subKey, subcategory]) => (
                       <div key={subKey} className="border-b border-gray-100 last:border-b-0">
                         {/* Subcategory Header */}
                         <button
@@ -126,25 +124,17 @@ export default function ServicesPage() {
                         {expandedSubcategory === subKey && (
                           <div className="pl-24 pr-6 pb-4">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                              {subcategory.services.map((service, index) => {
-                                console.log(service)
-                                return (
-                                <div key={index} className="bg-white flex justify-between p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                              {subcategory.services.map((service, index) => (
+                                <div key={index} className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
                                   <div className="flex justify-between items-start mb-2">
                                     <h5 className="font-semibold text-[#0d1117]">{service.name}</h5>
                                   </div>
-                                  <p className="text-gray-600 text-sm mb-3">{service.description}</p>
-                                  <div className="flex gap-2">
-                                      <Link
-                                        href={service.href}
-                                        className="flex items-center gap-2 text-purple-600 hover:text-purple-700 transition-colors duration-200 text-sm font-medium"
-                                      >
-                                        View 
-                                      </Link>
-                                  </div>
+                                  <Link href={service.href} className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors duration-200 text-sm font-medium">
+                                    View
+                                    <ArrowRight className="w-4 h-4" />
+                                  </Link>
                                 </div>
-                                )
-})}
+                              ))}
                             </div>
                           </div>
                         )}
@@ -153,7 +143,66 @@ export default function ServicesPage() {
                   </div>
                 )}
               </div>
-            ))}
+          </div>
+          <div className="mt-6">
+            {/* // ->>>  */}
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                {/* Main Category Header */}
+                <button
+                  onClick={() => toggleCategory('graphic_designing')}
+                  className="w-full p-6 flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className={`p-3 rounded-lg bg-gradient-to-r text-white`}>
+                      {/* Icon Here  */}
+                    </div>
+                    <div className="text-left">
+                      <h3 className="text-xl font-bold text-[#0d1117]">{graphicDesign.title}</h3>
+                      <p className="text-gray-600">{graphicDesign.description}</p>
+                    </div>
+                  </div>
+                  <div className="transition-transform duration-200">
+                    {expandedCategory === 'graphic_designing' ? (
+                      <ChevronDown className="w-6 h-6 text-gray-400" />
+                    ) : (
+                      <ChevronRight className="w-6 h-6 text-gray-400" />
+                    )}
+                  </div>
+                </button>
+
+                {/* Subcategories */}
+               {expandedCategory === 'graphic_designing' && (
+                  <div className="border-t border-gray-100 bg-gray-50">
+                    {Object.entries(graphicDesign.subcategories).map(([subKey, subcategory]) => {
+                      return <div key={subKey} className="border-b border-gray-100 last:border-b-0">
+                        {/* Subcategory Header */}
+                        <button
+                          onClick={() => toggleSubcategory(subKey)}
+                          className="w-full p-4 pl-16 flex items-center justify-between hover:bg-white transition-colors duration-200"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className="p-2 rounded-lg bg-white shadow-sm">
+                              {subcategory.icon}
+                            </div>
+                            <h4 className="text-lg font-semibold text-[#0d1117]">{subcategory.title}</h4>
+                          </div>
+                          <div className="transition-transform text-blue-500">
+                            {/* {expandedSubcategory === subKey ? (
+                              <ChevronDown className="w-5 h-5 text-gray-400" />
+                            ) : (
+                              <ChevronRight className="w-5 h-5 text-gray-400" />
+                            )} */}
+                            <Link href={subcategory.href}>View</Link>
+                          </div>
+                        </button>
+
+                        
+                      </div>
+})}
+                  </div>
+                )} 
+                
+              </div>
           </div>
         </div>
       </section>

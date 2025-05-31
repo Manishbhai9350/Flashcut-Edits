@@ -1,0 +1,107 @@
+Update the portfolioData function to match the current data using ai
+Implement the google drive video showing system and also add thumbnails
+
+  "Documentary":{
+    name: "Documentary",
+    href: "/services/graphic_designing/documentary",
+    subcategories: [
+      "Catalogs",
+      "Channel banners",
+      "cover images ",
+      "Flyers & Brochures",
+      "Logo designing ",
+      "Posters & creatives",
+      {name:"Thumbnails",href:""/services/graphic_designing/documentary?filter=Documentary"}
+    ]
+  },
+  "Educational":{
+    name: "Educational",
+    href: "/services/graphic_designing/educational",
+    subcategories: [
+      "Catalogs",
+      "Channel banners",
+      "cover images ",
+      "Flyers & Brochures",
+      "Logo designing ",
+      "Posters & creatives",
+      {name:"Thumbnails",href:""/services/graphic_designing/educational?filter=Educational"}
+    ]
+  },
+  "Fitness":{
+    name: "Fitness",
+    href: "/services/graphic_designing/fitness",
+    subcategories: [
+      "Catalogs",
+      "Channel banners",
+      "cover images ",
+      "Flyers & Brochures",
+      "Logo designing ",
+      "Posters & creatives",
+      {name:"Thumbnails",href:""/services/graphic_designing/fitness?filter=Fitness"}
+    ]
+  },
+  "Gaming":{
+    name: "Gaming",
+    href: "/services/graphic_designing/gaming",
+    subcategories: [
+      "Catalogs",
+      "Channel banners",
+      "cover images ",
+      "Flyers & Brochures",
+      "Logo designing ",
+      "Posters & creatives",
+      {name:"Thumbnails",href:""/services/graphic_designing/gaming?filter=Gaming"}
+    ]
+  },
+  "Podcasts":{
+    name: "Podcasts",
+    href: "/services/graphic_designing/podcasts",
+    subcategories: [
+      "Catalogs",
+      "Channel banners",
+      "cover images ",
+      "Flyers & Brochures",
+      "Logo designing ",
+      "Posters & creatives",
+      {name:"Thumbnails",href:""/services/graphic_designing/podcasts?filter=Podcasts"}
+    ]
+  },
+  "Tech":{
+    name: "Tech",
+    href: "/services/graphic_designing/tech",
+    subcategories: [
+      "Catalogs",
+      "Channel banners",
+      "cover images ",
+      "Flyers & Brochures",
+      "Logo designing ",
+      "Posters & creatives",
+      {name:"Thumbnails",href:""/services/graphic_designing/tech?filter=Tech"}
+    ]
+  },
+  "Trading":{
+    name: "Trading",
+    href: "/services/graphic_designing/trading",
+    subcategories: [
+      "Catalogs",
+      "Channel banners",
+      "cover images ",
+      "Flyers & Brochures",
+      "Logo designing ",
+      "Posters & creatives",
+      {name:"Thumbnails",href:""/services/graphic_designing/trading?filter=Trading"}
+    ]
+  },
+  "Vlog":{
+    name: "Vlog / Lifestyle",
+    href: "/services/graphic_designing/vlog_lifestyle",
+    subcategories: [
+      "Catalogs",
+      "Channel banners",
+      "cover images ",
+      "Flyers & Brochures",
+      "Logo designing ",
+      "Posters & creatives",
+      {name:"Thumbnails",href:""/services/graphic_designing/vlog_lifestyle?filter=Vlog"}
+    ]
+  }

@@ -7,8 +7,6 @@ export default function ViewTransition({ children }) {
   const pathname = usePathname();
 
   useEffect(() => {
-    console.log("🔄 ViewTransition component mounted");
-    console.log("📍 Current pathname:", pathname);
     // Add view transition support for navigation
     const handleLinkClick = (e) => {
       const link = e.target.closest('a');
