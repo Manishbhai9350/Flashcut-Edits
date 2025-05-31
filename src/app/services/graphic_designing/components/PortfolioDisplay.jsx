@@ -107,7 +107,7 @@ export default function PortfolioDisplay({
                 <div className="relative overflow-hidden">
                   <div className="aspect-[5/3] bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
                     <div className="image relative w-full h-[auto]">
-                      {/* <Image fill src={`https://drive.google.com/uc?export=view&id=${category.id}`} alt="Image" /> */}
+                      <Image fill src={`https://drive.google.com/uc?export=view&id=${category.id}`} alt="Image" />
                     </div>
                   </div>
                   
