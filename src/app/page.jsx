@@ -6,15 +6,16 @@ import { ReactLenis } from "lenis/dist/lenis-react";
 import Footer from "./_components/Footer";
 import Contact from "./_components/Contact";
 import ICON3D from "./_components/3d/3D_Icon";
+import Link from "next/link";
 export default function Home() {
 
   return (
     <ReactLenis root>
       <main className="relative font-sans overflow-x-hidden">
         {/* Hero */}
-        <section className="relative h-screen z-20 bg-white text-[#0d1117] py-32 px-6 md:px-20">
+        <section className="relative h-screen z-20 bg-white text-[#0d1117] pt-32 px-6 md:px-20">
           <div className="3d w-full h-full absolute right-0 top-0">
-            {/* <ICON3D /> */}
+            <ICON3D />
           </div>
           <div className="max-w-6xl mx-auto">
             <div className="relative z-30 w-full  sm:w-[60%]">
@@ -37,12 +38,12 @@ export default function Home() {
                 visual content.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-3 text-white rounded-lg hover:border-blue-500 hover:bg-gray-50 transition-all duration-300 cursor-pointer font-medium bg-gradient-to-r from-blue-500 to-pink-500 text-xl hover:opacity-80">
+                <Link href="https://calendly.com/jaitanishq222/video-editing-consultation" target='_blank' className="px-8 py-3 text-white rounded-lg hover:border-blue-500 hover:bg-gray-50 transition-all duration-300 cursor-pointer font-medium bg-gradient-to-r from-blue-500 to-pink-500 text-xl hover:opacity-80">
                   Get Started
-                </button>
-                <button className="px-8 py-3 text-white rounded-lg hover:border-blue-500 hover:bg-gray-50 transition-all duration-300 cursor-pointer font-medium bg-gradient-to-r from-blue-500 to-pink-500 text-xl hover:opacity-80">
+                </Link>
+                <Link href='/services' className="px-8 py-3 text-white rounded-lg hover:border-blue-500 hover:bg-gray-50 transition-all duration-300 cursor-pointer font-medium bg-gradient-to-r from-blue-500 to-pink-500 text-xl hover:opacity-80">
                   View Portfolio
-                </button>
+                </Link>
               </div>
             </div>
             {/* <img src="/hero-image.png" alt="Studio Setup" className="rounded-xl shadow-md" /> */}
@@ -53,7 +54,7 @@ export default function Home() {
         </section>
 
         {/* About */}
-        <section className="text-[#0d1117] bg-white py-16 px-6 md:px-20 text-center md:text-left">
+        <section className="text-[#0d1117] bg-white pb-16 px-6 md:px-20 text-center md:text-left">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-sm font-semibold mb-2 opacity-70 pop">OUR STORY</h2>
             <h3 className="text-3xl md:text-6xl mb-6 pop font-medium">

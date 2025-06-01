@@ -1,6 +1,5 @@
-Add the thumbnails data
-Show the thumbnails data 
-Implement the google drive video showing system and also add thumbnails
+Reduce The Thumbnail Image Size only those whose size is bigger than 1 mb 
+
 
   "Documentary":{
     name: "Documentary",

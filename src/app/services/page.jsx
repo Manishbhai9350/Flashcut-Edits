@@ -44,12 +44,6 @@ export default function ServicesPage() {
             >
               Explore Services
             </Link>
-            <Link
-              href="/contact"
-              className="px-8 py-3 bg-white border-2 border-gray-300 text-[#0d1117] rounded-lg hover:border-blue-500 hover:bg-gray-50 transition-all duration-300 font-medium text-center"
-            >
-              Get Quote
-            </Link>
           </div>
         </div>
       </section>

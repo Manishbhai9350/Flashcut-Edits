@@ -146,7 +146,7 @@ export default function Navbar() {
               Book a Call
             </Link>
             <Link
-              href="https://wa.me/1234567890"
+              href="https://wa.me/919867009961"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-green-500 rounded-lg hover:bg-green-600 transition-colors duration-200"
@@ -269,7 +269,7 @@ export default function Navbar() {
                   Book a Call
                 </Link>
                 <Link
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/919867009961"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white bg-green-500 rounded-lg hover:bg-green-600 transition-colors duration-200"

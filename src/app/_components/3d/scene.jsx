@@ -4,8 +4,9 @@ import { OrbitControls, Html } from "@react-three/drei";
 import { useWindow } from "@/app/hooks/useWindow";
 import { useThree } from "@react-three/fiber";
 import { Icon } from "./Icon";
+import { Editing } from "./Editing";
 
-const RotatingModel = () => {
+const Model = () => {
   const meshRef = useRef();
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const rotationSpeed = 0.1;
@@ -64,19 +65,23 @@ const RotatingModel = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  useFrame((state,delta) => {
-    if (meshRef.current) {
-      // Smoothly update rotation to target mouse position
-      meshRef.current.rotation.y += 
-        (mousePos.x * rotationScaleFactor - meshRef.current.rotation.y) * rotationSpeed * delta * 20 ;
-      meshRef.current.rotation.x +=
-        (mousePos.y * rotationScaleFactor - meshRef.current.rotation.x) * rotationSpeed * delta * 20;
-    }
-  }, [mousePos]);
+  useFrame((_, delta) => {
+  if (meshRef.current) {
+    // Smooth rotation
+    meshRef.current.rotation.y += 
+      (mousePos.x * rotationScaleFactor - meshRef.current.rotation.y) * rotationSpeed * delta * 20;
+    meshRef.current.rotation.x +=
+      (mousePos.y * rotationScaleFactor - meshRef.current.rotation.x) * rotationSpeed * delta * 20;
+
+    // Smooth vertical (Y) position movement
+    const targetY = mousePos.y * -.3 ; // Adjust 0.5 to control movement range
+    meshRef.current.position.y += (targetY - meshRef.current.position.y) * rotationSpeed * delta * 20;
+  }
+});
 
   return (
     <group ref={meshRef}>
-      <Icon />
+      <Editing />
     </group>
   );
 };
@@ -84,33 +89,68 @@ const RotatingModel = () => {
 const Scene = () => {
   return (
     <>
-      {/* Key Light (Main light) */}
-      <directionalLight
-        position={[5, 5, 5]}
-        intensity={1.5}
-        castShadow
-        shadow-mapSize-width={1024}
-        shadow-mapSize-height={1024}
-        shadow-camera-far={50}
-        shadow-camera-left={-10}
-        shadow-camera-right={10}
-        shadow-camera-top={10}
-        shadow-camera-bottom={-10}
-      />
+  {/* Pink Side of Gradient Key Light (left) */}
+  <directionalLight
+    position={[-6, 5, 5]}
+    intensity={1.2}
+    color="#ff6ec4" // Pink
+    castShadow
+    shadow-mapSize-width={1024}
+    shadow-mapSize-height={1024}
+    shadow-camera-far={50}
+    shadow-camera-left={-10}
+    shadow-camera-right={10}
+    shadow-camera-top={10}
+    shadow-camera-bottom={-10}
+  />
 
-      {/* Fill Light (Soft light from opposite side to reduce shadows) */}
-      <directionalLight position={[-5, 2, 2]} intensity={0.6} color="#ffffff" />
+  {/* Blue Side of Gradient Key Light (left offset) */}
+  <directionalLight
+    position={[-4, 5, 5]}
+    intensity={1.2}
+    color="#7873f5" // Blue
+  />
 
-      {/* Back Light / Rim Light (Highlights edges, placed behind the model) */}
-      <directionalLight position={[0, 5, -5]} intensity={1} color="#ffffff" />
+  {/* Fill Light (right) */}
+  <directionalLight
+    position={[5, 2, 2]}
+    intensity={5}
+    color="#ffffff"
+  />
 
-      {/* Ambient Light (optional, subtle overall light) */}
-      <ambientLight intensity={0.15} />
+  {/* Back Light / Rim Light (from behind) */}
+  <directionalLight
+    position={[0, 5, -5]}
+    intensity={1.5}
+    color="#4f8fff"
+  />
 
-      {/* The 3D Model placeholder */}
-      <RotatingModel />
+  {/* Ambient Light (soft, subtle) */}
+  <ambientLight intensity={0.1} />
 
-    </>
+  {/* Pink Point Light (center) */}
+  <pointLight
+    position={[0, 2, 0]}
+    intensity={5}
+    color="#ff6ec4"
+    distance={10}
+    decay={2}
+  />
+
+  {/* Blue Point Light (center) */}
+  <pointLight
+    position={[0, 2, 0]}
+    intensity={5}
+    color="#7873f5"
+    distance={10}
+    decay={2}
+  />
+
+  {/* Your Model */}
+  <Model />
+</>
+
+
   );
 };
 

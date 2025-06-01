@@ -23,10 +23,15 @@ export default function Pricing() {
             ₹9,999 <span className="text-base font-medium">/video</span>
           </h4>
           <ul className="space-y-3 text-sm mb-6">
-            <li>✓ Up to 10 min video</li>
-            <li>✓ Basic color correction</li>
-            <li>✓ Sound mixing</li>
-            <li>✓ 48-hour turnaround</li>
+            <li>✓ 7 Short Form Videos</li>
+            <li>✓ 1 Long Form Video (avg 5 min)</li>
+            <li>✓ 7 Cover Images</li>
+            <li>✓ Personal Manager</li>
+            <li>✓ 24x7 Support</li>
+            <li>✓ 2 Revisions</li>
+            <li>✓ Good Editing</li>
+            <li>✓ SFX & Typography</li>
+            <li>✓ Color Correction</li>
             <li className="line-through text-gray-600">✗ No motion graphics</li>
           </ul>
           <a
@@ -53,10 +58,16 @@ export default function Pricing() {
           </h4>
           <ul className="space-y-3 text-sm mb-6">
             <li>✓ Up to 20 min video</li>
-            <li>✓ Advanced color grading</li>
-            <li>✓ Professional sound design</li>
-            <li>✓ 24-hour turnaround</li>
-            <li>✓ Basic motion graphics</li>
+             <li>✓ 15 Short Form Videos</li>
+             <li>✓ 3 Long Form Videos (avg 5 min) </li>
+             <li>✓ 15 Cover Images</li>
+             <li>✓ 3 YouTube Thumbnails</li>
+             <li>✓ Personal Manager</li>
+             <li>✓ 24x7 Support</li>
+             <li>✓ Unlimited Revisions</li>
+             <li>✓ Motion Graphics</li>
+             <li>✓ SFX & Typography</li>
+             <li>✓ Color Correction</li>
           </ul>
           <a
             href="https://calendly.com/jaitanishq222/video-editing-consultation"
@@ -78,11 +89,16 @@ export default function Pricing() {
             ₹89,999 <span className="text-base font-medium">/video</span>
           </h4>
           <ul className="space-y-3 text-sm mb-6">
-            <li>✓ Up to 60 min video</li>
-            <li>✓ Cinematic color grading</li>
-            <li>✓ Hollywood-level sound</li>
-            <li>✓ 12-hour rush option</li>
-            <li>✓ Advanced motion graphics</li>
+            <li>✓ 30 Short Form Videos</li>
+            <li>✓ 10 Long Form Videos (avg 5 min)</li>
+            <li>✓ 30 Thumbnails</li>
+            <li>✓ 10 Cover Images</li>
+            <li>✓ 2 Personal Managers</li>
+            <li>✓ 24x7 Support</li>
+            <li>✓ Unlimited Revisions</li>
+            <li>✓ Motion Graphics</li>
+            <li>✓ SFX & Typography</li>
+            <li>✓ Color Correction</li>
           </ul>
           <a
             href="https://calendly.com/jaitanishq222/video-editing-consultation"
@@ -97,7 +113,8 @@ export default function Pricing() {
 
         <p className="text-gray-800 text-sm mt-12">
           Need something custom? We offer bulk discounts and monthly retainers. <br/>
-          <a href="#" className="text-indigo-400 underline">
+          <a href="https://calendly.com/jaitanishq222/video-editing-consultation"
+                target="_blank" className="text-indigo-400 underline">
             Contact us for custom pricing →
           </a>
         </p>
