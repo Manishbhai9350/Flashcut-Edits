@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ExpertiseSection() {
   return (
     <section className="text-[#0d1117] bg-white py-16 px-6 md:px-20">
@@ -18,28 +20,7 @@ export default function ExpertiseSection() {
           <div className="relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
             {/* Background Image */}
             <div className="h-80 bg-gradient-to-br from-gray-800 to-gray-900 relative">
-              {/* Simulated video editing interface background */}
-              <div className="absolute inset-0 bg-black/20"></div>
-              <div className="absolute top-4 left-4 right-4">
-                <div className="bg-gray-700/80 rounded p-2 mb-2">
-                  <div className="flex gap-1 mb-2">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  </div>
-                  <div className="space-y-1">
-                    <div className="h-2 bg-blue-400 rounded w-3/4"></div>
-                    <div className="h-2 bg-green-400 rounded w-1/2"></div>
-                    <div className="h-2 bg-purple-400 rounded w-2/3"></div>
-                  </div>
-                </div>
-                <div className="grid grid-cols-4 gap-1">
-                  <div className="h-12 bg-gray-600/60 rounded"></div>
-                  <div className="h-12 bg-gray-600/60 rounded"></div>
-                  <div className="h-12 bg-gray-600/60 rounded"></div>
-                  <div className="h-12 bg-gray-600/60 rounded"></div>
-                </div>
-              </div>
+              <Image fill src='/video-editing.jpg' alt='Image' />
             </div>
 
             {/* Overlay Content */}
@@ -55,29 +36,7 @@ export default function ExpertiseSection() {
           <div className="relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
             {/* Background Image */}
             <div className="h-80 bg-gradient-to-br from-gray-800 to-gray-900 relative">
-              {/* Simulated graphic design interface background */}
-              <div className="absolute inset-0 bg-black/20"></div>
-              <div className="absolute top-4 left-4 right-4">
-                <div className="bg-gray-700/80 rounded p-2 mb-2">
-                  <div className="flex gap-1 mb-2">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  </div>
-                  <div className="flex gap-2">
-                    <div className="w-8 h-8 bg-blue-500 rounded"></div>
-                    <div className="w-8 h-8 bg-pink-500 rounded-full"></div>
-                    <div className="w-8 h-8 bg-yellow-500 rounded"></div>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="h-16 bg-gradient-to-r from-blue-500/60 to-pink-500/60 rounded"></div>
-                  <div className="flex gap-2">
-                    <div className="h-8 bg-purple-500/60 rounded flex-1"></div>
-                    <div className="h-8 bg-green-500/60 rounded flex-1"></div>
-                  </div>
-                </div>
-              </div>
+              <Image fill src='/graphic-design.jpg' alt='Image' />
             </div>
 
             {/* Overlay Content */}

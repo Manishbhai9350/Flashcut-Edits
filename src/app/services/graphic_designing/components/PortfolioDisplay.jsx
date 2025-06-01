@@ -7,15 +7,23 @@ import Image from 'next/image';
 export default function PortfolioDisplay({ 
   portfolioData,
 }) {
-  const [activeTab, setActiveTab] = useState(portfolioData.categories[0].category);
+  const [activeTab, setActiveTab] = useState(portfolioData.isCats == false ? null : portfolioData?.categories[0]?.category || null);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [filteredProjects, setFilteredProjects] = useState([]);
-  const [Categories, setCategories] = useState(portfolioData.categories)
-  const [CurrentCategory, setCurrentCategory] = useState(portfolioData.categories.find(e => e.category == portfolioData.categories[0].category))
+  const [Categories, setCategories] = useState(portfolioData?.categories || [])
+  const [CurrentCategory, setCurrentCategory] = useState(portfolioData.isCats == false ? null : portfolioData.categories.find(e => e.category == portfolioData?.categories[0].category))
+  const [IsNoCats, setIsNoCats] = useState(false)
 
   useEffect(() => {
-    if(!activeTab) return;
-    setCurrentCategory(portfolioData.categories.find(e => e.category == activeTab))
+    if(!activeTab && portfolioData?.isCats !== false) return;
+    // console.clear()
+    console.log(portfolioData)
+    if(portfolioData?.isCats == false) {
+      setIsNoCats(true)
+    } else {
+      setIsNoCats(false)
+      setCurrentCategory(portfolioData.categories.find(e => e.category == activeTab))
+    }
     // setCurrentCategory(portfolioData.categories.find(e => e?.category == portfolioData?.categories[activeTab]?.category))
     return () => {
       
@@ -23,8 +31,57 @@ export default function PortfolioDisplay({
   }, [activeTab])
   
 
+  if(IsNoCats) {
+    return <div className="m-7 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {(portfolioData.isCats == false && portfolioData.data.length > 0 ) ?  portfolioData.data.map((item,i) => {
+                return <div
+                key={i}
+                className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:border-purple-300"
+              >
+                {/* Project Thumbnail */}
+                <div className="relative overflow-hidden">
+                  <div className="aspect-[1] bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
+                    <div className="image relative w-full h-full">
+                      {/* <Image fill className='w-full h-full' src={`/graphic_design/banners/documentary/img1.jpg`} alt="Image" /> */}
+                      <Image fill className='w-full h-full object-cover' src={`/graphic_design/${portfolioData.slugRoot+item}`} alt="Image" />
+                    </div>
+                  </div>
+                  
+                  {/* Project Overlay Info */}
+                  {/* <div className="absolute top-3 left-3 flex gap-2">
+                    <span className="bg-purple-500 text-white px-2 py-1 rounded text-xs font-medium">
+                      {category.category}
+                    </span>
+                  </div> */}
+                </div>
 
-  if (!portfolioData.categories || portfolioData.categories.length == 0 ) {
+                {/* Project Info */}
+                <div className="p-3">
+                  <div className="flex items-start justify-between my-1">
+                    <h3 className="font-bold text-lg text-[#0d1117] group-hover:text-purple-600 transition-colors">
+                      {portfolioData.name}
+                    </h3>
+                  </div>
+                  
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {portfolioData.description}
+                  </p>
+
+                  {/* Project Details */}
+                  <div className="flex items-center justify-between text-sm text-gray-500">
+                    <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">
+                      {portfolioData.category}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            }) : <>
+
+            </>}
+          </div>
+  }
+
+  else if (!portfolioData.categories || portfolioData.categories.length == 0 ) {
     return (
       <div className="text-center mt-12">
         <h3 className="text-xl font-semibold text-gray-700 mb-2">No Work Available</h3>
@@ -97,26 +154,26 @@ export default function PortfolioDisplay({
 
           {/* Projects Grid */}
           <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {(CurrentCategory.works && CurrentCategory.works.length > 0 ) ?  CurrentCategory.works.map((category) => {
-              console.log(category)
+            {(CurrentCategory.works && CurrentCategory.works.length > 0 ) ?  CurrentCategory.works.map((category,i) => {
                 return <div
-                key={category.id}
+                key={i}
                 className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:border-purple-300"
               >
                 {/* Project Thumbnail */}
                 <div className="relative overflow-hidden">
-                  <div className="aspect-[5/3] bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
+                  <div className="aspect-[6/3] bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
                     <div className="image relative w-full h-full">
-                      <img fill className='w-full h-full' src={`https://drive.google.com/uc?export=view&id=${category.id}`} alt="Image" />
+                      {/* <Image fill className='w-full h-full' src={`/graphic_design/banners/documentary/img1.jpg`} alt="Image" /> */}
+                      <Image fill className='w-full h-full object-cover' src={`/graphic_design/${portfolioData.slugRoot+CurrentCategory.catRoot+category.image}`} alt="Image" />
                     </div>
                   </div>
                   
                   {/* Project Overlay Info */}
-                  <div className="absolute top-3 left-3 flex gap-2">
+                  {/* <div className="absolute top-3 left-3 flex gap-2">
                     <span className="bg-purple-500 text-white px-2 py-1 rounded text-xs font-medium">
                       {category.category}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Project Info */}
