@@ -20,7 +20,7 @@ export default function ExpertiseSection() {
           <div className="relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
             {/* Background Image */}
             <div className="h-80 bg-gradient-to-br from-gray-800 to-gray-900 relative">
-              <Image fill src='/video-editing.jpg' alt='Image' />
+              <Image className='object-cover object-center' fill src='/video-editing.jpg' alt='Image' />
             </div>
 
             {/* Overlay Content */}
@@ -36,7 +36,7 @@ export default function ExpertiseSection() {
           <div className="relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
             {/* Background Image */}
             <div className="h-80 bg-gradient-to-br from-gray-800 to-gray-900 relative">
-              <Image fill src='/graphic-design.jpg' alt='Image' />
+              <Image className='object-cover object-center' fill src='/graphic-design.png' alt='Image' />
             </div>
 
             {/* Overlay Content */}

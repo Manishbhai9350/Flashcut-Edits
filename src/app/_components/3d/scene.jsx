@@ -14,6 +14,9 @@ const Model = () => {
 
   const windowSize = useWindow();
 
+  const TargetY = useRef(0)
+  const Time = useRef(0)
+
   const { width,height } = useThree((v) => v.viewport);
 
   useEffect(() => {
@@ -38,18 +41,17 @@ const Model = () => {
     if (!meshRef.current) return;
     if (windowSize.width < 500 || innerWidth < 500) {
       // scale down the mesh to 0.6
-      meshRef.current.scale.set(0.6, 0.6, 0.6);
+      meshRef.current.scale.set(0.5, 0.5, 0.5);
     } else {
       // reset scale to normal (1)
       meshRef.current.scale.set(1, 1, 1);
     }
     if (windowSize.width > 500 || innerWidth > 500) {
       meshRef.current.position.x =  width / 2 * 0.55;
-      meshRef.current.position.y =  0;
+      TargetY.current = 0
     } else {
       meshRef.current.position.x = 0;
-      meshRef.current.position.y -= height / 2 * 0.1;
-
+      TargetY.current = - height / 2 * .5
     }
   }, [windowSize, width, height]);
 
@@ -58,6 +60,10 @@ const Model = () => {
       // Normalize mouse coordinates from -1 to 1
       const x = (event.clientX / window.innerWidth) * 2 - 1;
       const y = (event.clientY / window.innerHeight) * 2 - 1;
+      // Smooth vertical (Y) position movement
+      if(windowSize.width > 500) {
+        TargetY.current = y * -.3 ; // Adjust 0.5 to control movement range
+      }
       setMousePos({ x, y });
     };
 
@@ -66,6 +72,7 @@ const Model = () => {
   }, []);
 
   useFrame((_, delta) => {
+    Time.current += delta
   if (meshRef.current) {
     // Smooth rotation
     meshRef.current.rotation.y += 
@@ -73,9 +80,10 @@ const Model = () => {
     meshRef.current.rotation.x +=
       (mousePos.y * rotationScaleFactor - meshRef.current.rotation.x) * rotationSpeed * delta * 20;
 
-    // Smooth vertical (Y) position movement
-    const targetY = mousePos.y * -.3 ; // Adjust 0.5 to control movement range
-    meshRef.current.position.y += (targetY - meshRef.current.position.y) * rotationSpeed * delta * 20;
+    meshRef.current.position.y += (TargetY.current - meshRef.current.position.y) * rotationSpeed * delta * 20;
+  } 
+  if(windowSize.width < 500) {
+    mousePos.x = Math.sin(Time.current * .6) 
   }
 });
 

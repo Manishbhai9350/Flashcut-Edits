@@ -13,7 +13,7 @@ export default function Home() {
     <ReactLenis root>
       <main className="relative font-sans overflow-x-hidden">
         {/* Hero */}
-        <section className="relative h-screen z-20 bg-white text-[#0d1117] pt-32 px-6 md:px-20">
+        <section className="relative h-screen z-20 bg-white text-[#0d1117] pt-20 sm:pt-32 px-6 md:px-20">
           <div className="3d w-full h-full absolute right-0 top-0">
             <ICON3D />
           </div>

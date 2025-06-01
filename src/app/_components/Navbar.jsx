@@ -62,7 +62,7 @@ export default function Navbar() {
       <div className="px-6 md:px-20 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="text-3xl font-[900] text-[#0d1117] hover:opacity-80 transition-opacity duration-200">
+          <Link href="/" className="text-3xl pop font-[900] text-[#0d1117] hover:opacity-80 transition-opacity duration-200">
             Flashcut Edits
           </Link>
 
