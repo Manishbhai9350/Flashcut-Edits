@@ -13,12 +13,12 @@ export default function Home() {
     <ReactLenis root>
       <main className="relative font-sans overflow-x-hidden">
         {/* Hero */}
-        <section className="relative h-screen z-20 bg-white text-[#0d1117] pt-20 sm:pt-32 px-6 md:px-20">
+        <section className="relative flex justify-start items-start flex-col lg:flex-row h-[110vh] w-screen z-20 bg-white text-[#0d1117] pt-20 px-6 md:px-20">
           <div className="3d w-full h-full absolute right-0 top-0">
             <ICON3D />
           </div>
-          <div className="max-w-6xl mx-auto">
-            <div className="relative z-30 w-full  sm:w-[60%]">
+          <div className="w-full h-1/2 lg:w-1/2 lg:h-full">
+            <div className="relative z-30 w-full h-full">
               <h1 className="text-3xl pop  sm:text-5xl lg:text-6xl font-semibold mb-4">
 
                 <span className="text-transparent bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text">
@@ -50,6 +50,9 @@ export default function Home() {
             <div className="uncorn-3d-element w-full h-full z-20 absolute top-1/2 left-1/4 -translate-y-1/2">
               {/* <UnicornEmbed /> */}
             </div>
+          </div>
+          <div className="placer-mirror w-full h-1/2 lg:h-full lg:w-1/2">
+
           </div>
         </section>
 

@@ -21,32 +21,30 @@ const Model = () => {
 
   useEffect(() => {
     if (!meshRef.current) return;
-    if (windowSize.width < 400 || innerWidth < 400) {
+    if (windowSize.width < 1000 || innerWidth < 1000) {
       // scale down the mesh to 0.6
       meshRef.current.scale.set(0.6, 0.6, 0.6);
     } else {
       // reset scale to normal (1)
       meshRef.current.scale.set(1, 1, 1);
     }
-    if (windowSize.width > 500 || innerWidth > 500) {
+    if (windowSize.width > 1000 || innerWidth > 1000) {
       meshRef.current.position.x =  width / 2 * 0.55;
-      meshRef.current.position.y =  0;
     } else {
       meshRef.current.position.x = 0;
-      meshRef.current.position.y -= width / 2 * 0.66;
 
     }
   }, []);
   useEffect(() => {
     if (!meshRef.current) return;
-    if (windowSize.width < 500 || innerWidth < 500) {
+    if (windowSize.width < 1000 || innerWidth < 1000) {
       // scale down the mesh to 0.6
       meshRef.current.scale.set(0.5, 0.5, 0.5);
     } else {
       // reset scale to normal (1)
       meshRef.current.scale.set(1, 1, 1);
     }
-    if (windowSize.width > 500 || innerWidth > 500) {
+    if (windowSize.width > 1000 || innerWidth > 1000) {
       meshRef.current.position.x =  width / 2 * 0.55;
       TargetY.current = 0
     } else {
@@ -61,8 +59,10 @@ const Model = () => {
       const x = (event.clientX / window.innerWidth) * 2 - 1;
       const y = (event.clientY / window.innerHeight) * 2 - 1;
       // Smooth vertical (Y) position movement
-      if(windowSize.width > 500) {
-        TargetY.current = y * -.3 ; // Adjust 0.5 to control movement range
+      if(windowSize.width > 1000) {
+        // TargetY.current = y * -.3 ; // Adjust 0.5 to control movement range
+      } else {
+        TargetY.current = 0 ; // Adjust 0.5 to control movement range
       }
       setMousePos({ x, y });
     };
@@ -79,11 +79,9 @@ const Model = () => {
       (mousePos.x * rotationScaleFactor - meshRef.current.rotation.y) * rotationSpeed * delta * 20;
     meshRef.current.rotation.x +=
       (mousePos.y * rotationScaleFactor - meshRef.current.rotation.x) * rotationSpeed * delta * 20;
-
-    meshRef.current.position.y += (TargetY.current - meshRef.current.position.y) * rotationSpeed * delta * 20;
   } 
-  if(windowSize.width < 500) {
-    mousePos.x = Math.sin(Time.current * .6) 
+  if(windowSize.width < 1000) {
+    mousePos.x = Math.sin(Time.current * .6) + 2
   }
 });
 
@@ -95,6 +93,40 @@ const Model = () => {
 };
 
 const Scene = () => {
+  const ModelGroupRef = useRef(null)
+  const windowSize = useWindow()
+  const Viewport = useThree(v => v.viewport)
+  useEffect(() => {
+  if (windowSize.width === 0 || !ModelGroupRef.current) return;
+  console.log('change')
+
+  const Placer3DMirror = document.querySelector('.placer-mirror');
+  const { left, top, width, height } = Placer3DMirror.getBoundingClientRect();
+
+  // Decide x center based on screen width
+  const centerX = windowSize.width < 1000
+    ? left + width / 2                            // Full center
+    : left - width / 8;                           // Left half center
+
+  const centerY = windowSize.width < 1000
+    ? top + height / 2  + 1                            // Full center
+    : top + height / 4;
+
+    console.log(windowSize.width)
+
+  // Convert to normalized device coordinates
+  const normalizedX = (centerX / windowSize.width) * 2 - 1;
+  const normalizedY = -(centerY / windowSize.height) * 2 + 1;
+
+  // Convert to Three.js world coordinates
+  const worldX = normalizedX * (Viewport.width / 2);
+  const worldY = normalizedY * (Viewport.height / 2);
+
+  ModelGroupRef.current.position.x = worldX;
+  ModelGroupRef.current.position.y = worldY;
+
+}, [windowSize]);
+
   return (
     <>
   {/* Pink Side of Gradient Key Light (left) */}
@@ -155,7 +187,9 @@ const Scene = () => {
   />
 
   {/* Your Model */}
+  <group ref={ModelGroupRef}>
   <Model />
+  </group>
 </>
 
 

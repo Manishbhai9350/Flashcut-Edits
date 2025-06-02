@@ -25,9 +25,8 @@ export default function PortfolioDisplay({
   }, [activeTab]);
 
   useEffect(() => {
-    console.log(FilteredData)
-  }, [FilteredData])
-  
+    console.log(FilteredData);
+  }, [FilteredData]);
 
   return (
     <section className="py-16 px-6 md:px-20">
@@ -64,62 +63,52 @@ export default function PortfolioDisplay({
         </div>
 
         {/* Video Grid */}
-        <div
-          className={`grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`}
-        >
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {FilteredData &&
             FilteredData.map((video) => {
-              console.log(video)
-              return <div
-                key={video.id}
-                className="group bg-white min-h-[300px] border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:border-blue-300"
-              >
-                {/* Video Overlay Info */}
-                <div className="absolute top-3 left-3 flex gap-2">
-                  <span className="bg-black/70 text-white px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
-                    <Clock size={12} />
-                    {video.duration}
-                  </span>
-                  <span className="bg-blue-500 text-white px-2 py-1 rounded text-xs font-medium">
-                    {video.platform}
-                  </span>
-                </div>
+              return (
+                <div
+                  key={video.id}
+                  className="group bg-white min-h-[300px] border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:border-blue-300 relative"
+                >
 
-                {/* Video  */}
-
-                <div className="video-container  flex justify-center">
-                  <div className="video w-full h-full">
-                    {video?.id ? (
-                      <iframe
-                        src={`https://drive.google.com/file/d/${video.id}/preview`}
-                        width="100%"
-                        height="250"
-                        allow="autoplay"
-                        allowFullScreen
-                      ></iframe>
-                    ) : (
-                      <p className="text-red-500">Video ID not available</p>
-                    )}
-                  </div>
-                </div>
-
-                {/* Video Info */}
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="font-bold text-lg text-[#0d1117] group-hover:text-blue-600 transition-colors">
-                      {video.title}
-                    </h3>
-                    <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium whitespace-nowrap ml-2">
-                      {video.type}
-                    </span>
+                  {/* Video */}
+                  <div className="video-container flex justify-center items-center">
+                    <div
+                      className={`video relative w-full ${
+                        activeTab === "short-form"
+                          ? "aspect-[9/16] max-h-[400px] sm:max-h-[500px] lg:max-h-[600px]"
+                          : "aspect-video"
+                      }`}
+                    >
+                      {video?.id ? (
+                        <iframe
+                          src={`https://drive.google.com/file/d/${video.id}/preview`}
+                          className="w-full h-full absolute top-0 left-0"
+                          allow="autoplay"
+                          allowFullScreen
+                        ></iframe>
+                      ) : (
+                        <p className="text-red-500">Video ID not available</p>
+                      )}
+                    </div>
                   </div>
 
-                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                    {video.description}
-                  </p>
+                  {/* Video Info */}
+                  <div className="p-6">
+                    <div className="flex items-start justify-between mb-3">
+                      <h3 className="font-bold text-lg text-[#0d1117] group-hover:text-blue-600 transition-colors">
+                        {video.title}
+                      </h3>
+                    </div>
+
+                    <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                      {video.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-})}
+              );
+            })}
         </div>
       </div>
     </section>
