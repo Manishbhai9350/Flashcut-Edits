@@ -123,8 +123,8 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Team Member 1 */}
               <div className="group bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-center transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Play className="w-10 h-10 text-white" />
+                <div className="w-20 h-20 relative bg-gradient-to-br overflow-hidden rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Image className="object-cover object-center" src='/team/tanishq.jpg' fill alt='Tanishq' />
                 </div>
                 <h4 className="text-xl font-bold mb-2 group-hover:text-white transition">Tanishq Jain</h4>
                 <p className="text-blue-500 font-medium mb-3 group-hover:text-blue-400 transition">Founder</p>
