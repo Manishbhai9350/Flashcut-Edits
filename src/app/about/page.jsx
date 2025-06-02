@@ -1,36 +1,26 @@
 "use client";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import Footer from "../_components/Footer";
-import { useEffect } from "react";
-import { Play, Users, Award, Globe, Heart, Zap, Target, Star } from "lucide-react";
-import Contact from "../_components/Contact";
-import FAQSection from "../_components/FAQ";
+import { useEffect, useRef } from "react";
+import { Play, Users, Award, Heart, Zap, Target, Star } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import gsap from "gsap";
 
-// Add your brand logos here - they can be any dimension
 const brands = [
-  { id: 1, src: "/brands/first-cry.jpg", alt: "Brand 1" },
-  { id: 2, src: "/brands/grow-diesel.jpg", alt: "Brand 2" },
-  { id: 3, src: "/brands/dinway.jpg", alt: "Brand 3" },
-  { id: 4, src: "/brands/Krafter.jpg", alt: "Brand 4" },
-  { id: 5, src: "/brands/ambition.jpg", alt: "Brand 5" },
-  // { id: 6, src: "/brands/brand6.jpg", alt: "Brand 6" },
-  // Add more brands as needed
+  { id: 1, src: "/brands/first-cry.jpg", alt: "First Cry" },
+  { id: 2, src: "/brands/grow-diesel.jpg", alt: "Grow Diesel" },
+  { id: 3, src: "/brands/dinway.jpg", alt: "Dinway" },
+  { id: 4, src: "/brands/Krafter.jpg", alt: "Krafter" },
+  { id: 5, src: "/brands/ambition.jpg", alt: "Ambition" },
 ];
 
-// Duplicate the brands array to create seamless looping
-const duplicatedBrands = [...brands, ...brands];
-
 export default function About() {
-  useEffect(() => {
-    console.log("🎬 About page loaded!");
-  }, []);
 
   return (
     <ReactLenis root>
       <main className="relative font-sans overflow-x-hidden">
-        {/* Hero Section */}
+           {/* Hero Section */}
         <section className="relative z-20 bg-white text-[#0d1117] py-32 px-6 md:px-20">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 pop">
@@ -233,7 +223,7 @@ export default function About() {
         </section>
 
 
-        {/* Brands We've Worked With - Updated with Marquee */}
+        {/* Brands We've Worked With - GSAP Marquee */}
         <section className="bg-gray-50 text-[#0d1117] py-16 px-6 md:px-20">
           <div className="max-w-6xl mx-auto text-center">
             <h3 className="text-sm font-semibold tracking-wide text-blue-600 uppercase mb-2">
@@ -251,14 +241,19 @@ export default function About() {
             </p>
 
             {/* Marquee Container */}
-            <div className="relative w-full overflow-hidden">
-              {/* Marquee Inner - Double the content for seamless looping */}
-              <div className="flex w-max animate-marquee whitespace-nowrap">
-                {duplicatedBrands.map((brand) => (
+            <div
+              className="relative w-full overflow-hidden py-4"
+            >
+              {/* Marquee Content - Duplicated for seamless looping */}
+              <div
+                className="flex w-max whitespace-nowrap"
+              >
+               
+                {[...brands].map((brand, i) => (
                   <div 
-                    key={`${brand.id}-marquee`} 
-                    className="inline-flex items-center justify-center mx-8"
-                    style={{ minWidth: '150px' }} // Minimum width for each brand container
+                    key={`${brand.id}-${i}`}
+                    className="marquee-infinite-child inline-flex items-center justify-center mx-8"
+                    style={{ minWidth: '150px' }}
                   >
                     <div className="relative h-16 w-full" style={{ maxWidth: '200px' }}>
                       <Image
@@ -274,9 +269,9 @@ export default function About() {
               </div>
             </div>
 
-            {/* Fallback Grid for Mobile if needed */}
-            <div className="grid grid-cols-3 gap-6 mt-8 md:hidden">
-              {brands.slice(0, 6).map((brand) => (
+            {/* Fallback Grid for Mobile */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-8 md:hidden">
+              {brands.map((brand) => (
                 <div key={brand.id} className="relative h-16">
                   <Image
                     src={brand.src}
