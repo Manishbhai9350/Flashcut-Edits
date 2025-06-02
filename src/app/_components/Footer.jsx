@@ -61,12 +61,12 @@ export default function Footer() {
 
       <div className="border-t border-gray-700 mt-12 pt-6 text-center text-sm text-gray-500">
         <p>2023 Flashcut Edits. All Rights Reserved.</p>
-        <div className="flex justify-center space-x-6 mt-2">
+        {/* <div className="flex justify-center space-x-6 mt-2">
           <a href="#" className="hover:text-white">WHO WE ARE</a>
           <a href="#" className="hover:text-white">OUR WORK</a>
           <a href="#" className="hover:text-white">OUR PARTNERS</a>
           <a href="#" className="hover:text-white">CAPABILITIES</a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

@@ -6,6 +6,21 @@ import { Play, Users, Award, Globe, Heart, Zap, Target, Star } from "lucide-reac
 import Contact from "../_components/Contact";
 import FAQSection from "../_components/FAQ";
 import Link from "next/link";
+import Image from "next/image";
+
+// Add your brand logos here - they can be any dimension
+const brands = [
+  { id: 1, src: "/brands/first-cry.jpg", alt: "Brand 1" },
+  { id: 2, src: "/brands/grow-diesel.jpg", alt: "Brand 2" },
+  { id: 3, src: "/brands/dinway.jpg", alt: "Brand 3" },
+  { id: 4, src: "/brands/Krafter.jpg", alt: "Brand 4" },
+  { id: 5, src: "/brands/ambition.jpg", alt: "Brand 5" },
+  // { id: 6, src: "/brands/brand6.jpg", alt: "Brand 6" },
+  // Add more brands as needed
+];
+
+// Duplicate the brands array to create seamless looping
+const duplicatedBrands = [...brands, ...brands];
 
 export default function About() {
   useEffect(() => {
@@ -56,13 +71,13 @@ export default function About() {
                 </h3>
                 <div className="space-y-4 text-lg opacity-80 leading-relaxed">
                   <p>
-                    Founded in 2019, FlashCut Edits began as a small creative studio with a big dream:
+                    Founded in 2024, FlashCut Edits began as a small creative studio with a big dream:
                     to democratize professional video editing and make it accessible to creators worldwide.
                   </p>
                   <p>
-                    What started as a passion project between friends has evolved into a full-service
-                    creative agency trusted by over 500+ clients globally. We've edited millions of
-                    minutes of content, generated billions of views, and helped countless brands
+                    What started as a passion project has evolved into a full-service
+                    creative agency trusted by clients globally. We've edited countless
+                    minutes of content, generated millions of views, and helped brands
                     tell their stories.
                   </p>
                   <p>
@@ -76,23 +91,83 @@ export default function About() {
                 <div className="bg-gradient-to-br from-blue-500 to-pink-500 rounded-2xl p-8 text-white">
                   <div className="grid grid-cols-2 gap-6">
                     <div className="text-center">
-                      <div className="text-3xl font-bold mb-2">500+</div>
+                      <div className="text-3xl font-bold mb-2">100+</div>
                       <div className="text-sm opacity-90">Happy Clients</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold mb-2">2M+</div>
+                      <div className="text-3xl font-bold mb-2">1K+</div>
                       <div className="text-sm opacity-90">Videos Edited</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold mb-2">50M+</div>
+                      <div className="text-3xl font-bold mb-2">10M+</div>
                       <div className="text-sm opacity-90">Views Generated</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold mb-2">5+</div>
+                      <div className="text-3xl font-bold mb-2">1+</div>
                       <div className="text-sm opacity-90">Years Experience</div>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Management Team Section */}
+        <section className="bg-white text-gray-800 py-16 px-6 md:px-20">
+          <div className="max-w-6xl mx-auto text-center">
+            <h3 className="text-sm font-semibold tracking-wide text-blue-600 uppercase mb-2">
+              LEADERSHIP
+            </h3>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Meet the{" "}
+              <span className="text-transparent bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text">
+                Management Team
+              </span>
+            </h2>
+            <p className="text-gray-500 max-w-2xl mx-auto mb-14">
+              Our leadership team brings together diverse expertise to guide FlashCut Edits
+              towards excellence in video editing and client satisfaction.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Team Member 1 */}
+              <div className="group bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-center transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Play className="w-10 h-10 text-white" />
+                </div>
+                <h4 className="text-xl font-bold mb-2 group-hover:text-white transition">Tanishq Jain</h4>
+                <p className="text-blue-500 font-medium mb-3 group-hover:text-blue-400 transition">Founder</p>
+                <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white/80 transition">
+                  The visionary Founder of FlashCut Edits, leads the agency with a deep passion for 
+                  content creation and innovation in digital storytelling.
+                </p>
+              </div>
+
+              {/* Team Member 2 */}
+              <div className="group bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-center transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-10 h-10 text-white" />
+                </div>
+                <h4 className="text-xl font-bold mb-2 group-hover:text-white transition">Anant</h4>
+                <p className="text-purple-500 font-medium mb-3 group-hover:text-purple-400 transition">Head of Management</p>
+                <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white/80 transition">
+                  Ensures smooth coordination across departments, keeping every project 
+                  aligned, efficient, and on schedule.
+                </p>
+              </div>
+
+              {/* Team Member 3 */}
+              <div className="group bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-center transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Award className="w-10 h-10 text-white" />
+                </div>
+                <h4 className="text-xl font-bold mb-2 group-hover:text-white transition">Shravani</h4>
+                <p className="text-pink-500 font-medium mb-3 group-hover:text-pink-400 transition">Manager</p>
+                <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white/80 transition">
+                  Plays a key role in daily operations and client communication, helping us 
+                  deliver a seamless experience from start to finish.
+                </p>
               </div>
             </div>
           </div>
@@ -157,85 +232,8 @@ export default function About() {
           </div>
         </section>
 
-        {/* Pricing */}
-        {/* <Pricing /> */}
-        {/* Contact Section */}
-        {/* <Contact /> */}
 
-        {/* FAQ Section  */}
-        {/* <FAQSection /> */}
-
-        {/* Our Team Section */}
-        <section className="bg-white text-gray-800 py-16 px-6 md:px-20">
-          <div className="max-w-6xl mx-auto text-center">
-            <h3 className="text-sm font-semibold tracking-wide text-blue-600 uppercase mb-2">
-              OUR TEAM
-            </h3>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Meet the{" "}
-              <span className="text-transparent bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text">
-                Creative Minds
-              </span>
-            </h2>
-            <p className="text-gray-500 max-w-2xl mx-auto mb-14">
-              Our diverse team of creative professionals brings together years of experience
-              in video editing, motion graphics, and visual storytelling.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Team Member 1 */}
-              <div className="group bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-center transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Play className="w-10 h-10 text-white" />
-                </div>
-                <h4 className="text-xl font-bold mb-2 group-hover:text-white transition">Arjun Sharma</h4>
-                <p className="text-blue-500 font-medium mb-3 group-hover:text-blue-400 transition">Creative Director & Founder</p>
-                <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white/80 transition">
-                  With 8+ years in video production, Arjun leads our creative vision and ensures
-                  every project exceeds expectations.
-                </p>
-              </div>
-
-              {/* Team Member 2 */}
-              <div className="group bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-center transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-10 h-10 text-white" />
-                </div>
-                <h4 className="text-xl font-bold mb-2 group-hover:text-white transition">Priya Patel</h4>
-                <p className="text-purple-500 font-medium mb-3 group-hover:text-purple-400 transition">Lead Motion Graphics Designer</p>
-                <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white/80 transition">
-                  Priya brings magic to our videos with stunning motion graphics and
-                  visual effects that captivate audiences.
-                </p>
-              </div>
-
-              {/* Team Member 3 */}
-              <div className="group bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-center transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Award className="w-10 h-10 text-white" />
-                </div>
-                <h4 className="text-xl font-bold mb-2 group-hover:text-white transition">Rahul Kumar</h4>
-                <p className="text-pink-500 font-medium mb-3 group-hover:text-pink-400 transition">Senior Video Editor</p>
-                <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white/80 transition">
-                  Rahul's expertise in storytelling and technical precision makes him
-                  our go-to editor for complex projects.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-12 text-center">
-              <p className="text-lg opacity-80 mb-6">
-                Plus 25+ talented editors, designers, and creative professionals working behind the scenes
-              </p>
-              <Link href="https://wa.me/919867009961"
-                target="_blank" className="px-8 py-3 text-white rounded-lg transition-all duration-300 cursor-pointer font-medium bg-gradient-to-r from-blue-500 to-pink-500 text-lg hover:opacity-80">
-                Join Our Team
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Brands We've Worked With */}
+        {/* Brands We've Worked With - Updated with Marquee */}
         <section className="bg-gray-50 text-[#0d1117] py-16 px-6 md:px-20">
           <div className="max-w-6xl mx-auto text-center">
             <h3 className="text-sm font-semibold tracking-wide text-blue-600 uppercase mb-2">
@@ -248,43 +246,46 @@ export default function About() {
               </span>
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto mb-14">
-              From startups to Fortune 500 companies, we've helped brands across industries
+              From startups to Fortune companies, we've helped brands across industries
               create compelling video content that drives results.
             </p>
 
-            {/* Brand Logos Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
-              {/* Brand placeholders - you can replace with actual logos */}
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="h-12 bg-gradient-to-r from-blue-500 to-pink-500 rounded flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">BRAND</span>
-                </div>
+            {/* Marquee Container */}
+            <div className="relative w-full overflow-hidden">
+              {/* Marquee Inner - Double the content for seamless looping */}
+              <div className="flex w-max animate-marquee whitespace-nowrap">
+                {duplicatedBrands.map((brand) => (
+                  <div 
+                    key={`${brand.id}-marquee`} 
+                    className="inline-flex items-center justify-center mx-8"
+                    style={{ minWidth: '150px' }} // Minimum width for each brand container
+                  >
+                    <div className="relative h-16 w-full" style={{ maxWidth: '200px' }}>
+                      <Image
+                        src={brand.src}
+                        alt={brand.alt}
+                        fill
+                        className="object-contain object-center"
+                        sizes="(max-width: 768px) 100px, 150px"
+                      />
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">TECH</span>
+            </div>
+
+            {/* Fallback Grid for Mobile if needed */}
+            <div className="grid grid-cols-3 gap-6 mt-8 md:hidden">
+              {brands.slice(0, 6).map((brand) => (
+                <div key={brand.id} className="relative h-16">
+                  <Image
+                    src={brand.src}
+                    alt={brand.alt}
+                    fill
+                    className="object-contain object-center"
+                  />
                 </div>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="h-12 bg-gradient-to-r from-blue-500 to-pink-500 rounded flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">STARTUP</span>
-                </div>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">AGENCY</span>
-                </div>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="h-12 bg-gradient-to-r from-blue-500 to-pink-500 rounded flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">CORP</span>
-                </div>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">MEDIA</span>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>

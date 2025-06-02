@@ -7,6 +7,7 @@ export  const graphicDesign = {
       "catalogs":{
         title: "Catalogs",
         description: "Comprehensive long-form videos for detailed storytelling",
+        slugRoot:'catalogs/',
         categories:[
         ]
       },
@@ -14,7 +15,7 @@ export  const graphicDesign = {
          title:"Channel banners",
          slugRoot:'/services/graphic_designing/banners',
         description: "Comprehensive long-form videos for detailed storytelling",
-        slugRoot:'/graphic_design/banners/',
+        slugRoot:'banners/',
         categories:[
           { 
             name: "Documentary",
@@ -100,7 +101,7 @@ export  const graphicDesign = {
       "cover":{
          title: "cover image",
         description: "Comprehensive long-form videos for detailed storytelling",
-        slugRoote:'/graphic_design/cover/',
+        slugRoote:'/cover/',
         categories:[
           { 
             name: "Documentary",
