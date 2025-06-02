@@ -3,7 +3,7 @@
 export async function generateMetadata({params}){
     const {slug} = await params;
   return  {
-   title: slug?.toUpperCase() + 'Graphic Designing' || 'Services',
+   title: slug?.toUpperCase() + ' Graphic Designing ' || 'Services',
     description: `Flash Edits Provides ${slug?.toUpperCase() || ''} Graphic Designing`,
     keywords: [
       "professional graphic designing",
@@ -57,7 +57,7 @@ export async function generateMetadata({params}){
 // export async function generateStaticParams(){
 //   const VideoEditingRoutes = await fetch('../data/staticRoutes.json').then(res => res.json())
   
-//   return VideoEditingRoutes.map((item) => ({
+//   return VideoEditingRoutes.routes.map((item) => ({
 //     slug: item
 //   }))
 // }

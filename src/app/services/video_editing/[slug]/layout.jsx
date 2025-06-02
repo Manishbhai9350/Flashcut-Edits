@@ -55,9 +55,9 @@ export async function generateMetadata({params}){
 }
 
 // export async function generateStaticParams(){
-//   const VideoEditingRoutes = await fetch('../data/staticRoutes.json').then(res => res.json())
+  // const VideoEditingRoutes = await fetch('../data/staticRoutes.json').then(res => res.json())
   
-//   return VideoEditingRoutes.map((item) => ({
+//   return VideoEditingRoutes.routes.map((item) => ({
 //     slug: item
 //   }))
 // }
