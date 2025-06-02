@@ -270,7 +270,7 @@ export default function About() {
             </div>
 
             {/* Fallback Grid for Mobile */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 place-items-center gap-6 mt-8 md:hidden">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-8 md:hidden">
               {brands.map((brand) => (
                 <div key={brand.id} className="relative h-16">
                   <Image
