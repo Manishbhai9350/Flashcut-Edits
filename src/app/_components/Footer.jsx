@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
           <div className="flex items-start space-x-3 mb-2">
             <Mail className="w-4 h-4 mt-1 text-gray-400" />
-            <span className="text-sm text-gray-400">flashcutedits@gmail.com</span>
+            <span className="text-sm text-gray-400">flashcutedit@gmail.com</span>
           </div>
         </div>
 
