@@ -190,7 +190,9 @@ export default function Navbar() {
                             : 'text-[#0d1117]/70 opacity-70 hover:opacity-100'
                         }`}
                       >
-                        {link.label}
+                        <Link href={link.href}>
+                          {link.label}
+                        </Link>
                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                           mobileServicesOpen ? 'rotate-180' : ''
                         }`} />

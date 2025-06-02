@@ -14,8 +14,6 @@ export default function PortfolioDisplay({
   const [FilteredData, setFilteredData] = useState(null);
 
   useEffect(() => {
-    console.clear();
-    console.log(portfolioData);
     setFilteredData((prev) => {
       const Filtered = portfolioData[activeTab].videos.filter(
         (video) => video.slug == slug
@@ -23,11 +21,6 @@ export default function PortfolioDisplay({
       return Filtered;
     });
   }, [activeTab]);
-
-  useEffect(() => {
-    console.log(FilteredData);
-  }, [FilteredData]);
-
   return (
     <section className="py-16 px-6 md:px-20">
       {/* Long Short Switch */}

@@ -98,7 +98,6 @@ const Scene = () => {
   const Viewport = useThree(v => v.viewport)
   useEffect(() => {
   if (windowSize.width === 0 || !ModelGroupRef.current) return;
-  console.log('change')
 
   const Placer3DMirror = document.querySelector('.placer-mirror');
   const { left, top, width, height } = Placer3DMirror.getBoundingClientRect();
@@ -109,10 +108,8 @@ const Scene = () => {
     : left - width / 8;                           // Left half center
 
   const centerY = windowSize.width < 1000
-    ? top + height / 2  + 1                            // Full center
+    ? top + height / 3                           // Full center
     : top + height / 4;
-
-    console.log(windowSize.width)
 
   // Convert to normalized device coordinates
   const normalizedX = (centerX / windowSize.width) * 2 - 1;

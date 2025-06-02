@@ -1,33 +1,45 @@
-'use client';
+"use client";
 
-import { use, useEffect, useState } from 'react';
-import { ArrowLeft } from 'lucide-react';
-import Link from 'next/link';
-import {videoPortfolio,Slugs} from '../data/portfolioData'
-import PortfolioDisplay from '../components/PortfolioDisplay'
+import { use, useEffect, useState } from "react";
+import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
+import { videoPortfolio, Slugs } from "../data/portfolioData";
+import PortfolioDisplay from "../components/PortfolioDisplay";
 
-export default  function VideoEditingSlugPage({ params }) {
-  const [PortfolioData , setPortfolioData ] = useState()
+
+
+
+
+export default function VideoEditingSlugPage({ params }) {
+  const [PortfolioData, setPortfolioData] = useState();
   const [slugConfig, setSlugConfig] = useState({});
   const [metadata, setMetadata] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const {slug} =  use(params);
+  const [IsClient, setIsClient] = useState(false);
+
+  const { slug } = use(params);
 
   useEffect(() => {
-    const CurrentSlug = Slugs.find(sl => sl.slug == slug)
-    if(!CurrentSlug) {
+    const CurrentSlug = Slugs.find((sl) => sl.slug == slug);
+    if (!CurrentSlug) {
       setError({
-        message:'Invalid Slug'
-      })
+        message: "Invalid Slug",
+      });
     } else {
-      setPortfolioData(videoPortfolio)
-      setMetadata(CurrentSlug)
+      setPortfolioData(videoPortfolio);
+      setMetadata(CurrentSlug);
     }
-    setIsLoading(false)
-  }, [])
-  
+    setIsLoading(false);
+  }, []);
+
+  useEffect(() => {
+    setIsClient(true);
+    return () => {};
+  }, []);
+
+  if (!IsClient) return <></>;
 
   // Loading state
   if (isLoading) {
@@ -50,7 +62,9 @@ export default  function VideoEditingSlugPage({ params }) {
             <span className="text-red-500 text-2xl">⚠️</span>
           </div>
           <h2 className="text-2xl font-bold text-gray-800 mb-2">
-            {error.type === 'invalid_slug' ? 'Page Not Found' : 'Error Loading Content'}
+            {error.type === "invalid_slug"
+              ? "Page Not Found"
+              : "Error Loading Content"}
           </h2>
           <p className="text-gray-600 mb-6">{error.message}</p>
 
@@ -102,8 +116,9 @@ export default  function VideoEditingSlugPage({ params }) {
             Ready to Create Amazing Videos?
           </h2>
           <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-            Let's bring your vision to life with professional video editing that captivates your audience
-            and elevates your brand. Get started with a free consultation today!
+            Let's bring your vision to life with professional video editing that
+            captivates your audience and elevates your brand. Get started with a
+            free consultation today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

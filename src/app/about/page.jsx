@@ -16,6 +16,14 @@ const brands = [
 ];
 
 export default function About() {
+    const [IsClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+        return () => {};
+      }, []);
+    
+      if (!IsClient) return <></>;
 
   return (
     <ReactLenis root>

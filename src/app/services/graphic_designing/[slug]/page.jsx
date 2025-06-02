@@ -10,6 +10,7 @@ export default function GraphicDesigningSlugPage({ params }) {
   const [portfolioData, setPortfolioData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [IsClient, setIsClient] = useState(false);
 
 
 
@@ -30,6 +31,13 @@ export default function GraphicDesigningSlugPage({ params }) {
       
     }
   }, [])
+  
+  useEffect(() => {
+      setIsClient(true);
+      return () => {};
+    }, []);
+  
+    if (!IsClient) return <></>;
   
 
   // Loading state

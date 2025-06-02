@@ -6,9 +6,13 @@ import { Play, Palette, Users, Zap, Clock, TrendingUp, Calendar, Mail } from "lu
 import Link from "next/link";
 
 export default function Hiring() {
-  useEffect(() => {
-    console.log("🔥 Careers page loaded!");
-  }, []);
+    const [IsClient, setIsClient] = useState(false);
+      useEffect(() => {
+          setIsClient(true);
+          return () => {};
+        }, []);
+      
+        if (!IsClient) return <></>;
 
   return (
     <ReactLenis root>

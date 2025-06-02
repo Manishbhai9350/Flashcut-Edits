@@ -16,8 +16,6 @@ export default function PortfolioDisplay({
 
   useEffect(() => {
     if(!activeTab && portfolioData?.isCats !== false) return;
-    // console.clear()
-    console.log(portfolioData)
     if(portfolioData?.isCats == false) {
       setIsNoCats(true)
     } else {

@@ -16,7 +16,7 @@ export default function Contact() {
     setStatus('loading');
 
     try {
-      const res = await fetch("https://formspree.io/f/mvgrpdvd", {
+      const res = await fetch(`https://formspree.io/f/${process.env.FORM_SPREE_API_KEY}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

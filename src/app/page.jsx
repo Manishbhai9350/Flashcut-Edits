@@ -7,7 +7,20 @@ import Footer from "./_components/Footer";
 import Contact from "./_components/Contact";
 import ICON3D from "./_components/3d/3D_Icon";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 export default function Home() {
+
+  const [IsClient, setIsClient ] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+    return () => {
+      
+    }
+  }, [])
+
+  if(!IsClient) return <></>
+  
 
   return (
     <ReactLenis root>
