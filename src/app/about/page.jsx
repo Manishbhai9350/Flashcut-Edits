@@ -1,7 +1,7 @@
 "use client";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import Footer from "../_components/Footer";
-import { useEffect, useRef } from "react";
+import { useEffect,useState, useRef } from "react";
 import { Play, Users, Award, Heart, Zap, Target, Star } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";

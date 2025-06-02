@@ -1,7 +1,7 @@
 "use client";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import Footer from "../_components/Footer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Play, Palette, Users, Zap, Clock, TrendingUp, Calendar, Mail } from "lucide-react";
 import Link from "next/link";
 
