@@ -242,7 +242,7 @@ export default function About() {
 
             {/* Marquee Container */}
             <div
-              className="relative w-full overflow-hidden py-4"
+              className="relative hidden md:block w-full overflow-hidden py-4"
             >
               {/* Marquee Content - Duplicated for seamless looping */}
               <div
@@ -270,7 +270,7 @@ export default function About() {
             </div>
 
             {/* Fallback Grid for Mobile */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-8 md:hidden">
+            <div className="grid grid-cols-2 sm:grid-cols-3 place-items-center gap-6 mt-8 md:hidden">
               {brands.map((brand) => (
                 <div key={brand.id} className="relative h-16">
                   <Image
