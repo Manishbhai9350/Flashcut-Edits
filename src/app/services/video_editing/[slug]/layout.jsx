@@ -54,6 +54,14 @@ export async function generateMetadata({params}){
   };
 }
 
+export async function generateStaticParams(){
+  const VideoEditingRoutes = await fetch('../data/staticRoutes.json').then(res => res.json())
+  
+  return VideoEditingRoutes.map((item) => ({
+    slug: item
+  }))
+}
+
 export default function RootLayout({ children }) {
   return <>{children}</>;
 }
