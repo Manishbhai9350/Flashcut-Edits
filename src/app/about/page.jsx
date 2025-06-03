@@ -168,6 +168,10 @@ export default function About() {
                 </p>
               </div>
             </div>
+            <p className="text-gray-500 capitalize max-w-2xl mx-auto mb-14">
+  20+ more talented team members working behind the scenes — bringing creativity, speed, and precision to every project.
+</p>
+
           </div>
         </section>
 
