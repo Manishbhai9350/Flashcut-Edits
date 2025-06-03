@@ -1,5 +1,7 @@
-{
-    "routes":[
+
+
+// Video Editing Routes
+export const StaticRoutes = [
         "ads_promotional",
         "3d",
         "documentary",
@@ -10,4 +12,3 @@
         "real_estate",
         "ecommerce"
     ]
-}

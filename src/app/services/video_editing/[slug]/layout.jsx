@@ -1,3 +1,4 @@
+import { StaticRoutes } from "../data/staticRoutes";
 
 
 export async function generateMetadata({params}){
@@ -54,13 +55,12 @@ export async function generateMetadata({params}){
   };
 }
 
-// export async function generateStaticParams(){
-  // const VideoEditingRoutes = await fetch('../data/staticRoutes.json').then(res => res.json())
+export async function generateStaticParams(){
   
-//   return VideoEditingRoutes.routes.map((item) => ({
-//     slug: item
-//   }))
-// }
+  return StaticRoutes.map((item) => ({
+    slug: item
+  }))
+}
 
 export default function RootLayout({ children }) {
   return <>{children}</>;

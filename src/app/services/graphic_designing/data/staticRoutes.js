@@ -1,5 +1,8 @@
-{
-    "routes":[
+
+
+
+// Graphic Designing Routes
+export const StaticRoutes = [
         "catalogs",
         "banners",
         "cover",
@@ -8,4 +11,3 @@
         "logo_designing",
         "thumbnails"
     ]
-}

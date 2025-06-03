@@ -57,7 +57,6 @@ export default function Pricing() {
             ₹29,999 <span className="text-base font-medium">/video</span>
           </h4>
           <ul className="space-y-3 text-sm mb-6">
-            <li>✓ Up to 20 min video</li>
              <li>✓ 15 Short Form Videos</li>
              <li>✓ 3 Long Form Videos (avg 5 min) </li>
              <li>✓ 15 Cover Images</li>
