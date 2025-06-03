@@ -248,18 +248,10 @@ const toggleSubcategory = (subcategory) => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/https://calendly.com/jaitanishq222/video-editing-consultation"
               className="px-8 py-3 bg-gradient-to-r from-blue-500 to-pink-500 text-white rounded-lg hover:from-blue-600 hover:to-pink-600 transition-all duration-300 font-medium text-center shadow-lg hover:shadow-xl"
             >
               Start Your Project
-            </Link>
-            <Link
-              href="https://calendly.com/jaitanishq222/video-editing-consultation"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 bg-white border-2 border-gray-300 text-[#0d1117] rounded-lg hover:border-blue-500 hover:bg-gray-50 transition-all duration-300 font-medium text-center"
-            >
-              Book Consultation
             </Link>
           </div>
         </div>
