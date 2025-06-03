@@ -93,7 +93,7 @@ export default function PortfolioDisplay({
       {/* Tab Navigation - Only show if multiple tabs available */}
       {portfolioData.categories?.length > 0 &&  (
         <section className="bg-white border-b border-gray-200 sticky top-0 z-10">
-          <div className="max-w-6xl mx-auto px-6 md:px-20">
+          <div className=" mx-auto px-6 md:px-20">
             <div className="flex space-x-8 w-screen overflow-x-scroll">
               {portfolioData.categories.map((item) => {
                 return <button
@@ -116,13 +116,13 @@ export default function PortfolioDisplay({
 
       {/* Content Section */}
       <section className="py-4 px-6 md:px-20">
-        <div className="max-w-6xl mx-auto">
+        <div className=" mx-auto">
           {/* Section Description */}
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0d1117]">
               {CurrentCategory?.title}
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+            <p className="text-gray-600  mx-auto text-lg leading-relaxed">
               {CurrentCategory?.description}
             </p>
           </div>

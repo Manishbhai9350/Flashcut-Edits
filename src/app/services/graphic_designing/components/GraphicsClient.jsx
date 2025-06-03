@@ -58,7 +58,7 @@ export default function GraphicsClient({ params }) {
   if (error) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="text-center max-w-md mx-auto px-6">
+        <div className="text-center  mx-auto px-6">
           <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <span className="text-red-500 text-2xl">⚠️</span>
           </div>
@@ -100,7 +100,7 @@ export default function GraphicsClient({ params }) {
     <div className="min-h-screen bg-white mt-12 overflow-x-hidden">
       {/* Header */}
       <section className="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-16 px-6 md:px-20">
-        <div className="max-w-6xl mx-auto">
+        <div className=" mx-auto">
           <Link 
             href="/services" 
             className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors mb-6"
@@ -112,7 +112,7 @@ export default function GraphicsClient({ params }) {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             {portfolioData.title}
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl">
+          <p className="text-xl text-white/90 ">
             {portfolioData.description}
           </p>
         </div>
@@ -125,7 +125,7 @@ export default function GraphicsClient({ params }) {
 
       {/* CTA Section */}
       <section className="bg-gray-50 py-16 px-6 md:px-20">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className=" mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#0d1117]">
             Ready to Create Amazing Designs?
           </h2>

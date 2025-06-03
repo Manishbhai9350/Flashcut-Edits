@@ -2,7 +2,7 @@
 export default function Services() {
   return (
     <section className="text-[#0d1117] bg-white py-16 px-6 md:px-20">
-      <div className="max-w-6xl mx-auto">
+      <div className="mx-auto">
         <div className="text-center mb-16">
           <h3 className="text-sm font-semibold tracking-wide text-blue-600 uppercase mb-2">
             Why Choose Us
@@ -14,7 +14,7 @@ export default function Services() {
             </span>{" "}
             for Your Creative Needs
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-500 mx-auto text-lg">
             We combine years of experience with cutting-edge technology to
             deliver exceptional results that exceed expectations and drive real
             business growth.

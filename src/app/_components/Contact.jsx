@@ -48,7 +48,7 @@ export default function Contact() {
 
   return (
     <section className="text-[#0d1117] bg-gray-50 py-16 px-6 md:px-20">
-      <div className="max-w-6xl mx-auto">
+      <div className="mx-auto">
         <div className="text-center mb-16">
           <h3 className="text-sm font-semibold tracking-wide text-blue-600 uppercase mb-2">
             Get In Touch
@@ -60,7 +60,7 @@ export default function Contact() {
             </span>{" "}
             Your Content?
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="text-gray-500 mx-auto text-lg leading-relaxed">
             Let's discuss your project and bring your vision to life. Get in touch with our team today for a free consultation.
           </p>
         </div>

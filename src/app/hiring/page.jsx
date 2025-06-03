@@ -19,7 +19,7 @@ export default function Hiring() {
       <main className="relative font-sans overflow-x-hidden bg-white text-[#0d1117]">
         {/* Hero Section */}
         <section className="relative z-20 py-32 px-6 md:px-20 bg-gradient-to-br from-blue-50 to-purple-50">
-          <div className="max-w-6xl mx-auto text-center">
+          <div className=" mx-auto text-center">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 pop">
               <span className="text-transparent bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text">
                 Join the
@@ -28,7 +28,7 @@ export default function Hiring() {
                 FlashCut Team
               </span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-80 pop max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl mb-8 opacity-80 pop  mx-auto leading-relaxed">
               We're building a world-class creative team to deliver high-impact video and graphic content. 
               If you're passionate, talented, and driven, we want you!
             </p>
@@ -42,7 +42,7 @@ export default function Hiring() {
 
         {/* Why Join Us */}
         <section className="py-20 px-6 md:px-20 bg-white">
-          <div className="max-w-6xl mx-auto">
+          <div className=" mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-sm font-semibold mb-2 opacity-70 pop">WHY JOIN US</h2>
               <h3 className="text-4xl md:text-5xl mb-6 pop font-bold">
@@ -103,13 +103,13 @@ export default function Hiring() {
 
         {/* Open Roles */}
         <section id="open-roles" className="py-20 px-6 md:px-20 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
+          <div className=" mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-sm font-semibold mb-2 opacity-70 pop">CAREER OPPORTUNITIES</h2>
               <h3 className="text-4xl md:text-5xl mb-6 pop font-bold">
                 Current <span className="text-transparent bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text">Open Roles</span>
               </h3>
-              <p className="text-lg opacity-80 max-w-3xl mx-auto">
+              <p className="text-lg opacity-80  mx-auto">
                 Whether you're a creative, manager, or sales pro - help us shape the future of visual storytelling.
               </p>
             </div>
@@ -272,7 +272,7 @@ export default function Hiring() {
 
         {/* CTA Section */}
         {/* <section className="py-20 px-6 md:px-20 bg-gradient-to-br from-blue-500 to-pink-500 text-white">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className=" mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to Join Our Creative Revolution?</h2>
             <p className="text-xl opacity-90 mb-8">
               Don't see your perfect role? We're always looking for talented individuals. 

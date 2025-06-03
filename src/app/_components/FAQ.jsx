@@ -38,18 +38,18 @@ export default function FAQSection() {
 
   return (
     <section className="text-[#0d1117] bg-white py-16 px-6 md:px-20">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
           Frequently Asked{" "}
           <span className="text-transparent bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text">
             Questions
           </span>
         </h2>
-        <p className="text-gray-500 max-w-2xl mx-auto mb-14">
+        <p className="text-gray-500 mx-auto mb-14">
           Find answers to common inquiries about our video editing services and how we can assist you.
         </p>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="mx-auto">
           <div className="border border-gray-200 overflow-hidden rounded-2xl divide-y divide-gray-200">
             {faqs.map((item, index) => (
               <div key={index} className="group">

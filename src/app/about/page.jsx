@@ -30,7 +30,7 @@ export default function About() {
       <main className="relative font-sans overflow-x-hidden">
            {/* Hero Section */}
         <section className="relative z-20 bg-white text-[#0d1117] py-32 px-6 md:px-20">
-          <div className="max-w-6xl mx-auto text-center">
+          <div className=" mx-auto text-center">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 pop">
               <span className="text-transparent bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text">
                 About
@@ -39,7 +39,7 @@ export default function About() {
                 FlashCut Edits
               </span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-80 pop max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl mb-8 opacity-80 pop  mx-auto leading-relaxed">
               We're not just video editors – we're visual storytellers passionate about
               transforming your ideas into captivating content that resonates with your audience.
             </p>
@@ -57,7 +57,7 @@ export default function About() {
 
         {/* Our Story Section */}
         <section className="bg-gray-50 text-[#0d1117] py-20 px-6 md:px-20">
-          <div className="max-w-6xl mx-auto">
+          <div className=" mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-sm font-semibold mb-2 opacity-70 pop">OUR JOURNEY</h2>
@@ -113,7 +113,7 @@ export default function About() {
 
         {/* Management Team Section */}
         <section className="bg-white text-gray-800 py-16 px-6 md:px-20">
-          <div className="max-w-6xl mx-auto text-center">
+          <div className=" mx-auto text-center">
             <h3 className="text-sm font-semibold tracking-wide text-blue-600 uppercase mb-2">
               LEADERSHIP
             </h3>
@@ -123,7 +123,7 @@ export default function About() {
                 Management Team
               </span>
             </h2>
-            <p className="text-gray-500 max-w-2xl mx-auto mb-14">
+            <p className="text-gray-500  mx-auto mb-14">
               Our leadership team brings together diverse expertise to guide FlashCut Edits
               towards excellence in video editing and client satisfaction.
             </p>
@@ -144,8 +144,8 @@ export default function About() {
 
               {/* Team Member 2 */}
               <div className="group bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-center transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-10 h-10 text-white" />
+                <div className="w-20 h-20 relative bg-gradient-to-br overflow-hidden rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Image className="object-cover object-center" src='/team/anant.jpg' fill alt='Tanishq' />
                 </div>
                 <h4 className="text-xl font-bold mb-2 group-hover:text-white transition">Anant</h4>
                 <p className="text-purple-500 font-medium mb-3 group-hover:text-purple-400 transition">Head of Management</p>
@@ -157,8 +157,8 @@ export default function About() {
 
               {/* Team Member 3 */}
               <div className="group bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-center transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Award className="w-10 h-10 text-white" />
+                <div className="w-20 h-20 relative bg-gradient-to-br overflow-hidden rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Image className="object-cover object-center" src='/team/shravani.jpg' fill alt='Tanishq' />
                 </div>
                 <h4 className="text-xl font-bold mb-2 group-hover:text-white transition">Shravani</h4>
                 <p className="text-pink-500 font-medium mb-3 group-hover:text-pink-400 transition">Manager</p>
@@ -168,7 +168,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <p className="text-gray-500 capitalize max-w-2xl mx-auto mt-14">
+            <p className="text-gray-500 capitalize  mx-auto mt-14">
   20+ more talented team members working behind the scenes — bringing creativity, speed, and precision to every project.
 </p>
 
@@ -177,7 +177,7 @@ export default function About() {
 
         {/* Our Values Section */}
         <section className="bg-white text-[#0d1117] py-20 px-6 md:px-20">
-          <div className="max-w-6xl mx-auto text-center">
+          <div className=" mx-auto text-center">
             <h2 className="text-sm font-semibold mb-2 opacity-70 pop">OUR VALUES</h2>
             <h3 className="text-4xl md:text-5xl mb-6 pop font-bold">
               What Drives{" "}
@@ -185,7 +185,7 @@ export default function About() {
                 Us Forward
               </span>
             </h3>
-            <p className="text-lg opacity-80 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg opacity-80 mb-12  mx-auto leading-relaxed">
               Our core values shape everything we do, from the way we approach projects
               to how we build relationships with our clients.
             </p>
@@ -237,7 +237,7 @@ export default function About() {
 
         {/* Brands We've Worked With - GSAP Marquee */}
         <section className="bg-gray-50 text-[#0d1117] py-16 px-6 md:px-20">
-          <div className="max-w-6xl mx-auto text-center">
+          <div className=" mx-auto text-center">
             <h3 className="text-sm font-semibold tracking-wide text-blue-600 uppercase mb-2">
               TRUSTED BY
             </h3>
@@ -247,7 +247,7 @@ export default function About() {
                 Worked With
               </span>
             </h2>
-            <p className="text-gray-500 max-w-2xl mx-auto mb-14">
+            <p className="text-gray-500  mx-auto mb-14">
               From startups to Fortune companies, we've helped brands across industries
               create compelling video content that drives results.
             </p>

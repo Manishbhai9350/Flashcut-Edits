@@ -81,7 +81,7 @@ export default function VideoClient({ params }) {
     <div className="min-h-screen bg-white pt-12">
       {/* Header */}
       <section className="bg-gradient-to-r from-blue-500 to-pink-500 text-white py-16 px-6 md:px-20">
-        <div className="max-w-6xl mx-auto">
+        <div className=" mx-auto">
           <Link
             href="/services"
             className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors mb-6"
@@ -93,7 +93,7 @@ export default function VideoClient({ params }) {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             {metadata?.title}
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl">
+          <p className="text-xl text-white/90 ">
             {metadata?.description}
           </p>
         </div>
@@ -108,7 +108,7 @@ export default function VideoClient({ params }) {
 
       {/* CTA Section */}
       <section className="bg-gray-50 py-16 px-6 md:px-20">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#0d1117]">
             Ready to Create Amazing Videos?
           </h2>

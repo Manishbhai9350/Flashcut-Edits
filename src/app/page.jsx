@@ -70,13 +70,13 @@ export default function Home() {
         </section>
 
         {/* About */}
-        <section className="text-[#0d1117] bg-white pb-16 px-6 md:px-20 text-center md:text-left">
-          <div className="max-w-6xl mx-auto">
+        <section className="text-[#0d1117] w-full bg-white pb-16 px-6 md:px-20 text-center md:text-left">
+          <div className="mx-auto">
             <h2 className="text-sm font-semibold mb-2 opacity-70 pop">OUR STORY</h2>
             <h3 className="text-3xl md:text-6xl mb-6 pop font-medium">
               About Flashcut Edits
             </h3>
-            <div className="max-w-4xl mb-12 pop">
+            <div className="mb-12 pop">
               <p className="text-lg mb-4 opacity-80 leading-relaxed">
                 Our mission is to provide premium video editing solutions that
                 resonate with your audience, ensuring every frame captures the
@@ -136,7 +136,7 @@ export default function Home() {
 
         {/* Testimonials  */}
         <section className="bg-white text-gray-800 py-16 px-6 md:px-20">
-          <div className="max-w-6xl mx-auto text-center">
+          <div className="mx-auto text-center">
             <h3 className="text-sm font-semibold tracking-wide text-blue-600 uppercase mb-2">
               Client Testimonials
             </h3>
@@ -147,7 +147,7 @@ export default function Home() {
               </span>{" "}
               Say
             </h2>
-            <p className="text-gray-500 max-w-2xl mx-auto mb-14">
+            <p className="text-gray-500 mx-auto mb-14">
               Don’t just take our word for it. Here's what creators and
               businesses say about working with us.
             </p>

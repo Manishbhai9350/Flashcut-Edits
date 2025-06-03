@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ExpertiseSection() {
   return (
     <section className="text-[#0d1117] bg-white py-16 px-6 md:px-20">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="mx-auto text-center">
         <p className="text-gray-500 mb-4 text-lg">
           Discover how Flashcut Edits transforms your vision into reality with our specialized services.
         </p>

@@ -1,7 +1,7 @@
 export default function Pricing() {
   return (
     <section className="text-[#0d1117] bg-white py-16 px-6 md:px-20">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="mx-auto text-center">
       <h2 className="text-4xl font-bold text-center mb-4">
         Simple,{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
@@ -14,7 +14,7 @@ export default function Pricing() {
         larger projects.
       </p>
 
-      <div className="grid text-white grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl ">
+      <div className="grid text-white grid-cols-1 md:grid-cols-3 gap-8 w-full ">
         {/* Starter Plan */}
         <div className="text-[#161b22] hover:bg-[#161b22] hover:text-white relative rounded-2xl p-6 flex flex-col duration-150 border-2 border-indigo-500/30 hover:border-indigo-500 text-left">
           <h3 className="text-xl font-semibold mb-2">Starter</h3>
