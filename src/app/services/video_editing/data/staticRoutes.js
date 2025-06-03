@@ -11,4 +11,4 @@ export const StaticRoutes = [
         "podcasts",
         "real_estate",
         "ecommerce"
-    ]
+]
