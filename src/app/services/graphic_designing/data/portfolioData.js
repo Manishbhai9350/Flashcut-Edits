@@ -975,7 +975,7 @@ export  const graphicDesign = {
           { 
             name: "Trading",
             category: "Trading",
-            catRoot:'Trading/',
+            catRoot:'trading/',
             works:[
               {
                 name:'Trading Thumbnail',
