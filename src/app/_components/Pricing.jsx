@@ -24,15 +24,14 @@ export default function Pricing() {
           </h4>
           <ul className="space-y-3 text-sm mb-6">
             <li>✓ 7 Short Form Videos</li>
-            <li>✓ 1 Long Form Video (avg 5 min)</li>
             <li>✓ 7 Cover Images</li>
             <li>✓ Personal Manager</li>
             <li>✓ 24x7 Support</li>
             <li>✓ 2 Revisions</li>
             <li>✓ Good Editing</li>
             <li>✓ SFX & Typography</li>
-            <li>✓ Color Correction</li>
-            <li className="line-through text-gray-600">✗ No motion graphics</li>
+            <li>✓ Basi Color Correction</li>
+            <li>✓ Basic Animations</li>
           </ul>
           <a
             href="https://calendly.com/jaitanishq222/video-editing-consultation"
@@ -54,19 +53,17 @@ export default function Pricing() {
             For growing channels & businesses
           </p>
           <h4 className="text-3xl font-bold mb-6">
-            $500 <span className="text-base font-medium">/month</span>
+            $600 <span className="text-base font-medium">/month</span>
           </h4>
           <ul className="space-y-3 text-sm mb-6">
-             <li>✓ 15 Short Form Videos</li>
-             <li>✓ 3 Long Form Videos (avg 5 min) </li>
-             <li>✓ 15 Cover Images</li>
-             <li>✓ 3 YouTube Thumbnails</li>
-             <li>✓ Personal Manager</li>
-             <li>✓ 24x7 Support</li>
-             <li>✓ Unlimited Revisions</li>
-             <li>✓ Motion Graphics</li>
-             <li>✓ SFX & Typography</li>
-             <li>✓ Color Correction</li>
+              <li>✓ 15 Short Form Videos </li>
+              <li>✓ 15 Cover Images </li>
+              <li>✓ 24x7 Support</li>
+              <li>✓ 5 Revisions</li>
+              <li>✓ SFX & Typography + Background Music</li>
+              <li>✓ Color Correction</li>
+              <li>✓ Animations & Transitions</li>
+              <li>✓ Basic Motion Graphics</li>
           </ul>
           <a
             href="https://calendly.com/jaitanishq222/video-editing-consultation"
@@ -85,19 +82,18 @@ export default function Pricing() {
             For established brands & agencies
           </p>
           <h4 className="text-3xl font-bold mb-6">
-            $1700 <span className="text-base font-medium">/month</span>
+            $1500 <span className="text-base font-medium">/month</span>
           </h4>
           <ul className="space-y-3 text-sm mb-6">
-            <li>✓ 30 Short Form Videos</li>
-            <li>✓ 10 Long Form Videos (avg 5 min)</li>
-            <li>✓ 30 Thumbnails</li>
-            <li>✓ 10 Cover Images</li>
-            <li>✓ 2 Personal Managers</li>
-            <li>✓ 24x7 Support</li>
+            <li>✓ 30 High-Quality Short Form Videos</li>
+            <li>✓ 30 Cover Images</li>
+            <li>✓ 3 Dedicated Personal Managers</li>
+            <li>✓ 24x7 Priority Support</li>
             <li>✓ Unlimited Revisions</li>
-            <li>✓ Motion Graphics</li>
-            <li>✓ SFX & Typography</li>
-            <li>✓ Color Correction</li>
+            <li>✓ SFX & Typography + Background Music</li>
+            <li>✓ Professional Color Correction</li>
+            <li>✓ Smooth Animations & Transitions</li>
+            <li>✓ High-Level Motion Graphics (Studio-Grade)</li>
           </ul>
           <a
             href="https://calendly.com/jaitanishq222/video-editing-consultation"
