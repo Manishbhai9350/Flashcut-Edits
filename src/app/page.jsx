@@ -38,7 +38,7 @@ export default function Home() {
                   Elevate
                 </span> Your Brand with{" "}
                 <span className="text-transparent bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text">
-                  Professional Video &nbsp;Editing
+                  Professional Video Editing
                 </span>{" "}
                 and{" "}
                 <span className="text-transparent bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text">
