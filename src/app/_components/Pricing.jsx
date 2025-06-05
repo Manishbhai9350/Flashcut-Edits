@@ -20,7 +20,7 @@ export default function Pricing() {
           <h3 className="text-xl font-semibold mb-2">Starter</h3>
           <p className="text-gray-400 mb-4">Perfect for new creators</p>
           <h4 className="text-3xl font-bold mb-6">
-            ₹9,999 <span className="text-base font-medium">/month</span>
+            $250 <span className="text-base font-medium">/month</span>
           </h4>
           <ul className="space-y-3 text-sm mb-6">
             <li>✓ 7 Short Form Videos</li>
@@ -54,7 +54,7 @@ export default function Pricing() {
             For growing channels & businesses
           </p>
           <h4 className="text-3xl font-bold mb-6">
-            ₹29,999 <span className="text-base font-medium">/month</span>
+            $500 <span className="text-base font-medium">/month</span>
           </h4>
           <ul className="space-y-3 text-sm mb-6">
              <li>✓ 15 Short Form Videos</li>
@@ -85,7 +85,7 @@ export default function Pricing() {
             For established brands & agencies
           </p>
           <h4 className="text-3xl font-bold mb-6">
-            ₹89,999 <span className="text-base font-medium">/month</span>
+            $1700 <span className="text-base font-medium">/month</span>
           </h4>
           <ul className="space-y-3 text-sm mb-6">
             <li>✓ 30 Short Form Videos</li>
