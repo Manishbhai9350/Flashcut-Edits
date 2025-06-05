@@ -93,7 +93,7 @@ export default function Pricing() {
             <li>✓ SFX & Typography + Background Music</li>
             <li>✓ Professional Color Correction</li>
             <li>✓ Smooth Animations & Transitions</li>
-            <li>✓ High-Level Motion Graphics (Studio-Grade)</li>
+            <li>✓ High-Level Motion Graphics</li>
           </ul>
           <a
             href="https://calendly.com/jaitanishq222/video-editing-consultation"
