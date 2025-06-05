@@ -18,9 +18,9 @@ export default function Pricing() {
         {/* Starter Plan */}
         <div className="text-[#161b22] hover:bg-[#161b22] hover:text-white relative rounded-2xl p-6 flex flex-col duration-150 border-2 border-indigo-500/30 hover:border-indigo-500 text-left">
           <h3 className="text-xl font-semibold mb-2">Starter</h3>
-          <p className="text-gray-400 mb-4">Perfect for new creators</p>
+          <p className="text-gray-400 mb-4">Perfect for new Creators</p>
           <h4 className="text-3xl font-bold mb-6">
-            $250 <span className="text-base font-medium">/month</span>
+            $250 <span className="text-base font-medium">/Month</span>
           </h4>
           <ul className="space-y-3 text-sm mb-6">
             <li>✓ 7 Short Form Videos</li>
@@ -30,7 +30,7 @@ export default function Pricing() {
             <li>✓ 2 Revisions</li>
             <li>✓ Good Editing</li>
             <li>✓ SFX & Typography</li>
-            <li>✓ Basi Color Correction</li>
+            <li>✓ Basic Color Correction</li>
             <li>✓ Basic Animations</li>
           </ul>
           <a
@@ -50,14 +50,15 @@ export default function Pricing() {
           </div>
           <h3 className="text-xl font-semibold mb-2">Pro</h3>
           <p className="text-gray-400 mb-4">
-            For growing channels & businesses
+            For growing Channels & Businesses
           </p>
           <h4 className="text-3xl font-bold mb-6">
-            $600 <span className="text-base font-medium">/month</span>
+            $600 <span className="text-base font-medium">/Month</span>
           </h4>
           <ul className="space-y-3 text-sm mb-6">
               <li>✓ 15 Short Form Videos </li>
               <li>✓ 15 Cover Images </li>
+              <li>✓ 2 Personal Managers </li>
               <li>✓ 24x7 Support</li>
               <li>✓ 5 Revisions</li>
               <li>✓ SFX & Typography + Background Music</li>
@@ -79,10 +80,10 @@ export default function Pricing() {
         <div className="text-[#161b22] hover:bg-[#161b22] hover:text-white relative rounded-2xl p-6 flex flex-col duration-150 border-2 border-indigo-500/30 hover:border-indigo-500 text-left">
           <h3 className="text-xl font-semibold mb-2">Premium</h3>
           <p className="text-gray-400 mb-4">
-            For established brands & agencies
+            For established Brands & Agencies
           </p>
           <h4 className="text-3xl font-bold mb-6">
-            $1500 <span className="text-base font-medium">/month</span>
+            $1500 <span className="text-base font-medium">/Month</span>
           </h4>
           <ul className="space-y-3 text-sm mb-6">
             <li>✓ 30 High-Quality Short Form Videos</li>
