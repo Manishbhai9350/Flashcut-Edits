@@ -8,7 +8,7 @@ import Image from "next/image";
 import gsap from "gsap";
 
 const brands = [
-  { id: 1, src: "/brands/first-cry.jpg", alt: "First Cry" },
+  { id: 1, src: "/brands/first-cry.png", alt: "First Cry" },
   { id: 2, src: "/brands/grow-diesel.jpg", alt: "Grow Diesel" },
   { id: 3, src: "/brands/dinway.jpg", alt: "Dinway" },
   { id: 4, src: "/brands/Krafter.jpg", alt: "Krafter" },
