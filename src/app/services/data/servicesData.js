@@ -115,7 +115,7 @@ export const graphicDesign = {
         ]
       },
       "Logo designing ":{
-         title: "Logo designin",
+         title: "Logo designing",
          href:'/services/graphic_designing/logo_designing',
         icon: <Sparkles className="w-5 h-5" />,
         description: "Comprehensive long-form videos for detailed storytelling",

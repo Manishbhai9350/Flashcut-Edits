@@ -157,7 +157,7 @@ export  const graphicDesign = {
         ]
       },
       "logo_designing":{
-         title: "Logo designin",
+         title: "Logo designing",
          slugRoot:'/services/graphic_designing/logo',
         description: "Comprehensive long-form videos for detailed storytelling",
         categories:[
