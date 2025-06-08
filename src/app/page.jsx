@@ -44,7 +44,7 @@ export default function Home() {
         const {latitude,longitude} = e.coords
         const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`
         fetch(url).then(data => data.json()).then(cords => {
-          console.table(cords?.address)
+            console.log(cords?.address?.country.toLocaleLowerCase() || 'india')
             setCountry(cords?.address?.country.toLocaleLowerCase() || 'india')
         }).catch(e => {
           console.error(e)
