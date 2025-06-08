@@ -6,12 +6,15 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+      "preinstall": "mkdir -p node_modules/geoip-lite/data && cp geoip-db/*.dat node_modules/geoip-lite/data/",
+  "update-geoip": "cd node_modules/geoip-lite && npm run-script updatedb license_key=YOUR_KEY && cp data/*.dat ../../geoip-db/"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@react-three/drei": "^10.1.2",
     "@react-three/fiber": "^9.1.2",
+    "geoip-lite": "^1.4.10",
     "gsap": "^3.13.0",
     "lenis": "^1.3.3",
     "lucide-react": "^0.511.0",

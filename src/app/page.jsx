@@ -11,6 +11,8 @@ import { useEffect, useState } from "react";
 export default function Home() {
 
   const [IsClient, setIsClient ] = useState(false)
+  const [Country, setCountry] = useState(null)
+  const [IsFetching, setIsFetching] = useState(false)
 
   useEffect(() => {
     setIsClient(true)
@@ -18,6 +20,24 @@ export default function Home() {
       
     }
   }, [])
+
+  useEffect(() => {
+    if(!IsClient) return;
+
+    const FetchCountry = async () => {
+      const Response = await fetch('/api/geo',{
+        method:'GET'
+      })
+      console.log(Response)
+    }
+
+    FetchCountry()
+
+    return () => {
+      
+    }
+  }, [IsClient])
+  
 
   if(!IsClient) return <></>
   
