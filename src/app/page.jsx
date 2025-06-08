@@ -11,32 +11,61 @@ import { useEffect, useState } from "react";
 export default function Home() {
 
   const [IsClient, setIsClient ] = useState(false)
-  const [Country, setCountry] = useState(null)
+  const [Country, setCountry] = useState('')
   const [IsFetching, setIsFetching] = useState(false)
+  const [Prices, setPrices] = useState({
+    india:{
+      starter:250,
+      pro:600,
+      premium:1500,
+    },
+    other:{
+      starter:700,
+      pro:800,
+      premium:2000
+    }
+  })
+
+  const [Price, setPrice] = useState(Prices['other'])
+
 
   useEffect(() => {
     setIsClient(true)
-    return () => {
-      
-    }
   }, [])
 
   useEffect(() => {
     if(!IsClient) return;
 
-    const FetchCountry = async () => {
-      const Response = await fetch('/api/geo',{
-        method:'GET'
-      })
-      console.log(Response)
+    const userLanguage = navigator.language || navigator.userLanguage;
+    const countryCode = userLanguage.split('-')[1]?.toUpperCase();
+
+    console.log(navigator.geolocation.getCurrentPosition(
+      e => {
+        const {latitude,longitude} = e.coords
+        const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`
+        fetch(url).then(data => data.json()).then(cords => {
+          console.table(cords?.address)
+            setCountry(cords?.address?.country.toLocaleLowerCase() || 'india')
+        }).catch(e => {
+          console.error(e)
+          setCountry('other')
+        })
+      },
+      e => setCountry('other')
+    ))
+  }, [IsClient])
+
+  useEffect(() => {
+    if(Country == 'india') {
+      setPrice(Prices['india'])
+    } else {
+      setPrice(Prices['other'])
     }
-
-    FetchCountry()
-
     return () => {
       
     }
-  }, [IsClient])
+  }, [Country])
+  
   
 
   if(!IsClient) return <></>
@@ -152,7 +181,7 @@ export default function Home() {
         <Expertise />
 
         {/* Pricing */}
-        <Pricing />
+        <Pricing Price={Price} />
 
         {/* Testimonials  */}
         <section className="bg-white text-gray-800 py-16 px-6 md:px-20">

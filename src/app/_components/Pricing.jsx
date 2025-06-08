@@ -1,4 +1,4 @@
-export default function Pricing() {
+export default function Pricing({Price}) {
   return (
     <section className="text-[#0d1117] bg-white py-16 px-6 md:px-20">
       <div className="mx-auto text-center">
@@ -20,7 +20,7 @@ export default function Pricing() {
           <h3 className="text-xl font-semibold mb-2">Starter</h3>
           <p className="text-gray-400 mb-4">Perfect for new Creators</p>
           <h4 className="text-3xl font-bold mb-6">
-            $250 <span className="text-base font-medium">/Month</span>
+            ${Price.starter} <span className="text-base font-medium">/Month</span>
           </h4>
           <ul className="space-y-3 text-sm mb-6">
             <li>✓ 7 Short Form Videos</li>
@@ -53,7 +53,7 @@ export default function Pricing() {
             For growing Channels & Businesses
           </p>
           <h4 className="text-3xl font-bold mb-6">
-            $600 <span className="text-base font-medium">/Month</span>
+            ${Price.pro} <span className="text-base font-medium">/Month</span>
           </h4>
           <ul className="space-y-3 text-sm mb-6">
               <li>✓ 15 Short Form Videos </li>
@@ -83,7 +83,7 @@ export default function Pricing() {
             For established Brands & Agencies
           </p>
           <h4 className="text-3xl font-bold mb-6">
-            $1500 <span className="text-base font-medium">/Month</span>
+            ${Price.premium} <span className="text-base font-medium">/Month</span>
           </h4>
           <ul className="space-y-3 text-sm mb-6">
             <li>✓ 30 High-Quality Short Form Videos</li>
