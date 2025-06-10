@@ -9,67 +9,55 @@ import ICON3D from "./_components/3d/3D_Icon";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 export default function Home() {
-
-  const [IsClient, setIsClient ] = useState(false)
-  const [Country, setCountry] = useState('')
-  const [IsFetching, setIsFetching] = useState(false)
+  const [IsClient, setIsClient] = useState(false);
+  const [Country, setCountry] = useState("");
+  const [IsFetching, setIsFetching] = useState(false);
   const [Prices, setPrices] = useState({
-    india:{
-      starter:250,
-      pro:600,
-      premium:1500,
+    india: {
+      starter: 250,
+      pro: 600,
+      premium: 1500,
     },
-    other:{
-      starter:700,
-      pro:800,
-      premium:2000
-    }
-  })
+    other: {
+      starter: 700,
+      pro: 800,
+      premium: 2000,
+    },
+  });
 
-  const [Price, setPrice] = useState(Prices['other'])
-
-
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
+  const [Price, setPrice] = useState(Prices["other"]);
 
   useEffect(() => {
-    if(!IsClient) return;
-
-    const userLanguage = navigator.language || navigator.userLanguage;
-    const countryCode = userLanguage.split('-')[1]?.toUpperCase();
-
-    console.log(navigator.geolocation.getCurrentPosition(
-      e => {
-        const {latitude,longitude} = e.coords
-        const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`
-        fetch(url).then(data => data.json()).then(cords => {
-            console.log(cords?.address?.country.toLocaleLowerCase() || 'india')
-            setCountry(cords?.address?.country.toLocaleLowerCase() || 'india')
-        }).catch(e => {
-          console.error(e)
-          setCountry('other')
-        })
-      },
-      e => setCountry('other')
-    ))
-  }, [IsClient])
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
-    if(Country == 'india') {
-      setPrice(Prices['india'])
+    if (!IsClient) return;
+
+    const url = `/api/country`;
+    fetch(url, { method: "POST" })
+      .then((response) => response.json()) // parse JSON body
+      .then((data) => {
+        console.log(data); // { country: 'India', country_code: 'IN', lookUpIp: '...' }
+        if(data.success) {
+          setCountry(data.country_code.toLocaleLowerCase() == 'in' ? 'india' : 'other')
+        }
+        // You can now access data.country, data.country_code etc.
+      })
+      .catch((e) => console.log(e));
+  }, [IsClient]);
+
+  useEffect(() => {
+    console.log(Country)
+    if (Country == "india") {
+      setPrice(Prices["india"]);
     } else {
-      setPrice(Prices['other'])
+      setPrice(Prices["other"]);
     }
-    return () => {
-      
-    }
-  }, [Country])
-  
-  
+    return () => {};
+  }, [Country]);
 
-  if(!IsClient) return <></>
-  
+  if (!IsClient) return <></>;
 
   return (
     <ReactLenis root>
@@ -82,10 +70,10 @@ export default function Home() {
           <div className="w-full h-1/2 lg:w-1/2 lg:h-full">
             <div className="relative z-30 w-full h-full">
               <h1 className="text-3xl pop  sm:text-5xl lg:text-6xl font-semibold mb-4">
-
                 <span className="text-transparent bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text">
                   Elevate
-                </span> Your Brand with{" "}
+                </span>{" "}
+                Your Brand with{" "}
                 <span className="text-transparent bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text">
                   Professional Video Editing
                 </span>{" "}
@@ -100,10 +88,17 @@ export default function Home() {
                 visual content.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="https://calendly.com/jaitanishq222/video-editing-consultation" target='_blank' className="px-8 py-3 text-white rounded-lg hover:border-blue-500 hover:bg-gray-50 transition-all duration-300 cursor-pointer font-medium bg-gradient-to-r from-blue-500 to-pink-500 text-xl hover:opacity-80">
+                <Link
+                  href="https://calendly.com/jaitanishq222/video-editing-consultation"
+                  target="_blank"
+                  className="px-8 py-3 text-white rounded-lg hover:border-blue-500 hover:bg-gray-50 transition-all duration-300 cursor-pointer font-medium bg-gradient-to-r from-blue-500 to-pink-500 text-xl hover:opacity-80"
+                >
                   Get Started
                 </Link>
-                <Link href='/services' className="px-8 py-3 text-white rounded-lg hover:border-blue-500 hover:bg-gray-50 transition-all duration-300 cursor-pointer font-medium bg-gradient-to-r from-blue-500 to-pink-500 text-xl hover:opacity-80">
+                <Link
+                  href="/services"
+                  className="px-8 py-3 text-white rounded-lg hover:border-blue-500 hover:bg-gray-50 transition-all duration-300 cursor-pointer font-medium bg-gradient-to-r from-blue-500 to-pink-500 text-xl hover:opacity-80"
+                >
                   View Portfolio
                 </Link>
               </div>
@@ -113,15 +108,15 @@ export default function Home() {
               {/* <UnicornEmbed /> */}
             </div>
           </div>
-          <div className="placer-mirror w-full h-1/2 lg:h-full lg:w-1/2">
-
-          </div>
+          <div className="placer-mirror w-full h-1/2 lg:h-full lg:w-1/2"></div>
         </section>
 
         {/* About */}
         <section className="text-[#0d1117] w-full bg-white pb-16 px-6 md:px-20 text-center md:text-left">
           <div className="mx-auto">
-            <h2 className="text-sm font-semibold mb-2 opacity-70 pop">OUR STORY</h2>
+            <h2 className="text-sm font-semibold mb-2 opacity-70 pop">
+              OUR STORY
+            </h2>
             <h3 className="text-3xl md:text-6xl mb-6 pop font-medium">
               About Flashcut Edits
             </h3>
@@ -143,7 +138,9 @@ export default function Home() {
             <div className="grid grid-cols-2 place-items-center sm:place-items-start md:grid-cols-4 gap-6 text-sm font-semibold">
               <div className="bg-gray-100 text-[#0d1117] p-6 shadow-sm w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center hover:bg-gray-200 transition-colors duration-300">
                 <div>
-                  <div className="text-xl sm:text-3xl font-bold mb-1 pop">5+</div>
+                  <div className="text-xl sm:text-3xl font-bold mb-1 pop">
+                    5+
+                  </div>
                   <div className="text-[.6rem] sm:text-md leading-tight pop font-medium">
                     Over 5 Years of Experience Crafting Engaging Visual Content
                   </div>
@@ -151,7 +148,9 @@ export default function Home() {
               </div>
               <div className="bg-gray-100 text-[#0d1117] p-6 shadow-sm w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center hover:bg-gray-200 transition-colors duration-300">
                 <div>
-                  <div className="text-xl sm:text-3xl font-bold mb-1 pop">100+</div>
+                  <div className="text-xl sm:text-3xl font-bold mb-1 pop">
+                    100+
+                  </div>
                   <div className="text-[.6rem] sm:text-md leading-tight pop font-medium">
                     Trusted by 100+ Clients Worldwide
                   </div>
@@ -159,7 +158,9 @@ export default function Home() {
               </div>
               <div className="bg-gray-100 text-[#0d1117] p-6 shadow-sm w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center hover:bg-gray-200 transition-colors duration-300">
                 <div>
-                  <div className="text-xl sm:text-3xl font-bold mb-1 pop">50M+</div>
+                  <div className="text-xl sm:text-3xl font-bold mb-1 pop">
+                    50M+
+                  </div>
                   <div className="text-[.6rem] sm:text-md leading-tight pop font-medium">
                     Over 50 Million Views Generated
                   </div>
@@ -167,7 +168,9 @@ export default function Home() {
               </div>
               <div className="bg-gray-100 text-[#0d1117] p-6 shadow-sm w-[160px] md:w-[200px] aspect-square flex justify-center items-center rounded-full text-center hover:bg-gray-200 transition-colors duration-300">
                 <div>
-                  <div className="text-xl sm:text-3xl font-bold mb-1 pop">30+</div>
+                  <div className="text-xl sm:text-3xl font-bold mb-1 pop">
+                    30+
+                  </div>
                   <div className="text-[.6rem] sm:text-md leading-tight pop font-medium">
                     A Dedicated Team of 30+ Creative Professionals
                   </div>
