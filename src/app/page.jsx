@@ -25,7 +25,7 @@ export default function Home() {
     },
   });
 
-  const [Price, setPrice] = useState(Prices["other"]);
+  const [Price, setPrice] = useState(Prices["india"]);
 
   useEffect(() => {
     setIsClient(true);
