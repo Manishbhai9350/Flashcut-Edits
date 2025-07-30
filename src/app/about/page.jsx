@@ -184,7 +184,32 @@ export default function About() {
     Ensures smooth coordination across departments, keeping every project aligned, efficient, and on schedule.
   </p>
 </div>
-              {/* Team Member 3 */}
+        
+
+{/* Team Member: Anant */}
+<div className="group max-w-[500px] bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-center transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
+  <div className="w-20 h-20 relative bg-gradient-to-br overflow-hidden rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+    <Image
+      className="object-cover object-center"
+      src="/team/anant.jpg"
+      fill
+      alt="Anant"
+    />
+  </div>
+  <h4 className="text-xl font-bold mb-2 group-hover:text-white transition">
+    Anant
+  </h4>
+  <p className="text-purple-500 font-medium mb-3 group-hover:text-purple-400 transition">
+    Backend Manager
+  </p>
+  <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white/80 transition">
+    The backbone of our operations, Anant ensures every project runs smoothly behind the scenes.
+    From client data to delivery timelines, he keeps our systems sharp and efficient.
+  </p>
+</div>
+
+
+      {/* Team Member 3 */}
               {/* <div className="group bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-center transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
                 <div className="w-20 h-20 relative bg-gradient-to-br overflow-hidden rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Image className="object-cover object-center" src='/team/shravani.jpg' fill alt='Tanishq' />
