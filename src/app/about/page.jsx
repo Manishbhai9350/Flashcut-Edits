@@ -1,7 +1,7 @@
 "use client";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import Footer from "../_components/Footer";
-import { useEffect,useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Play, Users, Award, Heart, Zap, Target, Star } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -16,14 +16,14 @@ const brands = [
 ];
 
 export default function About() {
-    const [IsClient, setIsClient] = useState(false);
+  const [IsClient, setIsClient] = useState(false);
 
-    useEffect(() => {
-        setIsClient(true);
-        return () => {};
-      }, []);
-    
-      if (!IsClient) return <></>;
+  useEffect(() => {
+    setIsClient(true);
+    return () => {};
+  }, []);
+
+  if (!IsClient) return <></>;
 
   return (
     <ReactLenis root>
@@ -139,7 +139,7 @@ export default function About() {
               satisfaction.
             </p>
 
-            <div className="flex justify-center items-center gap-8">
+            <div className="flex justify-center items-center flex-wrap  gap-8">
               {/* Team Member 1 */}
               <div className="group max-w-[500px] bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-center transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
                 <div className="w-20 h-20 relative bg-gradient-to-br overflow-hidden rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -164,52 +164,52 @@ export default function About() {
               </div>
 
               {/* Team Member 2 */}
-             
-<div className="group max-w-[500px] bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-center transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
-  <div className="w-20 h-20 relative bg-gradient-to-br overflow-hidden rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-    <Image
-      className="object-cover object-center"
-      src="/team/pratik.jpg" // Make sure this image exists!
-      fill
-      alt="Pratik"
-    />
-  </div>
-  <h4 className="text-xl font-bold mb-2 group-hover:text-white transition">
-    Pratik
-  </h4>
-  <p className="text-purple-500 font-medium mb-3 group-hover:text-purple-400 transition">
-    Head of Management
-  </p>
-  <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white/80 transition">
-    Ensures smooth coordination across departments, keeping every project aligned, efficient, and on schedule.
-  </p>
-</div>
-        
 
-{/* Team Member: Anant */}
-<div className="group max-w-[500px] bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-center transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
-  <div className="w-20 h-20 relative bg-gradient-to-br overflow-hidden rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-    <Image
-      className="object-cover object-center"
-      src="/team/anant.jpg"
-      fill
-      alt="Anant"
-    />
-  </div>
-  <h4 className="text-xl font-bold mb-2 group-hover:text-white transition">
-    Anant
-  </h4>
-  <p className="text-purple-500 font-medium mb-3 group-hover:text-purple-400 transition">
-    Backend Manager
-  </p>
-  <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white/80 transition">
-    The backbone of our operations, Anant ensures every project runs smoothly behind the scenes.
-    From client data to delivery timelines, he keeps our systems sharp and efficient.
-  </p>
-</div>
+              <div className="group max-w-[500px] bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-center transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
+                <div className="w-20 h-20 relative bg-gradient-to-br overflow-hidden rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Image
+                    className="object-cover object-center"
+                    src="/team/pratik.jpg" // Make sure this image exists!
+                    fill
+                    alt="Pratik"
+                  />
+                </div>
+                <h4 className="text-xl font-bold mb-2 group-hover:text-white transition">
+                  Pratik
+                </h4>
+                <p className="text-purple-500 font-medium mb-3 group-hover:text-purple-400 transition">
+                  Head of Management
+                </p>
+                <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white/80 transition">
+                  Ensures smooth coordination across departments, keeping every
+                  project aligned, efficient, and on schedule.
+                </p>
+              </div>
 
+              {/* Team Member: Anant */}
+              <div className="group max-w-[500px] bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-center transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
+                <div className="w-20 h-20 relative bg-gradient-to-br overflow-hidden rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Image
+                    className="object-cover object-center"
+                    src="/team/anant.jpg"
+                    fill
+                    alt="Anant"
+                  />
+                </div>
+                <h4 className="text-xl font-bold mb-2 group-hover:text-white transition">
+                  Anant
+                </h4>
+                <p className="text-purple-500 font-medium mb-3 group-hover:text-purple-400 transition">
+                  Backend Manager
+                </p>
+                <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white/80 transition">
+                  The backbone of our operations, Anant ensures every project
+                  runs smoothly behind the scenes. From client data to delivery
+                  timelines, he keeps our systems sharp and efficient.
+                </p>
+              </div>
 
-      {/* Team Member 3 */}
+              {/* Team Member 3 */}
               {/* <div className="group bg-white border border-gray-200 shadow-lg rounded-2xl p-6 text-center transition duration-300 hover:bg-[#0d1117] hover:border-[#0d1117]">
                 <div className="w-20 h-20 relative bg-gradient-to-br overflow-hidden rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Image className="object-cover object-center" src='/team/shravani.jpg' fill alt='Tanishq' />
@@ -323,10 +323,7 @@ export default function About() {
             <div className="flex justify-center items-center gap-5 mt-8 overflow-hidden">
               {brands.map((brand) => (
                 <div key={brand.id} className="relative w-[100px] h-auto">
-                  <img
-                    src={brand.src}
-                    alt={brand.alt}
-                  />
+                  <img src={brand.src} alt={brand.alt} />
                 </div>
               ))}
             </div>

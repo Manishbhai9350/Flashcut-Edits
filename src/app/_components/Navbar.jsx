@@ -169,7 +169,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden transition-all duration-500 ease-in-out ${
+        <div className={`lg:flex hidden transition-all duration-500 ease-in-out ${
           isMobileMenuOpen
             ? 'max-h-screen opacity-100 transform translate-y-0'
             : 'max-h-0 opacity-0 transform -translate-y-2 overflow-hidden'
